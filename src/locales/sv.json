@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Inventing - Steg in i 2026 idag",
-    "description": "Vi är utvecklare i framkant som hjälper småföretag att stega in i 2026 redan idag. Bygg en webbplats, anpassad transformation, företagschatbot eller bara ta bort all din administration."
+    "title": "Inventing - Steg in i 2030 idag",
+    "description": "Vi är utvecklare i framkant som hjälper småföretag att stega in i 2030 redan idag. Bygg en webbplats, anpassad transformation, företagschatbot eller bara ta bort all din administration."
   },
   "hero": {
     "title": "Inventing",
     "tagline": "Vi är utvecklare i framkant som hjälper småföretag att",
-    "taglineHighlight": "stega in i 2026 redan idag",
+    "taglineHighlight": "stega in i 2030 redan idag",
     "cta": "Kontakta oss"
   },
   "services": {
@@ -37,7 +37,7 @@
   },
   "contact": {
     "heading": "Kontakta oss",
-    "description": "Redo att stega in i 2026? Låt oss prata om ditt projekt.",
+    "description": "Redo att stega in i 2030? Låt oss prata om ditt projekt.",
     "cardTitle": "Kontakta oss",
     "cardDescription": "Fyll i formuläret nedan så återkommer vi så snart som möjligt.",
     "form": {
@@ -65,7 +65,7 @@
     }
   },
   "footer": {
-    "tagline": "Steg in i 2026 redan idag",
+    "tagline": "Steg in i 2030 redan idag",
     "copyright": "Alla rättigheter förbehållna."
   }
 }

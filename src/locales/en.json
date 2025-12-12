@@ -37,7 +37,7 @@
   },
   "contact": {
     "heading": "Get in touch",
-    "description": "Ready to step into 2026? Let's talk about your project.",
+    "description": "Ready to step into 2030? Let's talk about your project.",
     "cardTitle": "Contact us",
     "cardDescription": "Fill out the form below and we'll get back to you as soon as possible.",
     "form": {
@@ -65,7 +65,7 @@
     }
   },
   "footer": {
-    "tagline": "Step into 2026 already today",
+    "tagline": "Step into 2030 already today",
     "copyright": "All rights reserved."
   }
 }
