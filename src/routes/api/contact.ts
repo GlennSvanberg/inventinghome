@@ -19,18 +19,18 @@ export const Route = createFileRoute('/api/contact')({
 
           // Validate required fields
           if (!body.name || !body.email || !body.message) {
-            return json(
-              { success: false, message: 'Name, email, and message are required' },
-              { status: 400 }
+            return new Response(
+              JSON.stringify({ success: false, message: 'Name, email, and message are required' }),
+              { status: 400, headers: { 'Content-Type': 'application/json' } }
             )
           }
 
           // Validate email format
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
           if (!emailRegex.test(body.email)) {
-            return json(
-              { success: false, message: 'Invalid email format' },
-              { status: 400 }
+            return new Response(
+              JSON.stringify({ success: false, message: 'Invalid email format' }),
+              { status: 400, headers: { 'Content-Type': 'application/json' } }
             )
           }
 
@@ -44,9 +44,9 @@ export const Route = createFileRoute('/api/contact')({
 
           if (!smtpHost || !smtpUser || !smtpPassword) {
             console.error('SMTP configuration is missing')
-            return json(
-              { success: false, message: 'Email service is not configured' },
-              { status: 500 }
+            return new Response(
+              JSON.stringify({ success: false, message: 'Email service is not configured' }),
+              { status: 500, headers: { 'Content-Type': 'application/json' } }
             )
           }
 
@@ -104,15 +104,15 @@ ${body.message}
           return json({ success: true, message: 'Message sent successfully' })
         } catch (error) {
           console.error('Error sending email:', error)
-          return json(
-            {
+          return new Response(
+            JSON.stringify({
               success: false,
               message:
                 error instanceof Error
                   ? error.message
                   : 'Failed to send message. Please try again later.',
-            },
-            { status: 500 }
+            }),
+            { status: 500, headers: { 'Content-Type': 'application/json' } }
           )
         }
       },

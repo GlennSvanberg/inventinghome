@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { ScrollAnimation } from "@/components/scroll-animation"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
@@ -106,16 +107,19 @@ export function ContactFormSection() {
   return (
     <section id="contact" className="py-24 px-6 bg-muted/30">
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get in touch
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Ready to step into 2026? Let's talk about your project.
-          </p>
-        </div>
+        <ScrollAnimation direction="fade">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Get in touch
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Ready to step into 2026? Let's talk about your project.
+            </p>
+          </div>
+        </ScrollAnimation>
 
-        <Card className="border-border/50 shadow-lg">
+        <ScrollAnimation direction="up" delay={100}>
+          <Card className="border-border/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <MailIcon className="w-5 h-5 text-primary" />
@@ -243,6 +247,7 @@ export function ContactFormSection() {
             </form>
           </CardContent>
         </Card>
+        </ScrollAnimation>
       </div>
     </section>
   )

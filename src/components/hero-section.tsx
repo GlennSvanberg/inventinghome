@@ -19,7 +19,7 @@ export function HeroSection() {
         {/* Brand name */}
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
           <span className="bg-gradient-to-r from-primary via-primary/90 to-primary/80 bg-clip-text text-transparent">
-            inventing
+            Inventing
           </span>
         </h1>
 
@@ -41,13 +41,6 @@ export function HeroSection() {
             Contact us
             <ArrowRightIcon className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-        </div>
-
-        {/* Subtle scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center">
-            <div className="w-1.5 h-3 bg-foreground/40 rounded-full mt-2 animate-pulse" />
-          </div>
         </div>
       </div>
     </section>
