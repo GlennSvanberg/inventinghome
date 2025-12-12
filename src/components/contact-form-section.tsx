@@ -121,17 +121,22 @@ export function ContactFormSection() {
         </ScrollAnimation>
 
         <ScrollAnimation direction="up" delay={100}>
-          <Card className="border-border/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <MailIcon className="w-5 h-5 text-primary" />
-              {t('contact.cardTitle')}
-            </CardTitle>
-            <CardDescription>
-              {t('contact.cardDescription')}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          <Card className="glass-strong glass-hover relative overflow-hidden">
+            {/* Glass shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            
+            <CardHeader className="relative z-10">
+              <CardTitle className="flex items-center gap-2">
+                <div className="glass-primary rounded-lg p-2">
+                  <MailIcon className="w-5 h-5 text-primary" />
+                </div>
+                {t('contact.cardTitle')}
+              </CardTitle>
+              <CardDescription>
+                {t('contact.cardDescription')}
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="relative z-10">
             <form onSubmit={handleSubmit}>
               <FieldGroup>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

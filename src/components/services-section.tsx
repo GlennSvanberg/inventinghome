@@ -59,16 +59,19 @@ export function ServicesSection() {
                 direction="up"
                 delay={index * 100}
               >
-                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/30 hover:scale-[1.02]">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                      <Icon className="w-6 h-6 text-primary group-hover:rotate-12 transition-transform duration-300" />
+                <Card className="glass glass-hover group relative overflow-hidden">
+                  {/* Glass shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  
+                  <CardHeader className="relative z-10">
+                    <div className="w-14 h-14 rounded-2xl glass-primary flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <Icon className="w-7 h-7 text-primary group-hover:rotate-12 transition-transform duration-300" />
                     </div>
                     <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
                       {t(service.titleKey)}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="relative z-10">
                     <CardDescription className="text-base leading-relaxed">
                       {t(service.descriptionKey)}
                     </CardDescription>

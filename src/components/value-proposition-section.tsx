@@ -18,23 +18,28 @@ export function ValuePropositionSection() {
       <div className="max-w-5xl mx-auto relative z-10">
         <ScrollAnimation direction="fade" delay={100}>
           <div className="text-center">
-            {/* Quote */}
-            <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
-              <span className="text-foreground">
-                {t('valueProposition.quote')}{" "}
-                <span className="bg-gradient-to-r from-red-600 via-primary via-orange-500 to-primary bg-clip-text text-transparent relative inline-block bg-[length:200%_auto] animate-gradient">
-                  {t('valueProposition.quoteHighlight')}
-                  <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-primary to-orange-500 transform -skew-x-12 animate-pulse opacity-50" />
-                </span>{" "}
-                {t('valueProposition.quoteEnd')}
-              </span>
-            </blockquote>
+            {/* Glass card for quote */}
+            <div className="glass-strong rounded-3xl p-8 md:p-12 mb-8 glass-hover">
+              {/* Quote */}
+              <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+                <span className="text-foreground">
+                  {t('valueProposition.quote')}{" "}
+                  <span className="bg-gradient-to-r from-red-600 via-primary via-orange-500 to-primary bg-clip-text text-transparent relative inline-block bg-[length:200%_auto] animate-gradient">
+                    {t('valueProposition.quoteHighlight')}
+                    <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-primary to-orange-500 transform -skew-x-12 animate-pulse opacity-50" />
+                  </span>{" "}
+                  {t('valueProposition.quoteEnd')}
+                </span>
+              </blockquote>
+            </div>
 
             {/* Supporting text */}
             <ScrollAnimation direction="up" delay={200}>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                {t('valueProposition.supportingText')}
-              </p>
+              <div className="glass rounded-2xl p-6 inline-block">
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                  {t('valueProposition.supportingText')}
+                </p>
+              </div>
             </ScrollAnimation>
           </div>
         </ScrollAnimation>

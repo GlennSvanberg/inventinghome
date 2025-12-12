@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Inventing - Step into 2030 Today",
+    "title": "Inventing",
     "description": "We are developers at the forefront helping small businesses step into 2030 already today. Build a website, custom transformation, company chatbot or just removing all your admin."
   },
   "hero": {
@@ -48,7 +48,7 @@
       "company": "Company",
       "companyPlaceholder": "Your company",
       "phone": "Phone",
-      "phonePlaceholder": "+1 (555) 000-0000",
+      "phonePlaceholder": "+46 70 123 45 67",
       "message": "Message",
       "messagePlaceholder": "Tell us about your project...",
       "required": "*",

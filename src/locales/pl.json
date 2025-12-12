@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Inventing - Wejdź w 2026 już dziś",
-    "description": "Jesteśmy deweloperami na czele, pomagającymi małym firmom wejść w 2026 już dziś. Zbuduj stronę internetową, niestandardową transformację, chatbot firmowy lub po prostu usuń całą administrację."
+    "title": "Inventing",
+    "description": "Jesteśmy deweloperami na czele, pomagającymi małym firmom wejść w 2030 już dziś. Zbuduj stronę internetową, niestandardową transformację, chatbot firmowy lub po prostu usuń całą administrację."
   },
   "hero": {
     "title": "Inventing",
     "tagline": "Jesteśmy deweloperami na czele, pomagającymi małym firmom",
-    "taglineHighlight": "wejść w 2026 już dziś",
+    "taglineHighlight": "wejść w 2030 już dziś",
     "cta": "Skontaktuj się z nami"
   },
   "services": {
@@ -37,7 +37,7 @@
   },
   "contact": {
     "heading": "Skontaktuj się",
-    "description": "Gotowy wejść w 2026? Porozmawiajmy o Twoim projekcie.",
+    "description": "Gotowy wejść w 2030? Porozmawiajmy o Twoim projekcie.",
     "cardTitle": "Skontaktuj się z nami",
     "cardDescription": "Wypełnij poniższy formularz, a skontaktujemy się z Tobą tak szybko, jak to możliwe.",
     "form": {
@@ -65,7 +65,7 @@
     }
   },
   "footer": {
-    "tagline": "Wejdź w 2026 już dziś",
+    "tagline": "Wejdź w 2030 już dziś",
     "copyright": "Wszelkie prawa zastrzeżone."
   }
 }

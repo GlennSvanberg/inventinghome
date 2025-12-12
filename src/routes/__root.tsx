@@ -18,7 +18,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Inventing - Step into 2026 Today',
+        title: 'Inventing',
       },
       {
         name: 'description',
@@ -29,6 +29,15 @@ export const Route = createRootRoute({
       {
         rel: 'stylesheet',
         href: appCss,
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        href: '/favicon.png',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/logo.png',
       },
     ],
   }),
@@ -46,6 +55,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        {/* Logo - Fixed position top left */}
+        <div className="fixed top-4 left-4 z-50">
+          <img 
+            src="/logo.png" 
+            alt="Inventing Logo" 
+            className="w-12 h-12 md:w-16 md:h-16 object-contain"
+          />
+        </div>
         {/* Theme Toggle - Fixed position */}
         <div className="fixed top-4 right-4 z-50">
           <ThemeToggle />
