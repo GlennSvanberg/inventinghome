@@ -21,7 +21,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
         {/* Brand name */}
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
-          <span className="bg-gradient-to-r from-primary via-primary/90 to-primary/80 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-600 via-primary via-orange-500 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
             {t('hero.title')}
           </span>
         </h1>
@@ -29,7 +29,9 @@ export function HeroSection() {
         {/* Tagline */}
         <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 mb-8 font-medium max-w-3xl mx-auto leading-relaxed">
           {t('hero.tagline')}{" "}
-          <span className="text-primary font-semibold">{t('hero.taglineHighlight')}</span>
+          <span className="bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent font-semibold bg-[length:200%_auto] animate-gradient">
+            {t('hero.taglineHighlight')}
+          </span>
         </p>
 
         {/* CTA Button */}
