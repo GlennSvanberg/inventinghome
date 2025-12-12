@@ -3,9 +3,17 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { useTranslation } from 'react-i18next'
-import '../lib/i18n'
+import { useEffect, useState, Suspense } from 'react'
+import i18n, { waitForI18n } from '../lib/i18n'
 
 import appCss from '../styles.css?url'
+
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    __i18nReady?: boolean
+  }
+}
 
 export const Route = createRootRoute({
   head: () => ({
@@ -40,14 +48,81 @@ export const Route = createRootRoute({
         href: '/logo.png',
       },
     ],
+    scripts: [
+      {
+        children: `
+          (function() {
+            try {
+              // Hide body initially to prevent flickering using a class
+              document.documentElement.classList.add('i18n-loading');
+              
+              // Apply theme synchronously before React renders
+              const savedTheme = localStorage.getItem('theme');
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+              if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+              } else {
+                document.documentElement.classList.remove('dark');
+              }
+              
+              // Set language attribute synchronously
+              const savedLang = localStorage.getItem('i18nextLng');
+              const browserLang = navigator.language.split('-')[0];
+              const supportedLangs = ['en', 'sv', 'pl'];
+              const lang = savedLang && supportedLangs.includes(savedLang) 
+                ? savedLang 
+                : (supportedLangs.includes(browserLang) ? browserLang : 'en');
+              document.documentElement.lang = lang;
+            } catch (e) {}
+          })();
+        `,
+      },
+    ],
   }),
 
   shellComponent: RootDocument,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  const { i18n } = useTranslation()
-  const currentLang = i18n.language || 'en'
+  const { i18n: i18nInstance } = useTranslation()
+  
+  // Get language - use i18n language, fallback to DOM lang attribute
+  const currentLang = i18nInstance.language || (typeof document !== 'undefined' ? document.documentElement.lang : 'en') || 'en'
+
+  // Ensure language matches what blocking script set and show page (client-side only)
+  useEffect(() => {
+    if (typeof document === 'undefined') return
+    
+    const showPage = () => {
+      document.documentElement.classList.remove('i18n-loading')
+    }
+    
+    // Ensure language matches using the actual i18n instance
+    if (i18n.isInitialized) {
+      const expectedLang = document.documentElement.lang
+      if (expectedLang && i18n.language !== expectedLang) {
+        i18n.changeLanguage(expectedLang).then(showPage)
+      } else {
+        showPage()
+      }
+    } else {
+      // Wait for initialization using the actual i18n instance
+      const handleInit = () => {
+        const expectedLang = document.documentElement.lang
+        if (expectedLang && i18n.language !== expectedLang) {
+          i18n.changeLanguage(expectedLang).then(showPage)
+        } else {
+          showPage()
+        }
+        i18n.off('initialized', handleInit)
+      }
+      i18n.on('initialized', handleInit)
+      return () => {
+        i18n.off('initialized', handleInit)
+      }
+    }
+  }, [])
 
   return (
     <html lang={currentLang}>
@@ -67,7 +142,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <div className="fixed top-4 right-4 z-50">
           <ThemeToggle />
         </div>
-        {children}
+        <Suspense fallback={null}>
+          {children}
+        </Suspense>
         <TanStackDevtools
           config={{
             position: 'bottom-right',

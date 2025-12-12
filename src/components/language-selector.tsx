@@ -23,6 +23,8 @@ export function LanguageSelector() {
     i18n.changeLanguage(lang)
     // Update HTML lang attribute
     document.documentElement.lang = lang
+    // Save to localStorage for persistence
+    localStorage.setItem('i18nextLng', lang)
   }
 
   return (

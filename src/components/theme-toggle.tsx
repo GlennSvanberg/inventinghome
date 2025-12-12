@@ -5,18 +5,19 @@ import { Button } from "@/components/ui/button"
 import { SunIcon, MoonIcon } from "lucide-react"
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light")
+  // Initialize theme from already-applied class (set by blocking script)
+  // Use lazy initializer to avoid calling getInitialTheme on every render
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window === "undefined") return "light"
+    return document.documentElement.classList.contains("dark") ? "dark" : "light"
+  })
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-    
-    const initialTheme = savedTheme || (prefersDark ? "dark" : "light")
-    setTheme(initialTheme)
-    applyTheme(initialTheme)
+    // Sync state with actual DOM state (already set by blocking script)
+    const currentTheme = document.documentElement.classList.contains("dark") ? "dark" : "light"
+    setTheme(currentTheme)
   }, [])
 
   const applyTheme = (newTheme: "light" | "dark") => {

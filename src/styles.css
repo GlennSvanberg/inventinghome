@@ -129,6 +129,14 @@
   body {
     @apply font-sans bg-background text-foreground;
     }
+  /* Hide page until i18n is ready */
+  html.i18n-loading {
+    visibility: hidden;
+  }
+  html.i18n-loading body {
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 /* Futuristic font utility */
