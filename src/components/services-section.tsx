@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollAnimation } from "@/components/scroll-animation"
+import { useTranslation } from 'react-i18next'
 import { 
   GlobeIcon, 
   SparklesIcon, 
@@ -7,30 +8,32 @@ import {
   ZapIcon 
 } from "lucide-react"
 
-const services = [
-  {
-    icon: GlobeIcon,
-    title: "Build a website",
-    description: "Modern, responsive websites that convert visitors into customers. Built with cutting-edge technology.",
-  },
-  {
-    icon: SparklesIcon,
-    title: "Custom transformation",
-    description: "Transform your business processes with custom software solutions tailored to your needs.",
-  },
-  {
-    icon: BotIcon,
-    title: "Company chatbot",
-    description: "Intelligent chatbots that handle customer inquiries 24/7, freeing your team for what matters.",
-  },
-  {
-    icon: ZapIcon,
-    title: "Removing admin tasks",
-    description: "Automate repetitive tasks and workflows. Focus on growth while we handle the admin.",
-  },
-]
-
 export function ServicesSection() {
+  const { t } = useTranslation()
+
+  const services = [
+    {
+      icon: GlobeIcon,
+      titleKey: "services.buildWebsite.title",
+      descriptionKey: "services.buildWebsite.description",
+    },
+    {
+      icon: SparklesIcon,
+      titleKey: "services.customTransformation.title",
+      descriptionKey: "services.customTransformation.description",
+    },
+    {
+      icon: BotIcon,
+      titleKey: "services.companyChatbot.title",
+      descriptionKey: "services.companyChatbot.description",
+    },
+    {
+      icon: ZapIcon,
+      titleKey: "services.removingAdmin.title",
+      descriptionKey: "services.removingAdmin.description",
+    },
+  ]
+
   return (
     <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
@@ -38,10 +41,10 @@ export function ServicesSection() {
         <ScrollAnimation direction="fade">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              What we do
+              {t('services.heading')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions to help your business thrive in the digital age
+              {t('services.description')}
             </p>
           </div>
         </ScrollAnimation>
@@ -52,7 +55,7 @@ export function ServicesSection() {
             const Icon = service.icon
             return (
               <ScrollAnimation
-                key={service.title}
+                key={service.titleKey}
                 direction="up"
                 delay={index * 100}
               >
@@ -62,12 +65,12 @@ export function ServicesSection() {
                       <Icon className="w-6 h-6 text-primary group-hover:rotate-12 transition-transform duration-300" />
                     </div>
                     <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
-                      {service.title}
+                      {t(service.titleKey)}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-base leading-relaxed">
-                      {service.description}
+                      {t(service.descriptionKey)}
                     </CardDescription>
                   </CardContent>
                 </Card>

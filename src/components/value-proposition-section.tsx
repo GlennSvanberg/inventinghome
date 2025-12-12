@@ -1,6 +1,9 @@
 import { ScrollAnimation } from "@/components/scroll-animation"
+import { useTranslation } from 'react-i18next'
 
 export function ValuePropositionSection() {
+  const { t } = useTranslation()
+
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Gradient background */}
@@ -18,20 +21,19 @@ export function ValuePropositionSection() {
             {/* Quote */}
             <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
               <span className="text-foreground">
-                We are there to help for{" "}
+                {t('valueProposition.quote')}{" "}
                 <span className="text-primary relative inline-block">
-                  half or less
+                  {t('valueProposition.quoteHighlight')}
                   <span className="absolute -bottom-2 left-0 right-0 h-1 bg-primary/30 transform -skew-x-12 animate-pulse" />
                 </span>{" "}
-                that you would think.
+                {t('valueProposition.quoteEnd')}
               </span>
             </blockquote>
 
             {/* Supporting text */}
             <ScrollAnimation direction="up" delay={200}>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                Quality development services at a fraction of traditional agency costs. 
-                We believe great technology should be accessible to every business.
+                {t('valueProposition.supportingText')}
               </p>
             </ScrollAnimation>
           </div>

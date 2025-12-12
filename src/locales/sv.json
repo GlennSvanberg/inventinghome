@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Inventing - Steg in i 2026 idag",
+    "description": "Vi är utvecklare i framkant som hjälper småföretag att stega in i 2026 redan idag. Bygg en webbplats, anpassad transformation, företagschatbot eller bara ta bort all din administration."
+  },
+  "hero": {
+    "title": "Inventing",
+    "tagline": "Vi är utvecklare i framkant som hjälper småföretag att",
+    "taglineHighlight": "stega in i 2026 redan idag",
+    "cta": "Kontakta oss"
+  },
+  "services": {
+    "heading": "Vad vi gör",
+    "description": "Omfattande lösningar för att hjälpa ditt företag att frodas i den digitala tidsåldern",
+    "buildWebsite": {
+      "title": "Bygg en webbplats",
+      "description": "Modern, responsiva webbplatser som omvandlar besökare till kunder. Byggda med toppmodern teknik."
+    },
+    "customTransformation": {
+      "title": "Anpassad transformation",
+      "description": "Förvandla dina affärsprocesser med anpassade mjukvarulösningar skräddarsydda för dina behov."
+    },
+    "companyChatbot": {
+      "title": "Företagschatbot",
+      "description": "Intelligenta chatbotar som hanterar kundförfrågningar dygnet runt, så att ditt team kan fokusera på det som spelar roll."
+    },
+    "removingAdmin": {
+      "title": "Ta bort administrativa uppgifter",
+      "description": "Automatisera repetitiva uppgifter och arbetsflöden. Fokusera på tillväxt medan vi hanterar administrationen."
+    }
+  },
+  "valueProposition": {
+    "quote": "Vi är där för att hjälpa till för",
+    "quoteHighlight": "hälften eller mindre",
+    "quoteEnd": "än du skulle tro.",
+    "supportingText": "Kvalitetsutvecklingstjänster till en bråkdel av traditionella byråkostnader. Vi tror att bra teknik ska vara tillgänglig för alla företag."
+  },
+  "contact": {
+    "heading": "Kontakta oss",
+    "description": "Redo att stega in i 2026? Låt oss prata om ditt projekt.",
+    "cardTitle": "Kontakta oss",
+    "cardDescription": "Fyll i formuläret nedan så återkommer vi så snart som möjligt.",
+    "form": {
+      "name": "Namn",
+      "namePlaceholder": "Ditt namn",
+      "email": "E-post",
+      "emailPlaceholder": "din.epost@exempel.se",
+      "company": "Företag",
+      "companyPlaceholder": "Ditt företag",
+      "phone": "Telefon",
+      "phonePlaceholder": "+46 70 123 45 67",
+      "message": "Meddelande",
+      "messagePlaceholder": "Berätta om ditt projekt...",
+      "required": "*",
+      "send": "Skicka meddelande",
+      "sending": "Skickar...",
+      "success": "Meddelandet skickades! Vi återkommer snart.",
+      "errors": {
+        "nameRequired": "Namn krävs",
+        "emailRequired": "E-post krävs",
+        "emailInvalid": "Vänligen ange en giltig e-postadress",
+        "messageRequired": "Meddelande krävs",
+        "sendFailed": "Kunde inte skicka meddelandet. Vänligen försök igen."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Steg in i 2026 redan idag",
+    "copyright": "Alla rättigheter förbehållna."
+  }
+}
+

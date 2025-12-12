@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Field, FieldGroup } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { LoaderIcon, CheckCircleIcon, AlertCircleIcon, MailIcon } from "lucide-react"
+import { useTranslation } from 'react-i18next'
 
 type FormState = {
   name: string
@@ -21,6 +22,7 @@ type FormState = {
 type SubmitState = "idle" | "loading" | "success" | "error"
 
 export function ContactFormSection() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState<FormState>({
     name: "",
     email: "",
@@ -40,19 +42,19 @@ export function ContactFormSection() {
 
   const validateForm = (): boolean => {
     if (!formData.name.trim()) {
-      setErrorMessage("Name is required")
+      setErrorMessage(t('contact.form.errors.nameRequired'))
       return false
     }
     if (!formData.email.trim()) {
-      setErrorMessage("Email is required")
+      setErrorMessage(t('contact.form.errors.emailRequired'))
       return false
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      setErrorMessage("Please enter a valid email address")
+      setErrorMessage(t('contact.form.errors.emailInvalid'))
       return false
     }
     if (!formData.message.trim()) {
-      setErrorMessage("Message is required")
+      setErrorMessage(t('contact.form.errors.messageRequired'))
       return false
     }
     return true
@@ -80,7 +82,7 @@ export function ContactFormSection() {
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.message || "Failed to send message")
+        throw new Error(errorData.message || t('contact.form.errors.sendFailed'))
       }
 
       setSubmitState("success")
@@ -99,7 +101,7 @@ export function ContactFormSection() {
     } catch (error) {
       setSubmitState("error")
       setErrorMessage(
-        error instanceof Error ? error.message : "Failed to send message. Please try again."
+        error instanceof Error ? error.message : t('contact.form.errors.sendFailed')
       )
     }
   }
@@ -110,10 +112,10 @@ export function ContactFormSection() {
         <ScrollAnimation direction="fade">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Get in touch
+              {t('contact.heading')}
             </h2>
             <p className="text-xl text-muted-foreground">
-              Ready to step into 2026? Let's talk about your project.
+              {t('contact.description')}
             </p>
           </div>
         </ScrollAnimation>
@@ -123,10 +125,10 @@ export function ContactFormSection() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <MailIcon className="w-5 h-5 text-primary" />
-              Contact us
+              {t('contact.cardTitle')}
             </CardTitle>
             <CardDescription>
-              Fill out the form below and we'll get back to you as soon as possible.
+              {t('contact.cardDescription')}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -135,7 +137,7 @@ export function ContactFormSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Field>
                     <Label htmlFor="name">
-                      Name <span className="text-destructive">*</span>
+                      {t('contact.form.name')} <span className="text-destructive">{t('contact.form.required')}</span>
                     </Label>
                     <Input
                       id="name"
@@ -145,13 +147,13 @@ export function ContactFormSection() {
                       onChange={handleChange}
                       required
                       disabled={submitState === "loading"}
-                      placeholder="Your name"
+                      placeholder={t('contact.form.namePlaceholder')}
                     />
                   </Field>
 
                   <Field>
                     <Label htmlFor="email">
-                      Email <span className="text-destructive">*</span>
+                      {t('contact.form.email')} <span className="text-destructive">{t('contact.form.required')}</span>
                     </Label>
                     <Input
                       id="email"
@@ -161,14 +163,14 @@ export function ContactFormSection() {
                       onChange={handleChange}
                       required
                       disabled={submitState === "loading"}
-                      placeholder="your.email@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </Field>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Field>
-                    <Label htmlFor="company">Company</Label>
+                    <Label htmlFor="company">{t('contact.form.company')}</Label>
                     <Input
                       id="company"
                       name="company"
@@ -176,12 +178,12 @@ export function ContactFormSection() {
                       value={formData.company}
                       onChange={handleChange}
                       disabled={submitState === "loading"}
-                      placeholder="Your company"
+                      placeholder={t('contact.form.companyPlaceholder')}
                     />
                   </Field>
 
                   <Field>
-                    <Label htmlFor="phone">Phone</Label>
+                    <Label htmlFor="phone">{t('contact.form.phone')}</Label>
                     <Input
                       id="phone"
                       name="phone"
@@ -189,14 +191,14 @@ export function ContactFormSection() {
                       value={formData.phone}
                       onChange={handleChange}
                       disabled={submitState === "loading"}
-                      placeholder="+1 (555) 000-0000"
+                      placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </Field>
                 </div>
 
                 <Field>
                   <Label htmlFor="message">
-                    Message <span className="text-destructive">*</span>
+                    {t('contact.form.message')} <span className="text-destructive">{t('contact.form.required')}</span>
                   </Label>
                   <Textarea
                     id="message"
@@ -205,7 +207,7 @@ export function ContactFormSection() {
                     onChange={handleChange}
                     required
                     disabled={submitState === "loading"}
-                    placeholder="Tell us about your project..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                     rows={6}
                   />
                 </Field>
@@ -222,7 +224,7 @@ export function ContactFormSection() {
                 {submitState === "success" && (
                   <div className="flex items-center gap-2 text-primary text-sm p-3 bg-primary/10 rounded-lg border border-primary/20">
                     <CheckCircleIcon className="w-4 h-4" />
-                    <span>Message sent successfully! We'll get back to you soon.</span>
+                    <span>{t('contact.form.success')}</span>
                   </div>
                 )}
 
@@ -236,10 +238,10 @@ export function ContactFormSection() {
                     {submitState === "loading" ? (
                       <>
                         <LoaderIcon className="w-4 h-4 mr-2 animate-spin" />
-                        Sending...
+                        {t('contact.form.sending')}
                       </>
                     ) : (
-                      "Send message"
+                      t('contact.form.send')
                     )}
                   </Button>
                 </Field>

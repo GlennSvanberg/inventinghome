@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRightIcon } from "lucide-react"
+import { useTranslation } from 'react-i18next'
 
 export function HeroSection() {
+  const { t } = useTranslation()
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated gradient background */}
@@ -19,14 +22,14 @@ export function HeroSection() {
         {/* Brand name */}
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
           <span className="bg-gradient-to-r from-primary via-primary/90 to-primary/80 bg-clip-text text-transparent">
-            Inventing
+            {t('hero.title')}
           </span>
         </h1>
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 mb-8 font-medium max-w-3xl mx-auto leading-relaxed">
-          We are developers at the forefront helping small businesses{" "}
-          <span className="text-primary font-semibold">step into 2026 already today</span>
+          {t('hero.tagline')}{" "}
+          <span className="text-primary font-semibold">{t('hero.taglineHighlight')}</span>
         </p>
 
         {/* CTA Button */}
@@ -38,7 +41,7 @@ export function HeroSection() {
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
             }}
           >
-            Contact us
+            {t('hero.cta')}
             <ArrowRightIcon className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

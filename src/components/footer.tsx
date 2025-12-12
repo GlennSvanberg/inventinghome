@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next'
+import { LanguageSelector } from './language-selector'
+
 export function Footer() {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -8,11 +12,14 @@ export function Footer() {
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-1">Inventing</h3>
             <p className="text-sm text-muted-foreground">
-              Step into 2026 already today
+              {t('footer.tagline')}
             </p>
           </div>
-          <div className="text-sm text-muted-foreground">
-            © {currentYear} Inventing. All rights reserved.
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <LanguageSelector />
+            <div className="text-sm text-muted-foreground">
+              © {currentYear} Inventing. {t('footer.copyright')}
+            </div>
           </div>
         </div>
       </div>

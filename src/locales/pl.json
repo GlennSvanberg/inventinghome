@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Inventing - Wejdź w 2026 już dziś",
+    "description": "Jesteśmy deweloperami na czele, pomagającymi małym firmom wejść w 2026 już dziś. Zbuduj stronę internetową, niestandardową transformację, chatbot firmowy lub po prostu usuń całą administrację."
+  },
+  "hero": {
+    "title": "Inventing",
+    "tagline": "Jesteśmy deweloperami na czele, pomagającymi małym firmom",
+    "taglineHighlight": "wejść w 2026 już dziś",
+    "cta": "Skontaktuj się z nami"
+  },
+  "services": {
+    "heading": "Co robimy",
+    "description": "Kompleksowe rozwiązania pomagające Twojej firmie rozwijać się w erze cyfrowej",
+    "buildWebsite": {
+      "title": "Zbuduj stronę internetową",
+      "description": "Nowoczesne, responsywne strony internetowe, które przekształcają odwiedzających w klientów. Zbudowane z najnowocześniejszą technologią."
+    },
+    "customTransformation": {
+      "title": "Niestandardowa transformacja",
+      "description": "Przekształć swoje procesy biznesowe za pomocą niestandardowych rozwiązań programowych dostosowanych do Twoich potrzeb."
+    },
+    "companyChatbot": {
+      "title": "Chatbot firmowy",
+      "description": "Inteligentne chatboty, które obsługują zapytania klientów 24/7, uwalniając Twój zespół do tego, co ważne."
+    },
+    "removingAdmin": {
+      "title": "Usuwanie zadań administracyjnych",
+      "description": "Automatyzuj powtarzalne zadania i przepływy pracy. Skup się na wzroście, podczas gdy my zajmujemy się administracją."
+    }
+  },
+  "valueProposition": {
+    "quote": "Jesteśmy po to, aby pomóc za",
+    "quoteHighlight": "połowę lub mniej",
+    "quoteEnd": "niż myślisz.",
+    "supportingText": "Usługi deweloperskie wysokiej jakości za ułamek kosztów tradycyjnych agencji. Wierzymy, że świetna technologia powinna być dostępna dla każdej firmy."
+  },
+  "contact": {
+    "heading": "Skontaktuj się",
+    "description": "Gotowy wejść w 2026? Porozmawiajmy o Twoim projekcie.",
+    "cardTitle": "Skontaktuj się z nami",
+    "cardDescription": "Wypełnij poniższy formularz, a skontaktujemy się z Tobą tak szybko, jak to możliwe.",
+    "form": {
+      "name": "Imię",
+      "namePlaceholder": "Twoje imię",
+      "email": "E-mail",
+      "emailPlaceholder": "twoj.email@przyklad.pl",
+      "company": "Firma",
+      "companyPlaceholder": "Twoja firma",
+      "phone": "Telefon",
+      "phonePlaceholder": "+48 123 456 789",
+      "message": "Wiadomość",
+      "messagePlaceholder": "Opowiedz nam o swoim projekcie...",
+      "required": "*",
+      "send": "Wyślij wiadomość",
+      "sending": "Wysyłanie...",
+      "success": "Wiadomość wysłana pomyślnie! Wkrótce się z Tobą skontaktujemy.",
+      "errors": {
+        "nameRequired": "Imię jest wymagane",
+        "emailRequired": "E-mail jest wymagany",
+        "emailInvalid": "Proszę podać prawidłowy adres e-mail",
+        "messageRequired": "Wiadomość jest wymagana",
+        "sendFailed": "Nie udało się wysłać wiadomości. Spróbuj ponownie."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Wejdź w 2026 już dziś",
+    "copyright": "Wszelkie prawa zastrzeżone."
+  }
+}
+

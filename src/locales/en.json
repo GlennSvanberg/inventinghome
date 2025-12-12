@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Inventing - Step into 2026 Today",
+    "description": "We are developers at the forefront helping small businesses step into 2026 already today. Build a website, custom transformation, company chatbot or just removing all your admin."
+  },
+  "hero": {
+    "title": "Inventing",
+    "tagline": "We are developers at the forefront helping small businesses",
+    "taglineHighlight": "step into 2026 already today",
+    "cta": "Contact us"
+  },
+  "services": {
+    "heading": "What we do",
+    "description": "Comprehensive solutions to help your business thrive in the digital age",
+    "buildWebsite": {
+      "title": "Build a website",
+      "description": "Modern, responsive websites that convert visitors into customers. Built with cutting-edge technology."
+    },
+    "customTransformation": {
+      "title": "Custom transformation",
+      "description": "Transform your business processes with custom software solutions tailored to your needs."
+    },
+    "companyChatbot": {
+      "title": "Company chatbot",
+      "description": "Intelligent chatbots that handle customer inquiries 24/7, freeing your team for what matters."
+    },
+    "removingAdmin": {
+      "title": "Removing admin tasks",
+      "description": "Automate repetitive tasks and workflows. Focus on growth while we handle the admin."
+    }
+  },
+  "valueProposition": {
+    "quote": "We are there to help for",
+    "quoteHighlight": "half or less",
+    "quoteEnd": "that you would think.",
+    "supportingText": "Quality development services at a fraction of traditional agency costs. We believe great technology should be accessible to every business."
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "description": "Ready to step into 2026? Let's talk about your project.",
+    "cardTitle": "Contact us",
+    "cardDescription": "Fill out the form below and we'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "company": "Company",
+      "companyPlaceholder": "Your company",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "required": "*",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "messageRequired": "Message is required",
+        "sendFailed": "Failed to send message. Please try again."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Step into 2026 already today",
+    "copyright": "All rights reserved."
+  }
+}
+
