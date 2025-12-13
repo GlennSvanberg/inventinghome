@@ -1,7 +1,6 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
-import { ThemeToggle } from '@/components/theme-toggle'
 import { useTranslation } from 'react-i18next'
 import { useEffect, Suspense } from 'react'
 import i18n from '../lib/i18n'
@@ -63,15 +62,8 @@ export const Route = createRootRoute({
               // Hide body initially to prevent flickering using a class
               document.documentElement.classList.add('i18n-loading');
               
-              // Apply theme synchronously before React renders
-              const savedTheme = localStorage.getItem('theme');
-              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-              if (theme === 'dark') {
-                document.documentElement.classList.add('dark');
-              } else {
-                document.documentElement.classList.remove('dark');
-              }
+              // Always apply dark theme
+              document.documentElement.classList.add('dark');
               
               // Set language attribute synchronously
               const savedLang = localStorage.getItem('i18nextLng');
@@ -84,7 +76,7 @@ export const Route = createRootRoute({
               
               // #region agent log
               const t1 = performance.now();
-              const log2 = {location:'__root.tsx:blocking-script',message:'Blocking script complete',data:{time:t1,elapsed:t1-t0,lang:lang,theme:theme,savedLang:savedLang,browserLang:browserLang,hasLoadingClass:document.documentElement.classList.contains('i18n-loading'),hasDarkClass:document.documentElement.classList.contains('dark')},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'};
+              const log2 = {location:'__root.tsx:blocking-script',message:'Blocking script complete',data:{time:t1,elapsed:t1-t0,lang:lang,savedLang:savedLang,browserLang:browserLang,hasLoadingClass:document.documentElement.classList.contains('i18n-loading'),hasDarkClass:document.documentElement.classList.contains('dark')},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'};
               console.log('[DEBUG]', log2);
               fetch('http://127.0.0.1:7245/ingest/007ed69a-6782-478e-aedb-41d4db522a3c',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(log2)}).catch(()=>{});
               // #endregion
@@ -110,9 +102,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   // Get language - use i18n language, fallback to DOM lang attribute
   const currentLang = i18nInstance.language || (typeof document !== 'undefined' ? document.documentElement.lang : 'en') || 'en'
   
-  // Get initial theme from DOM (set by blocking script) to avoid hydration mismatch
-  const initialThemeClass = typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? 'dark' : ''
-  const htmlClassName = `i18n-loading${initialThemeClass ? ` ${initialThemeClass}` : ''}`
+  // Always use dark theme
+  const htmlClassName = 'i18n-loading dark'
 
   // Ensure language matches what blocking script set and show page (client-side only)
   useEffect(() => {
@@ -219,10 +210,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             alt="Inventing Logo" 
             className="w-12 h-12 md:w-16 md:h-16 object-contain"
           />
-        </div>
-        {/* Theme Toggle - Fixed position */}
-        <div className="fixed top-4 right-4 z-50">
-          <ThemeToggle />
         </div>
         <Suspense fallback={null}>
           {children}
