@@ -2,7 +2,7 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { useTranslation } from 'react-i18next'
-import { useEffect, Suspense } from 'react'
+import { useLayoutEffect, Suspense } from 'react'
 import i18n from '../lib/i18n'
 
 import appCss from '../styles.css?url'
@@ -52,7 +52,11 @@ export const Route = createRootRoute({
         children: `
           (function() {
             try {
-              // Hide body initially to prevent flickering using a class
+              // Hide page immediately with inline style (works before CSS loads)
+              document.documentElement.style.visibility = 'hidden';
+              document.documentElement.style.opacity = '0';
+              
+              // Also add class for CSS-based hiding (redundancy)
               document.documentElement.classList.add('i18n-loading');
               
               // Always apply dark theme
@@ -88,11 +92,17 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   const htmlClassName = 'i18n-loading dark'
 
   // Ensure language matches what blocking script set and show page (client-side only)
-  useEffect(() => {
+  // Use useLayoutEffect for synchronous DOM updates before paint
+  useLayoutEffect(() => {
     if (typeof document === 'undefined') return
     
     const showPage = () => {
-      document.documentElement.classList.remove('i18n-loading')
+      // Remove inline styles first, then class for smooth transition
+      requestAnimationFrame(() => {
+        document.documentElement.style.visibility = ''
+        document.documentElement.style.opacity = ''
+        document.documentElement.classList.remove('i18n-loading')
+      })
     }
     
     // Ensure language matches using the actual i18n instance
