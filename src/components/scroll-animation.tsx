@@ -1,6 +1,3 @@
-"use client"
-
-import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
 
 interface ScrollAnimationProps {
@@ -10,59 +7,25 @@ interface ScrollAnimationProps {
   direction?: "up" | "down" | "left" | "right" | "fade"
 }
 
+// Simple wrapper that just passes through - animations handled by CSS
 export function ScrollAnimation({
   children,
   className,
   delay = 0,
   direction = "up",
 }: ScrollAnimationProps) {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true)
-          }, delay)
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      }
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
-      }
-    }
-  }, [delay])
-
-  const directionClasses = {
-    up: "translate-y-8",
-    down: "-translate-y-8",
-    left: "translate-x-8",
-    right: "-translate-x-8",
-    fade: "",
-  }
+  const animationClass = {
+    up: "animate-fade-in-up",
+    down: "animate-fade-in-down", 
+    left: "animate-fade-in-left",
+    right: "animate-fade-in-right",
+    fade: "animate-fade-in",
+  }[direction]
 
   return (
-    <div
-      ref={ref}
-      className={cn(
-        "transition-all duration-700 ease-out",
-        isVisible
-          ? "opacity-100 translate-y-0 translate-x-0"
-          : `opacity-0 ${directionClasses[direction]}`,
-        className
-      )}
+    <div 
+      className={cn(animationClass, className)}
+      style={{ animationDelay: `${delay}ms` }}
     >
       {children}
     </div>

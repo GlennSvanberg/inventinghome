@@ -1,8 +1,7 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
-import { useTranslation } from 'react-i18next'
-import { useEffect, Suspense } from 'react'
+import { Suspense } from 'react'
 // Import i18n early to ensure synchronous initialization before any render
 import '../lib/i18n'
 
@@ -47,24 +46,9 @@ export const Route = createRootRoute({
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
-  const { i18n: i18nInstance } = useTranslation()
-  
-  // Get language
-  const currentLang = i18nInstance.language || 'en'
-
-  // Show page after React hydration
-  useEffect(() => {
-    document.body.classList.add('ready')
-  }, [])
-
   return (
-    <html lang={currentLang} className="dark">
+    <html lang="en" className="dark">
       <head>
-        {/* Critical CSS - inline to prevent flash */}
-        <style dangerouslySetInnerHTML={{ __html: `
-          body { opacity: 0; }
-          body.ready { opacity: 1; transition: opacity 0.15s ease-in; }
-        `}} />
         <HeadContent />
       </head>
       <body>
