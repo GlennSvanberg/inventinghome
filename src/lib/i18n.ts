@@ -5,7 +5,7 @@ import enTranslations from '../locales/en.json'
 import svTranslations from '../locales/sv.json'
 import plTranslations from '../locales/pl.json'
 
-// Detect language synchronously before initialization
+// Detect language synchronously
 const detectLanguage = (): string => {
   if (typeof window === 'undefined') return 'en'
   
@@ -20,72 +20,32 @@ const detectLanguage = (): string => {
     if (supportedLangs.includes(browserLang)) {
       return browserLang
     }
-  } catch (e) {
+  } catch {
     // Fallback to 'en' if detection fails
   }
   
   return 'en'
 }
 
-// Initialize with detected language immediately
-const detectedLang = detectLanguage()
-
-// Create a promise that resolves when i18n is ready with the correct language
-let initPromise: Promise<void>
-
-// Initialize i18n WITHOUT LanguageDetector to prevent async language changes
-if (!i18n.isInitialized) {
-  initPromise = i18n
-    .use(initReactI18next)
-    .init({
-      lng: detectedLang, // Set language immediately - no detector to override it
-      resources: {
-        en: {
-          translation: enTranslations,
-        },
-        sv: {
-          translation: svTranslations,
-        },
-        pl: {
-          translation: plTranslations,
-        },
-      },
-      fallbackLng: 'en',
-      supportedLngs: ['en', 'sv', 'pl'],
-      interpolation: {
-        escapeValue: false,
-      },
-      // Enable Suspense to wait for translations
-      react: {
-        useSuspense: true,
-      },
-    })
-    .then(() => {
-      // Ensure language is correct after initialization
-      if (i18n.language !== detectedLang) {
-        return i18n.changeLanguage(detectedLang).then(() => {
-          // Language fixed
-        })
-      }
-    })
-    .catch((error) => {
-      console.error('i18n initialization error:', error)
-      // Return resolved promise even on error to prevent blocking
-      return Promise.resolve()
-    })
-} else {
-  // Already initialized, but ensure language is correct
-  if (i18n.language !== detectedLang) {
-    initPromise = i18n.changeLanguage(detectedLang).catch(() => Promise.resolve())
-  } else {
-    initPromise = Promise.resolve()
-  }
-}
-
-// Export a function to wait for i18n to be ready
-export const waitForI18n = () => {
-  return initPromise || Promise.resolve()
-}
+// Initialize i18n SYNCHRONOUSLY - this is critical to prevent flash of translation keys
+i18n.use(initReactI18next).init({
+  lng: detectLanguage(),
+  resources: {
+    en: { translation: enTranslations },
+    sv: { translation: svTranslations },
+    pl: { translation: plTranslations },
+  },
+  fallbackLng: 'en',
+  supportedLngs: ['en', 'sv', 'pl'],
+  interpolation: {
+    escapeValue: false,
+  },
+  // CRITICAL: Make initialization synchronous since resources are bundled
+  initImmediate: false,
+  react: {
+    useSuspense: false, // Disable suspense since we init synchronously
+  },
+})
 
 export default i18n
 

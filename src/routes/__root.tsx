@@ -3,6 +3,8 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { useTranslation } from 'react-i18next'
 import { useEffect, Suspense } from 'react'
+// Import i18n early to ensure synchronous initialization before any render
+import '../lib/i18n'
 
 import appCss from '../styles.css?url'
 
