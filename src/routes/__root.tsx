@@ -2,17 +2,9 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { useTranslation } from 'react-i18next'
-import { useLayoutEffect, Suspense } from 'react'
-import i18n from '../lib/i18n'
+import { useEffect, Suspense } from 'react'
 
 import appCss from '../styles.css?url'
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    __i18nReady?: boolean
-  }
-}
 
 export const Route = createRootRoute({
   head: () => ({
@@ -47,36 +39,6 @@ export const Route = createRootRoute({
         href: '/logo.png',
       },
     ],
-    scripts: [
-      {
-        children: `
-          (function() {
-            try {
-              // Hide page immediately with inline style (works before CSS loads)
-              document.documentElement.style.visibility = 'hidden';
-              document.documentElement.style.opacity = '0';
-              
-              // Also add class for CSS-based hiding (redundancy)
-              document.documentElement.classList.add('i18n-loading');
-              
-              // Always apply dark theme
-              document.documentElement.classList.add('dark');
-              
-              // Set language attribute synchronously
-              const savedLang = localStorage.getItem('i18nextLng');
-              const browserLang = navigator.language.split('-')[0];
-              const supportedLangs = ['en', 'sv', 'pl'];
-              const lang = savedLang && supportedLangs.includes(savedLang) 
-                ? savedLang 
-                : (supportedLangs.includes(browserLang) ? browserLang : 'en');
-              document.documentElement.lang = lang;
-            } catch (e) {
-              // Silently handle errors
-            }
-          })();
-        `,
-      },
-    ],
   }),
 
   shellComponent: RootDocument,
@@ -85,59 +47,22 @@ export const Route = createRootRoute({
 function RootDocument({ children }: { children: React.ReactNode }) {
   const { i18n: i18nInstance } = useTranslation()
   
-  // Get language - use i18n language, fallback to DOM lang attribute
-  const currentLang = i18nInstance.language || (typeof document !== 'undefined' ? document.documentElement.lang : 'en') || 'en'
-  
-  // Always use dark theme
-  const htmlClassName = 'i18n-loading dark'
+  // Get language
+  const currentLang = i18nInstance.language || 'en'
 
-  // Ensure language matches what blocking script set and show page (client-side only)
-  // Use useLayoutEffect for synchronous DOM updates before paint
-  useLayoutEffect(() => {
-    if (typeof document === 'undefined') return
-    
-    const showPage = () => {
-      // Remove inline styles first, then class for smooth transition
-      requestAnimationFrame(() => {
-        document.documentElement.style.visibility = ''
-        document.documentElement.style.opacity = ''
-        document.documentElement.classList.remove('i18n-loading')
-      })
-    }
-    
-    // Ensure language matches using the actual i18n instance
-    if (i18n.isInitialized) {
-      const expectedLang = document.documentElement.lang
-      if (expectedLang && i18n.language !== expectedLang) {
-        i18n.changeLanguage(expectedLang).then(() => {
-          showPage()
-        })
-      } else {
-        showPage()
-      }
-    } else {
-      // Wait for initialization using the actual i18n instance
-      const handleInit = () => {
-        const expectedLang = document.documentElement.lang
-        if (expectedLang && i18n.language !== expectedLang) {
-          i18n.changeLanguage(expectedLang).then(() => {
-            showPage()
-          })
-        } else {
-          showPage()
-        }
-        i18n.off('initialized', handleInit)
-      }
-      i18n.on('initialized', handleInit)
-      return () => {
-        i18n.off('initialized', handleInit)
-      }
-    }
+  // Show page after React hydration
+  useEffect(() => {
+    document.body.classList.add('ready')
   }, [])
 
   return (
-    <html lang={currentLang} className={htmlClassName}>
+    <html lang={currentLang} className="dark">
       <head>
+        {/* Critical CSS - inline to prevent flash */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          body { opacity: 0; }
+          body.ready { opacity: 1; transition: opacity 0.15s ease-in; }
+        `}} />
         <HeadContent />
       </head>
       <body>

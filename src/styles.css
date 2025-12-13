@@ -129,20 +129,6 @@
   body {
     @apply font-sans bg-background text-foreground;
     }
-  /* Hide page until i18n is ready - critical for preventing flicker */
-  html.i18n-loading {
-    visibility: hidden !important;
-    opacity: 0 !important;
-    will-change: opacity, visibility;
-  }
-  html.i18n-loading body {
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-  /* Smooth transition when page becomes visible */
-  html:not(.i18n-loading) {
-    transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
-  }
 }
 
 /* Futuristic font utility */
