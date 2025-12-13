@@ -10,11 +10,11 @@ export function HeroSection() {
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-primary/5" />
       
-      {/* Animated geometric shapes */}
+      {/* Static geometric shapes - no animations */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       </div>
 
       {/* Floating glass panel */}
@@ -29,7 +29,7 @@ export function HeroSection() {
         <div className="glass-strong rounded-3xl p-8 md:p-12 mb-8">
           {/* Brand name */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
-            <span className="font-futuristic font-black bg-gradient-to-r from-red-600 via-primary via-orange-500 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+            <span className="font-futuristic font-black bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent">
               {t('hero.title')}
             </span>
           </h1>
@@ -37,7 +37,7 @@ export function HeroSection() {
           {/* Tagline */}
           <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 mb-8 font-medium max-w-3xl mx-auto leading-relaxed">
             {t('hero.tagline')}{" "}
-            <span className="bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent font-semibold bg-[length:200%_auto] animate-gradient">
+            <span className="bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent font-semibold">
               {t('hero.taglineHighlight')}
             </span>
           </p>
