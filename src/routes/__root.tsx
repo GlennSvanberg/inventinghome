@@ -22,7 +22,7 @@ export const Route = createRootRoute({
       },
       {
         name: 'description',
-        content: 'We are developers at the forefront helping small businesses step into 2026 already today. Build a website, custom transformation, company chatbot or just removing all your admin.',
+        content: 'We revolutionize how software works. With AI, new possibilities have arisen—we deliver solutions at a fraction of what custom software previously cost. Pragmatic developers solving real challenges and reducing admin burden.',
       },
     ],
     links: [

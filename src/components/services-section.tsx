@@ -24,8 +24,8 @@ export function ServicesSection() {
     },
     {
       icon: BotIcon,
-      titleKey: "services.companyChatbot.title",
-      descriptionKey: "services.companyChatbot.description",
+      titleKey: "services.aiAutomation.title",
+      descriptionKey: "services.aiAutomation.description",
     },
     {
       icon: ZapIcon,

@@ -1,43 +1,43 @@
 {
   "meta": {
     "title": "Inventing",
-    "description": "We are developers at the forefront helping small businesses step into 2030 already today. Build a website, custom transformation, company chatbot or just removing all your admin."
+    "description": "We revolutionize how software works. With AI, new possibilities have arisen—we deliver solutions at a fraction of what custom software previously cost. Pragmatic developers solving real challenges and reducing admin burden."
   },
   "hero": {
     "title": "Inventing",
-    "tagline": "We are developers at the forefront helping small businesses",
-    "taglineHighlight": "step into 2030 already today",
+    "tagline": "We revolutionize how software works",
+    "taglineHighlight": "at a fraction of what custom solutions previously cost",
     "cta": "Contact us"
   },
   "services": {
     "heading": "What we do",
-    "description": "Comprehensive solutions to help your business thrive in the digital age",
+    "description": "Pragmatic developers with the latest tools, solving real challenges and reducing admin burden—not just building software, but solving problems fast",
     "buildWebsite": {
       "title": "Build a website",
-      "description": "Modern, responsive websites that convert visitors into customers. Built with cutting-edge technology."
+      "description": "Modern, responsive websites that solve real business challenges. Built with cutting-edge technology at a fraction of traditional costs."
     },
     "customTransformation": {
       "title": "Custom transformation",
-      "description": "Transform your business processes with custom software solutions tailored to your needs."
+      "description": "Transform your business processes with AI-powered solutions tailored to your needs. Solve real challenges, not just build software."
     },
-    "companyChatbot": {
-      "title": "Company chatbot",
-      "description": "Intelligent chatbots that handle customer inquiries 24/7, freeing your team for what matters."
+    "aiAutomation": {
+      "title": "AI-powered automation",
+      "description": "Intelligent automation that reduces admin burden and solves real problems. We leverage the latest AI tools to deliver solutions fast."
     },
     "removingAdmin": {
-      "title": "Removing admin tasks",
-      "description": "Automate repetitive tasks and workflows. Focus on growth while we handle the admin."
+      "title": "Reducing admin burden",
+      "description": "Automate repetitive tasks and workflows intelligently. Focus on growth while we handle the admin—solving real challenges, not just building software."
     }
   },
   "valueProposition": {
-    "quote": "We are there to help for",
-    "quoteHighlight": "half or less",
-    "quoteEnd": "that you would think.",
-    "supportingText": "Quality development services at a fraction of traditional agency costs. We believe great technology should be accessible to every business."
+    "quote": "We revolutionize software development",
+    "quoteHighlight": "at a fraction of the cost",
+    "quoteEnd": "of traditional custom solutions.",
+    "supportingText": "With AI opening new possibilities, we're pragmatic developers with the latest tools—always knowing how to solve real problems in a crazy fast way. We don't just build software, we solve real challenges and reduce admin burden."
   },
   "contact": {
     "heading": "Get in touch",
-    "description": "Ready to step into 2030? Let's talk about your project.",
+    "description": "Ready to revolutionize your software? Let's solve your challenges together.",
     "cardTitle": "Contact us",
     "cardDescription": "Fill out the form below and we'll get back to you as soon as possible.",
     "form": {
@@ -65,7 +65,7 @@
     }
   },
   "footer": {
-    "tagline": "Step into 2030 already today",
+    "tagline": "Revolutionizing how software works",
     "copyright": "All rights reserved."
   }
 }

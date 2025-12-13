@@ -1,43 +1,43 @@
 {
   "meta": {
     "title": "Inventing",
-    "description": "Jesteśmy deweloperami na czele, pomagającymi małym firmom wejść w 2030 już dziś. Zbuduj stronę internetową, niestandardową transformację, chatbot firmowy lub po prostu usuń całą administrację."
+    "description": "Rewolucjonizujemy sposób działania oprogramowania. Dzięki AI pojawiły się nowe możliwości—dostarczamy rozwiązania za ułamek kosztów, które wcześniej kosztowało niestandardowe oprogramowanie. Pragmatyczni deweloperzy rozwiązujący prawdziwe wyzwania i redukujący obciążenie administracyjne."
   },
   "hero": {
     "title": "Inventing",
-    "tagline": "Jesteśmy deweloperami na czele, pomagającymi małym firmom",
-    "taglineHighlight": "wejść w 2030 już dziś",
+    "tagline": "Rewolucjonizujemy sposób działania oprogramowania",
+    "taglineHighlight": "za ułamek kosztów niestandardowych rozwiązań",
     "cta": "Skontaktuj się z nami"
   },
   "services": {
     "heading": "Co robimy",
-    "description": "Kompleksowe rozwiązania pomagające Twojej firmie rozwijać się w erze cyfrowej",
+    "description": "Pragmatyczni deweloperzy z najnowszymi narzędziami, rozwiązujący prawdziwe wyzwania i redukujący obciążenie administracyjne—nie tylko budujemy oprogramowanie, ale szybko rozwiązujemy problemy",
     "buildWebsite": {
       "title": "Zbuduj stronę internetową",
-      "description": "Nowoczesne, responsywne strony internetowe, które przekształcają odwiedzających w klientów. Zbudowane z najnowocześniejszą technologią."
+      "description": "Nowoczesne, responsywne strony internetowe rozwiązujące prawdziwe wyzwania biznesowe. Zbudowane z najnowocześniejszą technologią za ułamek tradycyjnych kosztów."
     },
     "customTransformation": {
       "title": "Niestandardowa transformacja",
-      "description": "Przekształć swoje procesy biznesowe za pomocą niestandardowych rozwiązań programowych dostosowanych do Twoich potrzeb."
+      "description": "Przekształć swoje procesy biznesowe za pomocą rozwiązań napędzanych przez AI dostosowanych do Twoich potrzeb. Rozwiązuj prawdziwe wyzwania, nie tylko buduj oprogramowanie."
     },
-    "companyChatbot": {
-      "title": "Chatbot firmowy",
-      "description": "Inteligentne chatboty, które obsługują zapytania klientów 24/7, uwalniając Twój zespół do tego, co ważne."
+    "aiAutomation": {
+      "title": "Automatyzacja napędzana przez AI",
+      "description": "Inteligentna automatyzacja redukująca obciążenie administracyjne i rozwiązująca prawdziwe problemy. Wykorzystujemy najnowsze narzędzia AI, aby szybko dostarczać rozwiązania."
     },
     "removingAdmin": {
-      "title": "Usuwanie zadań administracyjnych",
-      "description": "Automatyzuj powtarzalne zadania i przepływy pracy. Skup się na wzroście, podczas gdy my zajmujemy się administracją."
+      "title": "Redukcja obciążenia administracyjnego",
+      "description": "Inteligentnie automatyzuj powtarzalne zadania i przepływy pracy. Skup się na wzroście, podczas gdy my zajmujemy się administracją—rozwiązujemy prawdziwe wyzwania, nie tylko budujemy oprogramowanie."
     }
   },
   "valueProposition": {
-    "quote": "Jesteśmy po to, aby pomóc za",
-    "quoteHighlight": "połowę lub mniej",
-    "quoteEnd": "niż myślisz.",
-    "supportingText": "Usługi deweloperskie wysokiej jakości za ułamek kosztów tradycyjnych agencji. Wierzymy, że świetna technologia powinna być dostępna dla każdej firmy."
+    "quote": "Rewolucjonizujemy rozwój oprogramowania",
+    "quoteHighlight": "za ułamek kosztów",
+    "quoteEnd": "tradycyjnych niestandardowych rozwiązań.",
+    "supportingText": "Dzięki AI otwierającemu nowe możliwości jesteśmy pragmatycznymi deweloperami z najnowszymi narzędziami—zawsze wiemy, jak rozwiązywać prawdziwe problemy w szalenie szybki sposób. Nie tylko budujemy oprogramowanie, rozwiązujemy prawdziwe wyzwania i redukujemy obciążenie administracyjne."
   },
   "contact": {
     "heading": "Skontaktuj się",
-    "description": "Gotowy wejść w 2030? Porozmawiajmy o Twoim projekcie.",
+    "description": "Gotowy zrewolucjonizować swoje oprogramowanie? Rozwiążmy Twoje wyzwania razem.",
     "cardTitle": "Skontaktuj się z nami",
     "cardDescription": "Wypełnij poniższy formularz, a skontaktujemy się z Tobą tak szybko, jak to możliwe.",
     "form": {
@@ -65,7 +65,7 @@
     }
   },
   "footer": {
-    "tagline": "Wejdź w 2030 już dziś",
+    "tagline": "Rewolucjonizujemy sposób działania oprogramowania",
     "copyright": "Wszelkie prawa zastrzeżone."
   }
 }
