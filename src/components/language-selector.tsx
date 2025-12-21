@@ -1,6 +1,7 @@
 "use client"
 
 import { useTranslation } from 'react-i18next'
+import { GlobeIcon } from 'lucide-react'
 import {
   Select,
   SelectContent,
@@ -8,7 +9,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { GlobeIcon } from 'lucide-react'
 
 const languages = [
   { code: 'en', name: 'English' },

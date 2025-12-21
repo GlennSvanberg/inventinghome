@@ -1,45 +1,113 @@
 {
   "meta": {
-    "title": "Inventing",
-    "description": "We revolutionize how software works. With AI, new possibilities have arisen—we deliver solutions at a fraction of what custom software previously cost. Pragmatic developers solving real challenges and reducing admin burden."
+    "title": "Inventing — Custom SaaS on Subscription",
+    "description": "Custom SaaS solutions on a fixed monthly subscription (no upfront cost) for logistics and manufacturing leaders in Poland and Sweden. Replace spreadsheet chaos with secure, scalable software tailored to your workflow."
   },
   "hero": {
-    "title": "Inventing",
-    "tagline": "We revolutionize how software works",
-    "taglineHighlight": "at a fraction of what custom solutions previously cost",
-    "cta": "Contact us"
+    "kicker": "Custom SaaS on Subscription",
+    "kickerZeroUpfront": "0 SEK Upfront",
+    "kickerLocations": "Poznań • Gothenburg",
+    "headline": "Stop Managing Your Multi‑Million Logistics & Manufacturing Business in Excel.",
+    "subheadline": "We build the custom software you need to eliminate technical debt and admin chaos. Zero Upfront Cost. Fixed Monthly Subscription.",
+    "ctaPrimary": "Book Your Problem Discovery (Poznań/Gothenburg)",
+    "ctaSecondary": "Run the 60‑second Diagnostic",
+    "visualTitle": "From spreadsheet chaos → clean ops dashboard",
+    "visualBefore": "BEFORE",
+    "visualAfter": "AFTER",
+    "visualDashboard": "Operations Dashboard",
+    "visualLive": "LIVE",
+    "visualMetric1": "On‑time dispatch",
+    "visualMetric2": "Admin time",
+    "microProof": "Built for operations leaders who need reliability, not another tool to babysit."
   },
-  "services": {
-    "heading": "What we do",
-    "description": "Pragmatic developers with the latest tools, solving real challenges and reducing admin burden—not just building software, but solving problems fast",
-    "buildWebsite": {
-      "title": "Build a website",
-      "description": "Modern, responsive websites that solve real business challenges. Built with cutting-edge technology at a fraction of traditional costs."
-    },
-    "customTransformation": {
-      "title": "Custom transformation",
-      "description": "Transform your business processes with AI-powered solutions tailored to your needs. Solve real challenges, not just build software."
-    },
-    "aiAutomation": {
-      "title": "AI-powered automation",
-      "description": "Intelligent automation that reduces admin burden and solves real problems. We leverage the latest AI tools to deliver solutions fast."
-    },
-    "removingAdmin": {
-      "title": "Reducing admin burden",
-      "description": "Automate repetitive tasks and workflows intelligently. Focus on growth while we handle the admin—solving real challenges, not just building software."
+  "excelHell": {
+    "kicker": "THE “EXCEL HELL”",
+    "heading": "Excel is a masterpiece. It’s a dangerous place to run a warehouse.",
+    "copy": "Excel is a masterpiece of software, but it’s a dangerous place to run a warehouse. When your “human‑database” quits or a formula breaks, your revenue stops. We turn your “Excel Hell” into a secure, scalable SaaS tailored to your specific workflow."
+  },
+  "partnership": {
+    "kicker": "THE “ZERO‑RISK” PARTNERSHIP MODEL",
+    "heading": "We take the build risk. You keep the upside.",
+    "description": "Three steps from spreadsheet dependency to a dedicated SaaS module—then a fixed monthly subscription once it’s live (hosting, security, updates included).",
+    "steps": {
+      "extraction": {
+        "title": "1) The Extraction",
+        "body": "We sit with your team in Poznań/Gothenburg to map the messy manual processes behind the spreadsheet."
+      },
+      "engineering": {
+        "title": "2) The Engineering",
+        "body": "We build your dedicated SaaS module. We take the development risk; you pay 0 SEK for the build."
+      },
+      "optimization": {
+        "title": "3) The Optimization",
+        "body": "Once live, you pay a fixed monthly subscription. We handle hosting, security, and updates. You focus on growth."
+      }
     }
   },
-  "valueProposition": {
-    "quote": "We revolutionize software development",
-    "quoteHighlight": "at a fraction of the cost",
-    "quoteEnd": "of traditional custom solutions.",
-    "supportingText": "With AI opening new possibilities, we're pragmatic developers with the latest tools—always knowing how to solve real problems in a crazy fast way. We don't just build software, we solve real challenges and reduce admin burden."
+  "whyInventing": {
+    "kicker": "WHY INVENTING",
+    "heading": "Swedish standards. Polish execution. Built for factories & fleets.",
+    "description": "We build custom SaaS for logistics and manufacturing: fast to ship, hard to break, and designed around the reality of operations.",
+    "items": {
+      "swedish": {
+        "title": "Swedish engineering standards",
+        "body": "Predictable delivery, pragmatic decisions, and systems that don’t break at 2 AM."
+      },
+      "aiSpeed": {
+        "title": "High‑speed AI‑assisted development",
+        "body": "Shorter cycles without cutting corners—so you can automate next month, not next year."
+      },
+      "b2b": {
+        "title": "B2B operations specialization",
+        "body": "We don’t make “websites.” We make tools that calculate fuel margins, track ESG metrics, and automate warehouse floor‑plans."
+      }
+    }
+  },
+  "trust": {
+    "kicker": "SOCIAL PROOF / TRUST",
+    "heading": "Swedish Pragmatism. Polish Ambition. Global Scale.",
+    "description": "If your operation depends on spreadsheets, we’ll replace them with a secure, scalable SaaS that matches your workflow—and reduces admin chaos.",
+    "badgeScarcity": "3 slots available for Q1 2025",
+    "badgeLine": "Subscription • No upfront cost • Dedicated SaaS",
+    "cta": "Book Your Problem Discovery",
+    "micro": "15–30 min. No prep. Bring the spreadsheet."
+  },
+  "diagnostic": {
+    "kicker": "PROBLEM DIAGNOSTIC",
+    "heading": "How expensive is your spreadsheet dependency?",
+    "description": "Answer 3 questions. We’ll turn it into a scoped problem statement for your discovery call.",
+    "cardTitle": "60‑second Diagnostic",
+    "cardDescription": "No email required. Use it to brief us faster.",
+    "q1": {
+      "label": "How many hours a week do you spend copy‑pasting data between files?",
+      "placeholder": "e.g. 6"
+    },
+    "q2": {
+      "label": "How many people’s jobs depend on a single spreadsheet?",
+      "placeholder": "e.g. 3"
+    },
+    "q3": {
+      "label": "What would it be worth to have this automated by next month?",
+      "placeholder": "e.g. 25,000 EUR/month"
+    },
+    "summaryLabel": "COPY/PASTE INTO THE CONTACT FORM",
+    "summaryTemplate": "Problem Diagnostic\n- Hours/week copy‑pasting: {{hours}}\n- Roles depending on one spreadsheet: {{people}}\n- Estimated value if automated by next month: {{value}}\n\nContext: Logistics / Manufacturing\nLocation preference: Poznań or Gothenburg",
+    "reset": "Start over",
+    "back": "Back",
+    "next": "Next",
+    "finish": "See summary",
+    "cta": "Send this to Inventing",
+    "sideTitle": "What happens after you click send?",
+    "sideDescription": "We respond with a plan you can sanity‑check.",
+    "sideBullet1": "We clarify the workflow and data sources (ERP, WMS, TMS, suppliers).",
+    "sideBullet2": "We outline a first module that removes the biggest bottleneck.",
+    "sideBullet3": "You get a fixed subscription proposal—no surprise invoices."
   },
   "contact": {
-    "heading": "Get in touch",
-    "description": "Ready to revolutionize your software? Let's solve your challenges together.",
-    "cardTitle": "Contact us",
-    "cardDescription": "Fill out the form below and we'll get back to you as soon as possible.",
+    "heading": "Book Your Problem Discovery",
+    "description": "Tell us what’s breaking. We’ll map the workflow and propose a subscription module.",
+    "cardTitle": "Request a discovery call",
+    "cardDescription": "We’ll reply within 1 business day.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -50,11 +118,11 @@
       "phone": "Phone",
       "phonePlaceholder": "+46 70 123 45 67",
       "message": "Message",
-      "messagePlaceholder": "Tell us about your project...",
+      "messagePlaceholder": "Paste your diagnostic summary or describe the spreadsheet...",
       "required": "*",
-      "send": "Send message",
+      "send": "Request call",
       "sending": "Sending...",
-      "success": "Message sent successfully! We'll get back to you soon.",
+      "success": "Request sent — we’ll propose times shortly.",
       "errors": {
         "nameRequired": "Name is required",
         "emailRequired": "Email is required",
@@ -65,7 +133,18 @@
     }
   },
   "footer": {
-    "tagline": "Revolutionizing how software works",
+    "tagline": "Custom SaaS solutions on subscription. Built in Sweden & Poland.",
+    "localPresenceLabel": "Local presence",
+    "locations": {
+      "poznan": {
+        "title": "Poznań, Poland",
+        "lines": "Workshops on‑site • Polish‑speaking delivery"
+      },
+      "gothenburg": {
+        "title": "Gothenburg, Sweden",
+        "lines": "Workshops on‑site • Swedish engineering standards"
+      }
+    },
     "copyright": "All rights reserved."
   }
 }

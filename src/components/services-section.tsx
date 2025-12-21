@@ -1,12 +1,12 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ScrollAnimation } from "@/components/scroll-animation"
 import { useTranslation } from 'react-i18next'
 import { 
+  BotIcon, 
   GlobeIcon, 
   SparklesIcon, 
-  BotIcon, 
   ZapIcon 
 } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ScrollAnimation } from "@/components/scroll-animation"
 
 export function ServicesSection() {
   const { t } = useTranslation()
