@@ -5,7 +5,7 @@
   },
   "hero": {
     "kicker": "Dedykowane SaaS w abonamencie",
-    "kickerZeroUpfront": "0 SEK na start",
+    "kickerZeroUpfront": "0 na start",
     "headline": "Przestań zarządzać wielomilionową logistyką i produkcją w Excelu.",
     "subheadline": "Budujemy dedykowane oprogramowanie, które eliminuje dług techniczny i chaos administracyjny. Bez kosztu startowego. Stały miesięczny abonament.",
     "ctaPrimary": "Umów rozmowę discovery",
@@ -35,7 +35,7 @@
       },
       "engineering": {
         "title": "2) Inżynieria",
-        "body": "Budujemy dedykowany moduł SaaS. My bierzemy ryzyko developmentu; Ty płacisz 0 SEK za budowę."
+        "body": "Budujemy dedykowany moduł SaaS. My bierzemy ryzyko developmentu; Ty nie płacisz nic na start za budowę."
       },
       "optimization": {
         "title": "3) Optymalizacja",
@@ -45,11 +45,11 @@
   },
   "whyInventing": {
     "kicker": "DLACZEGO INVENTING",
-    "heading": "Szwedzkie standardy. Polska realizacja. Dla fabryk i flot.",
+    "heading": "Wysokie standardy. Szybka realizacja. Dla fabryk i flot.",
     "description": "Budujemy dedykowane SaaS dla logistyki i produkcji: szybkie we wdrożeniu, trudne do zepsucia i zaprojektowane pod realia operacji.",
     "items": {
       "swedish": {
-        "title": "Szwedzkie standardy inżynierskie",
+        "title": "Standardy inżynierskie",
         "body": "Przewidywalne dowożenie, pragmatyczne decyzje i systemy, które nie padają o 2 w nocy."
       },
       "aiSpeed": {
@@ -64,7 +64,7 @@
   },
   "trust": {
     "kicker": "ZAUFANIE / SOCIAL PROOF",
-    "heading": "Szwedzki pragmatyzm. Polska ambicja. Skala globalna.",
+    "heading": "Pragmatyczne dowożenie. Ambitna budowa. Stabilna skala.",
     "description": "Jeśli Twoja operacja zależy od arkuszy, zastąpimy je bezpiecznym, skalowalnym SaaS dopasowanym do workflow — i ograniczymy chaos administracyjny.",
     "badgeScarcity": "3 miejsca dostępne na Q1 2025",
     "badgeLine": "Abonament • Bez kosztu startowego • Dedykowane SaaS",
@@ -87,7 +87,7 @@
     },
     "q3": {
       "label": "Ile byłoby warte zautomatyzowanie tego do przyszłego miesiąca?",
-      "placeholder": "np. 25 000 EUR/mies."
+      "placeholder": "np. 25 000 / mies."
     },
     "summaryLabel": "SKOPIUJ I WKLEJ DO FORMULARZA",
     "summaryTemplate": "Diagnostyka problemu\n- Godz./tydz. kopiuj‑wklej: {{hours}}\n- Role zależne od jednego arkusza: {{people}}\n- Szacowana wartość automatyzacji do przyszłego miesiąca: {{value}}\n\nKontekst: logistyka / produkcja",
@@ -111,11 +111,11 @@
       "name": "Imię",
       "namePlaceholder": "Twoje imię",
       "email": "E-mail",
-      "emailPlaceholder": "twoj.email@przyklad.pl",
+      "emailPlaceholder": "twoj.email@example.com",
       "company": "Firma",
       "companyPlaceholder": "Twoja firma",
       "phone": "Telefon",
-      "phonePlaceholder": "+48 123 456 789",
+      "phonePlaceholder": "np. +00 123 456 789",
       "message": "Wiadomość",
       "messagePlaceholder": "Wklej podsumowanie diagnostyki lub opisz arkusz...",
       "required": "*",

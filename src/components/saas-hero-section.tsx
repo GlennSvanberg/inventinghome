@@ -12,7 +12,7 @@ export function SaaSHeroSection() {
       <div className="absolute inset-0 blueprint-grid pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20">
+      <div className="relative max-w-7xl mx-auto px-6 pt-20 sm:pt-24 lg:pt-28 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
             <div className="flex flex-wrap items-center gap-2 mb-6">
@@ -24,7 +24,7 @@ export function SaaSHeroSection() {
               </Badge>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.02] font-display">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.02] font-display">
               {t("hero.headline")}
             </h1>
 
