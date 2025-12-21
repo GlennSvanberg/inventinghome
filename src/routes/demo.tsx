@@ -1,4 +1,4 @@
-import { Link, createFileRoute } from '@tanstack/react-router'
+import { Link, Outlet, createFileRoute, useRouterState } from '@tanstack/react-router'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { getAllDemos } from '@/components/demos/registry'
 import { Badge } from '@/components/ui/badge'
@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
 export const Route = createFileRoute('/demo')({
-  component: DemoIndex,
+  component: DemoLayout,
   head: () => ({
     meta: [
       { title: 'Inventing — Demo Engine' },
@@ -15,6 +15,17 @@ export const Route = createFileRoute('/demo')({
     ],
   }),
 })
+
+function DemoLayout() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname })
+  const isIndex = pathname === '/demo' || pathname === '/demo/'
+
+  if (!isIndex) {
+    return <Outlet />
+  }
+
+  return <DemoIndex />
+}
 
 function DemoIndex() {
   const demos = getAllDemos()
@@ -31,14 +42,14 @@ function DemoIndex() {
               <Sparkles className="h-4 w-4 text-primary" />
               <span>Demo Engine</span>
               <Badge variant="secondary" className="border-white/10">
-                prototypes
+                live demos
               </Badge>
             </div>
             <h1 className="mt-2 font-display text-3xl tracking-tight sm:text-4xl">
               Live SaaS demos
             </h1>
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-              Polished, interactive prototypes you can share with B2B clients in seconds.
+              Explore live, clickable demo environments—open a link and let clients experience real flows.
             </p>
           </div>
         </header>
