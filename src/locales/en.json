@@ -115,7 +115,7 @@
       "company": "Company",
       "companyPlaceholder": "Your company",
       "phone": "Phone",
-      "phonePlaceholder": "e.g. +00 123 456 789",
+      "phonePlaceholder": "e.g. +46 70 123 45 67",
       "message": "Message",
       "messagePlaceholder": "Paste your diagnostic summary or describe the spreadsheet...",
       "required": "*",
