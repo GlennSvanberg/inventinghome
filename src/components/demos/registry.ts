@@ -1,5 +1,6 @@
 import { LogisticsPro } from './LogisticsPro'
 import { BuildFlow } from './BuildFlow'
+import { ElectricianQA } from './ElectricianQA'
 import type { ComponentType } from 'react'
 
 export type DemoRegistryEntry = {
@@ -21,6 +22,12 @@ export const demoRegistry = {
     title: 'BuildFlow',
     description: 'Task-driven construction workflow replacing spreadsheet checklists.',
     Component: BuildFlow,
+  },
+  'site-commission': {
+    slug: 'site-commission',
+    title: 'ElectricianQA',
+    description: 'Mobile-first site commissioning assistant with photos, inputs, and conditional test flows.',
+    Component: ElectricianQA,
   },
 } satisfies Record<string, DemoRegistryEntry>
 
