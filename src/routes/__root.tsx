@@ -18,11 +18,12 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Inventing',
+        title: 'Inventing — Custom SaaS on Subscription',
       },
       {
         name: 'description',
-        content: 'We revolutionize how software works. With AI, new possibilities have arisen—we deliver solutions at a fraction of what custom software previously cost. Pragmatic developers solving real challenges and reducing admin burden.',
+        content:
+          'Custom SaaS solutions on a fixed monthly subscription (no upfront cost) for logistics and manufacturing leaders. Replace spreadsheet chaos with secure, scalable software tailored to your workflow.',
       },
     ],
     links: [

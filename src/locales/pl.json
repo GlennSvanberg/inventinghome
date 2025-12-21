@@ -1,45 +1,112 @@
 {
   "meta": {
-    "title": "Inventing",
-    "description": "Rewolucjonizujemy sposób działania oprogramowania. Dzięki AI pojawiły się nowe możliwości—dostarczamy rozwiązania za ułamek kosztów, które wcześniej kosztowało niestandardowe oprogramowanie. Pragmatyczni deweloperzy rozwiązujący prawdziwe wyzwania i redukujący obciążenie administracyjne."
+    "title": "Inventing — Dedykowane SaaS w abonamencie",
+    "description": "Dedykowane rozwiązania SaaS w stałym abonamencie (bez kosztu startowego) dla liderów logistyki i produkcji. Zamień chaos arkuszy na bezpieczne, skalowalne oprogramowanie dopasowane do Twojego procesu."
   },
   "hero": {
-    "title": "Inventing",
-    "tagline": "Rewolucjonizujemy sposób działania oprogramowania",
-    "taglineHighlight": "za ułamek kosztów niestandardowych rozwiązań",
-    "cta": "Skontaktuj się z nami"
+    "kicker": "Dedykowane SaaS w abonamencie",
+    "kickerZeroUpfront": "0 SEK na start",
+    "headline": "Przestań zarządzać wielomilionową logistyką i produkcją w Excelu.",
+    "subheadline": "Budujemy dedykowane oprogramowanie, które eliminuje dług techniczny i chaos administracyjny. Bez kosztu startowego. Stały miesięczny abonament.",
+    "ctaPrimary": "Umów rozmowę discovery",
+    "ctaSecondary": "Zrób 60‑sek. diagnostykę",
+    "visualTitle": "Od chaosu w arkuszach → do czystego dashboardu",
+    "visualBefore": "PRZED",
+    "visualAfter": "PO",
+    "visualDashboard": "Dashboard operacyjny",
+    "visualLive": "NA ŻYWO",
+    "visualMetric1": "Wysyłki na czas",
+    "visualMetric2": "Czas admin",
+    "microProof": "Dla liderów operacji, którzy potrzebują niezawodności — nie kolejnego narzędzia do pilnowania."
   },
-  "services": {
-    "heading": "Co robimy",
-    "description": "Pragmatyczni deweloperzy z najnowszymi narzędziami, rozwiązujący prawdziwe wyzwania i redukujący obciążenie administracyjne—nie tylko budujemy oprogramowanie, ale szybko rozwiązujemy problemy",
-    "buildWebsite": {
-      "title": "Zbuduj stronę internetową",
-      "description": "Nowoczesne, responsywne strony internetowe rozwiązujące prawdziwe wyzwania biznesowe. Zbudowane z najnowocześniejszą technologią za ułamek tradycyjnych kosztów."
-    },
-    "customTransformation": {
-      "title": "Niestandardowa transformacja",
-      "description": "Przekształć swoje procesy biznesowe za pomocą rozwiązań napędzanych przez AI dostosowanych do Twoich potrzeb. Rozwiązuj prawdziwe wyzwania, nie tylko buduj oprogramowanie."
-    },
-    "aiAutomation": {
-      "title": "Automatyzacja napędzana przez AI",
-      "description": "Inteligentna automatyzacja redukująca obciążenie administracyjne i rozwiązująca prawdziwe problemy. Wykorzystujemy najnowsze narzędzia AI, aby szybko dostarczać rozwiązania."
-    },
-    "removingAdmin": {
-      "title": "Redukcja obciążenia administracyjnego",
-      "description": "Inteligentnie automatyzuj powtarzalne zadania i przepływy pracy. Skup się na wzroście, podczas gdy my zajmujemy się administracją—rozwiązujemy prawdziwe wyzwania, nie tylko budujemy oprogramowanie."
+  "excelHell": {
+    "kicker": "„PIEKŁO EXCELA”",
+    "heading": "Excel jest genialny. Ale magazyn to nie miejsce na formuły.",
+    "copy": "Excel to arcydzieło oprogramowania, ale to niebezpieczne miejsce do prowadzenia magazynu. Gdy „ludzka baza danych” odchodzi albo formuła się psuje, staje przychód. Zamieniamy Twoje „Piekło Excela” w bezpieczne, skalowalne SaaS dopasowane do Twojego konkretnego workflow."
+  },
+  "partnership": {
+    "kicker": "MODEL „ZERO‑RYZYKA”",
+    "heading": "My bierzemy ryzyko budowy. Ty zostajesz z efektem.",
+    "description": "Trzy kroki od zależności od arkuszy do dedykowanego modułu SaaS — a potem stały miesięczny abonament, gdy system działa (hosting, bezpieczeństwo i aktualizacje w cenie).",
+    "steps": {
+      "extraction": {
+        "title": "1) Ekstrakcja",
+        "body": "Siadamy z Twoim zespołem i mapujemy ręczne, „brudne” procesy stojące za arkuszem."
+      },
+      "engineering": {
+        "title": "2) Inżynieria",
+        "body": "Budujemy dedykowany moduł SaaS. My bierzemy ryzyko developmentu; Ty płacisz 0 SEK za budowę."
+      },
+      "optimization": {
+        "title": "3) Optymalizacja",
+        "body": "Po uruchomieniu płacisz stały miesięczny abonament. My ogarniamy hosting, bezpieczeństwo i aktualizacje. Ty skupiasz się na wzroście."
+      }
     }
   },
-  "valueProposition": {
-    "quote": "Rewolucjonizujemy rozwój oprogramowania",
-    "quoteHighlight": "za ułamek kosztów",
-    "quoteEnd": "tradycyjnych niestandardowych rozwiązań.",
-    "supportingText": "Dzięki AI otwierającemu nowe możliwości jesteśmy pragmatycznymi deweloperami z najnowszymi narzędziami—zawsze wiemy, jak rozwiązywać prawdziwe problemy w szalenie szybki sposób. Nie tylko budujemy oprogramowanie, rozwiązujemy prawdziwe wyzwania i redukujemy obciążenie administracyjne."
+  "whyInventing": {
+    "kicker": "DLACZEGO INVENTING",
+    "heading": "Szwedzkie standardy. Polska realizacja. Dla fabryk i flot.",
+    "description": "Budujemy dedykowane SaaS dla logistyki i produkcji: szybkie we wdrożeniu, trudne do zepsucia i zaprojektowane pod realia operacji.",
+    "items": {
+      "swedish": {
+        "title": "Szwedzkie standardy inżynierskie",
+        "body": "Przewidywalne dowożenie, pragmatyczne decyzje i systemy, które nie padają o 2 w nocy."
+      },
+      "aiSpeed": {
+        "title": "Szybki development wspierany AI",
+        "body": "Krótsze cykle bez cięcia jakości — automatyzujesz w przyszłym miesiącu, nie w przyszłym roku."
+      },
+      "b2b": {
+        "title": "Specjalizacja B2B w operacjach",
+        "body": "Nie robimy „stron”. Robimy narzędzia liczące marże paliwowe, śledzące ESG i automatyzujące plany hal magazynowych."
+      }
+    }
+  },
+  "trust": {
+    "kicker": "ZAUFANIE / SOCIAL PROOF",
+    "heading": "Szwedzki pragmatyzm. Polska ambicja. Skala globalna.",
+    "description": "Jeśli Twoja operacja zależy od arkuszy, zastąpimy je bezpiecznym, skalowalnym SaaS dopasowanym do workflow — i ograniczymy chaos administracyjny.",
+    "badgeScarcity": "3 miejsca dostępne na Q1 2025",
+    "badgeLine": "Abonament • Bez kosztu startowego • Dedykowane SaaS",
+    "cta": "Umów discovery",
+    "micro": "15–30 min. Bez przygotowań. Przynieś arkusz."
+  },
+  "diagnostic": {
+    "kicker": "DIAGNOSTYKA PROBLEMU",
+    "heading": "Ile kosztuje Cię zależność od arkuszy?",
+    "description": "Odpowiedz na 3 pytania. Zamienimy to w precyzyjny opis problemu na rozmowę discovery.",
+    "cardTitle": "Diagnostyka 60 sekund",
+    "cardDescription": "Bez e‑maila. Służy do szybszego briefu.",
+    "q1": {
+      "label": "Ile godzin tygodniowo spędzasz na kopiuj‑wklej między plikami?",
+      "placeholder": "np. 6"
+    },
+    "q2": {
+      "label": "Ile osób ma pracę zależną od jednego arkusza?",
+      "placeholder": "np. 3"
+    },
+    "q3": {
+      "label": "Ile byłoby warte zautomatyzowanie tego do przyszłego miesiąca?",
+      "placeholder": "np. 25 000 EUR/mies."
+    },
+    "summaryLabel": "SKOPIUJ I WKLEJ DO FORMULARZA",
+    "summaryTemplate": "Diagnostyka problemu\n- Godz./tydz. kopiuj‑wklej: {{hours}}\n- Role zależne od jednego arkusza: {{people}}\n- Szacowana wartość automatyzacji do przyszłego miesiąca: {{value}}\n\nKontekst: logistyka / produkcja",
+    "reset": "Zacznij od nowa",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "finish": "Zobacz podsumowanie",
+    "cta": "Wyślij to do Inventing",
+    "sideTitle": "Co dalej po kliknięciu „Wyślij”?",
+    "sideDescription": "Odpowiemy planem, który łatwo zweryfikujesz.",
+    "sideBullet1": "Doprecyzujemy workflow i źródła danych (ERP, WMS, TMS, dostawcy).",
+    "sideBullet2": "Zaproponujemy pierwszy moduł usuwający największe wąskie gardło.",
+    "sideBullet3": "Dostajesz ofertę stałego abonamentu — bez „niespodziewanych” faktur."
   },
   "contact": {
-    "heading": "Skontaktuj się",
-    "description": "Gotowy zrewolucjonizować swoje oprogramowanie? Rozwiążmy Twoje wyzwania razem.",
-    "cardTitle": "Skontaktuj się z nami",
-    "cardDescription": "Wypełnij poniższy formularz, a skontaktujemy się z Tobą tak szybko, jak to możliwe.",
+    "heading": "Umów rozmowę discovery",
+    "description": "Powiedz, co się sypie. Zmapujemy proces i zaproponujemy moduł w abonamencie.",
+    "cardTitle": "Poproś o rozmowę",
+    "cardDescription": "Odpowiemy w ciągu 1 dnia roboczego.",
     "form": {
       "name": "Imię",
       "namePlaceholder": "Twoje imię",
@@ -50,11 +117,11 @@
       "phone": "Telefon",
       "phonePlaceholder": "+48 123 456 789",
       "message": "Wiadomość",
-      "messagePlaceholder": "Opowiedz nam o swoim projekcie...",
+      "messagePlaceholder": "Wklej podsumowanie diagnostyki lub opisz arkusz...",
       "required": "*",
-      "send": "Wyślij wiadomość",
+      "send": "Poproś o rozmowę",
       "sending": "Wysyłanie...",
-      "success": "Wiadomość wysłana pomyślnie! Wkrótce się z Tobą skontaktujemy.",
+      "success": "Wysłano — zaraz zaproponujemy terminy.",
       "errors": {
         "nameRequired": "Imię jest wymagane",
         "emailRequired": "E-mail jest wymagany",
@@ -65,7 +132,7 @@
     }
   },
   "footer": {
-    "tagline": "Rewolucjonizujemy sposób działania oprogramowania",
+    "tagline": "Dedykowane SaaS w abonamencie. Dla zespołów operacyjnych.",
     "copyright": "Wszelkie prawa zastrzeżone."
   }
 }

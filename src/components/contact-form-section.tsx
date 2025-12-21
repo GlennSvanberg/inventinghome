@@ -1,6 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { AlertCircleIcon, CheckCircleIcon, LoaderIcon, MailIcon } from "lucide-react"
+import { useTranslation } from 'react-i18next'
 import { Button } from "@/components/ui/button"
 import { ScrollAnimation } from "@/components/scroll-animation"
 import { Input } from "@/components/ui/input"
@@ -8,8 +10,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Field, FieldGroup } from "@/components/ui/field"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { LoaderIcon, CheckCircleIcon, AlertCircleIcon, MailIcon } from "lucide-react"
-import { useTranslation } from 'react-i18next'
+import { DIAGNOSTIC_STORAGE_KEY } from "@/components/problem-diagnostic-section"
 
 type FormState = {
   name: string
@@ -32,6 +33,19 @@ export function ContactFormSection() {
   })
   const [submitState, setSubmitState] = useState<SubmitState>("idle")
   const [errorMessage, setErrorMessage] = useState<string>("")
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    try {
+      const prefill = localStorage.getItem(DIAGNOSTIC_STORAGE_KEY)
+      if (prefill && !formData.message.trim()) {
+        setFormData((prev) => ({ ...prev, message: prefill }))
+        localStorage.removeItem(DIAGNOSTIC_STORAGE_KEY)
+      }
+    } catch {
+      // ignore
+    }
+  }, [formData.message])
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -107,7 +121,8 @@ export function ContactFormSection() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-muted/30">
+    <section id="contact" className="py-24 px-6 bg-muted/20 relative overflow-hidden">
+      <div className="absolute inset-0 blueprint-grid opacity-35 pointer-events-none" />
       <div className="max-w-2xl mx-auto">
         <ScrollAnimation direction="fade">
           <div className="text-center mb-12">

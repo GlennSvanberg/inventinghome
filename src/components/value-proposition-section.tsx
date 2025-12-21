@@ -1,5 +1,5 @@
-import { ScrollAnimation } from "@/components/scroll-animation"
 import { useTranslation } from 'react-i18next'
+import { ScrollAnimation } from "@/components/scroll-animation"
 
 export function ValuePropositionSection() {
   const { t } = useTranslation()

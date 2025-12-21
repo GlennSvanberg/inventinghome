@@ -1,45 +1,112 @@
 {
   "meta": {
-    "title": "Inventing",
-    "description": "Vi revolutionerar hur mjukvara fungerar. Med AI har nya möjligheter uppstått—vi levererar lösningar till en bråkdel av vad anpassad mjukvara tidigare kostade. Pragmatiska utvecklare som löser verkliga utmaningar och minskar administrativ börda."
+    "title": "Inventing — Skräddarsytt SaaS på abonnemang",
+    "description": "Skräddarsydda SaaS‑lösningar på fast månadsabonnemang (ingen startkostnad) för logistik- och tillverkningsledare. Byt kalkylbladskaos mot säker, skalbar mjukvara anpassad till ert arbetssätt."
   },
   "hero": {
-    "title": "Inventing",
-    "tagline": "Vi revolutionerar hur mjukvara fungerar",
-    "taglineHighlight": "till en bråkdel av vad anpassade lösningar tidigare kostade",
-    "cta": "Kontakta oss"
+    "kicker": "Skräddarsytt SaaS på abonnemang",
+    "kickerZeroUpfront": "0 SEK i startkostnad",
+    "headline": "Sluta driva din mångmiljon‑logistik och produktion i Excel.",
+    "subheadline": "Vi bygger den skräddarsydda mjukvaran du behöver för att eliminera teknisk skuld och administrativt kaos. Ingen startkostnad. Fast månadsabonnemang.",
+    "ctaPrimary": "Boka problem‑discovery",
+    "ctaSecondary": "Gör 60‑sekundersdiagnosen",
+    "visualTitle": "Från kalkylbladskaos → till ren operations‑dashboard",
+    "visualBefore": "FÖRE",
+    "visualAfter": "EFTER",
+    "visualDashboard": "Operations‑dashboard",
+    "visualLive": "LIVE",
+    "visualMetric1": "Leverans i tid",
+    "visualMetric2": "Admin‑tid",
+    "microProof": "För operationsledare som behöver pålitlighet — inte ännu ett verktyg att passa."
   },
-  "services": {
-    "heading": "Vad vi gör",
-    "description": "Pragmatiska utvecklare med de senaste verktygen, löser verkliga utmaningar och minskar administrativ börda—inte bara bygger mjukvara, utan löser problem snabbt",
-    "buildWebsite": {
-      "title": "Bygg en webbplats",
-      "description": "Modern, responsiva webbplatser som löser verkliga affärsutmaningar. Byggda med toppmodern teknik till en bråkdel av traditionella kostnader."
-    },
-    "customTransformation": {
-      "title": "Anpassad transformation",
-      "description": "Förvandla dina affärsprocesser med AI-drivna lösningar skräddarsydda för dina behov. Lös verkliga utmaningar, inte bara bygg mjukvara."
-    },
-    "aiAutomation": {
-      "title": "AI-driven automatisering",
-      "description": "Intelligent automatisering som minskar administrativ börda och löser verkliga problem. Vi utnyttjar de senaste AI-verktygen för att leverera lösningar snabbt."
-    },
-    "removingAdmin": {
-      "title": "Minska administrativ börda",
-      "description": "Automatisera repetitiva uppgifter och arbetsflöden intelligent. Fokusera på tillväxt medan vi hanterar administrationen—löser verkliga utmaningar, inte bara bygger mjukvara."
+  "excelHell": {
+    "kicker": "”EXCEL‑HELvetet”",
+    "heading": "Excel är ett mästerverk. Men ett farligt ställe att driva ett lager.",
+    "copy": "Excel är ett mästerverk av mjukvara, men ett farligt ställe att driva ett lager. När er ”mänskliga databas” slutar eller en formel går sönder, stannar intäkterna. Vi förvandlar ert ”Excel‑helvete” till ett säkert, skalbart SaaS anpassat till ert specifika arbetssätt."
+  },
+  "partnership": {
+    "kicker": "”NOLL‑RISK”‑MODELLEN",
+    "heading": "Vi tar byggrisken. Ni behåller uppsidan.",
+    "description": "Tre steg från kalkylbladsberoende till en dedikerad SaaS‑modul — sedan fast månadsabonnemang när det är live (hosting, säkerhet och uppdateringar ingår).",
+    "steps": {
+      "extraction": {
+        "title": "1) Extraktionen",
+        "body": "Vi sitter med ert team och kartlägger de stökiga manuella processerna bakom kalkylbladet."
+      },
+      "engineering": {
+        "title": "2) Ingenjörsarbetet",
+        "body": "Vi bygger er dedikerade SaaS‑modul. Vi tar utvecklingsrisken; ni betalar 0 SEK för bygget."
+      },
+      "optimization": {
+        "title": "3) Optimeringen",
+        "body": "När det är live betalar ni ett fast månadsabonnemang. Vi hanterar hosting, säkerhet och uppdateringar. Ni fokuserar på tillväxt."
+      }
     }
   },
-  "valueProposition": {
-    "quote": "Vi revolutionerar mjukvaruutveckling",
-    "quoteHighlight": "till en bråkdel av kostnaden",
-    "quoteEnd": "av traditionella anpassade lösningar.",
-    "supportingText": "Med AI som öppnar nya möjligheter är vi pragmatiska utvecklare med de senaste verktygen—alltid vetande hur man löser verkliga problem på ett galet snabbt sätt. Vi bygger inte bara mjukvara, vi löser verkliga utmaningar och minskar administrativ börda."
+  "whyInventing": {
+    "kicker": "VARFÖR INVENTING",
+    "heading": "Svenska standarder. Polsk leverans. Byggt för fabriker och flöden.",
+    "description": "Vi bygger skräddarsytt SaaS för logistik och tillverkning: snabbt att leverera, svårt att slå sönder och designat för verkligheten i operations.",
+    "items": {
+      "swedish": {
+        "title": "Svenska ingenjörsstandarder",
+        "body": "Förutsägbar leverans, pragmatiska beslut och system som inte faller isär kl. 02:00."
+      },
+      "aiSpeed": {
+        "title": "Hög hastighet med AI‑stöd",
+        "body": "Kortare cykler utan att tumma på kvalitet — automatisera nästa månad, inte nästa år."
+      },
+      "b2b": {
+        "title": "B2B‑specialisering i operations",
+        "body": "Vi bygger inte ”webbplatser”. Vi bygger verktyg som räknar bränslemarginaler, spårar ESG och automatiserar lagerlayouter."
+      }
+    }
+  },
+  "trust": {
+    "kicker": "FÖRTROENDE / SOCIAL PROOF",
+    "heading": "Svensk pragmatism. Polsk ambition. Global skala.",
+    "description": "Om er verksamhet hänger på kalkylblad, ersätter vi dem med ett säkert, skalbart SaaS som matchar ert arbetssätt — och minskar admin‑kaos.",
+    "badgeScarcity": "3 platser kvar för Q1 2025",
+    "badgeLine": "Abonnemang • Ingen startkostnad • Dedikerat SaaS",
+    "cta": "Boka problem‑discovery",
+    "micro": "15–30 min. Ingen förberedelse. Ta med kalkylbladet."
+  },
+  "diagnostic": {
+    "kicker": "PROBLEMDIAGNOS",
+    "heading": "Hur dyrt är ert kalkylbladsberoende?",
+    "description": "Svara på 3 frågor. Vi gör om det till en avgränsad problemformulering inför discovery‑mötet.",
+    "cardTitle": "60‑sekundersdiagnos",
+    "cardDescription": "Ingen e‑post krävs. Använd för att briefa oss snabbare.",
+    "q1": {
+      "label": "Hur många timmar i veckan lägger ni på att copy‑paste mellan filer?",
+      "placeholder": "t.ex. 6"
+    },
+    "q2": {
+      "label": "Hur många personers jobb beror på ett enda kalkylblad?",
+      "placeholder": "t.ex. 3"
+    },
+    "q3": {
+      "label": "Vad vore det värt att få detta automatiserat till nästa månad?",
+      "placeholder": "t.ex. 25 000 EUR/mån"
+    },
+    "summaryLabel": "KOPIERA/PASTA IN I KONTAKTFORMULÄRET",
+    "summaryTemplate": "Problemdiagnos\n- Timmar/vecka copy‑paste: {{hours}}\n- Roller beroende av ett kalkylblad: {{people}}\n- Uppskattat värde om automatiserat till nästa månad: {{value}}\n\nKontext: logistik / tillverkning",
+    "reset": "Börja om",
+    "back": "Tillbaka",
+    "next": "Nästa",
+    "finish": "Se sammanfattning",
+    "cta": "Skicka detta till Inventing",
+    "sideTitle": "Vad händer efter att du klickar ”Skicka”?",
+    "sideDescription": "Vi svarar med en plan du kan sanity‑checka.",
+    "sideBullet1": "Vi klargör workflow och datakällor (ERP, WMS, TMS, leverantörer).",
+    "sideBullet2": "Vi föreslår en första modul som tar bort största flaskhalsen.",
+    "sideBullet3": "Ni får ett fast abonnemangsförslag — inga överraskningsfakturor."
   },
   "contact": {
-    "heading": "Kontakta oss",
-    "description": "Redo att revolutionera din mjukvara? Låt oss lösa dina utmaningar tillsammans.",
-    "cardTitle": "Kontakta oss",
-    "cardDescription": "Fyll i formuläret nedan så återkommer vi så snart som möjligt.",
+    "heading": "Boka discovery‑möte",
+    "description": "Berätta vad som fallerar. Vi kartlägger workflow och föreslår en abonnemangsmodul.",
+    "cardTitle": "Be om ett möte",
+    "cardDescription": "Vi återkommer inom 1 arbetsdag.",
     "form": {
       "name": "Namn",
       "namePlaceholder": "Ditt namn",
@@ -50,11 +117,11 @@
       "phone": "Telefon",
       "phonePlaceholder": "+46 70 123 45 67",
       "message": "Meddelande",
-      "messagePlaceholder": "Berätta om ditt projekt...",
+      "messagePlaceholder": "Klistra in diagnosens sammanfattning eller beskriv kalkylbladet...",
       "required": "*",
-      "send": "Skicka meddelande",
+      "send": "Be om möte",
       "sending": "Skickar...",
-      "success": "Meddelandet skickades! Vi återkommer snart.",
+      "success": "Skickat — vi föreslår tider inom kort.",
       "errors": {
         "nameRequired": "Namn krävs",
         "emailRequired": "E-post krävs",
@@ -65,7 +132,7 @@
     }
   },
   "footer": {
-    "tagline": "Revolutionerar hur mjukvara fungerar",
+    "tagline": "Skräddarsytt SaaS på abonnemang. För operations‑team.",
     "copyright": "Alla rättigheter förbehållna."
   }
 }
