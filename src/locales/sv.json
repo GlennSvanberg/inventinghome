@@ -90,6 +90,8 @@
       "placeholder": "t.ex. 25 000 / mån"
     },
     "summaryLabel": "KOPIERA/PASTA IN I KONTAKTFORMULÄRET",
+    "copy": "Kopiera",
+    "copied": "Kopierat",
     "summaryTemplate": "Problemdiagnos\n- Timmar/vecka copy‑paste: {{hours}}\n- Roller beroende av ett kalkylblad: {{people}}\n- Uppskattat värde om automatiserat till nästa månad: {{value}}\n\nKontext: logistik / tillverkning",
     "reset": "Börja om",
     "back": "Tillbaka",

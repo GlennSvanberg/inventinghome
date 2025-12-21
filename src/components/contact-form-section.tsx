@@ -122,14 +122,14 @@ export function ContactFormSection() {
 
   return (
     <section id="contact" className="py-24 px-6 bg-muted/20 relative overflow-hidden">
-      <div className="absolute inset-0 blueprint-grid opacity-35 pointer-events-none" />
+      <div className="absolute inset-0 blueprint-grid opacity-18 pointer-events-none" />
       <div className="max-w-2xl mx-auto">
         <ScrollAnimation direction="fade">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight font-display mb-4 leading-[1.05]">
               {t('contact.heading')}
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               {t('contact.description')}
             </p>
           </div>

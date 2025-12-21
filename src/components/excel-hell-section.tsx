@@ -16,7 +16,7 @@ function SpreadsheetMock() {
           {Array.from({ length: 12 }).map((_, i) => (
             <div
               key={`h-${i}`}
-              className="bg-muted/30 text-[10px] text-muted-foreground font-mono px-2 py-1"
+              className="bg-[#0F172A]/70 text-[10px] text-slate-300 font-mono px-2 py-1"
             >
               {String.fromCharCode(65 + i)}
             </div>
@@ -29,7 +29,7 @@ function SpreadsheetMock() {
                 <div
                   key={`c-${r}-${c}`}
                   className={[
-                    "bg-background/60 px-2 py-2 font-mono text-[10px] text-foreground/80",
+                    "bg-[#0B1220] px-2 py-2 font-mono text-[10px] text-slate-200/90",
                     "min-h-[26px]",
                     isFormula ? "text-primary/90" : "",
                   ].join(" ")}
@@ -50,7 +50,7 @@ export function ExcelHellSection() {
 
   return (
     <section className="relative py-20 px-6">
-      <div className="absolute inset-0 blueprint-grid opacity-60 pointer-events-none" />
+      <div className="absolute inset-0 blueprint-grid opacity-25 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <ScrollAnimation direction="fade">

@@ -11,7 +11,7 @@ export function TrustSection() {
   return (
     <section className="py-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-background to-primary/10 pointer-events-none" />
-      <div className="absolute inset-0 blueprint-grid opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 blueprint-grid opacity-18 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto">
         <ScrollAnimation direction="fade">
@@ -32,7 +32,10 @@ export function TrustSection() {
                   <Badge className="font-mono text-xs tracking-wide bg-primary/15 text-primary border border-primary/30">
                     {t("trust.badgeScarcity")}
                   </Badge>
-                  <Badge variant="secondary" className="glass font-mono text-xs tracking-wide">
+                  <Badge
+                    variant="secondary"
+                    className="glass font-mono text-xs tracking-wide font-semibold border border-white/20 text-slate-200"
+                  >
                     {t("trust.badgeLine")}
                   </Badge>
                 </div>

@@ -90,6 +90,8 @@
       "placeholder": "np. 25 000 / mies."
     },
     "summaryLabel": "SKOPIUJ I WKLEJ DO FORMULARZA",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano",
     "summaryTemplate": "Diagnostyka problemu\n- Godz./tydz. kopiuj‑wklej: {{hours}}\n- Role zależne od jednego arkusza: {{people}}\n- Szacowana wartość automatyzacji do przyszłego miesiąca: {{value}}\n\nKontekst: logistyka / produkcja",
     "reset": "Zacznij od nowa",
     "back": "Wstecz",

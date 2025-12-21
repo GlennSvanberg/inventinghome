@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { ArrowRightIcon, RotateCcwIcon } from "lucide-react"
+import { ArrowRightIcon, CheckIcon, CopyIcon, RotateCcwIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -20,6 +20,7 @@ type DiagnosticState = {
 export function ProblemDiagnosticSection() {
   const { t } = useTranslation()
   const [step, setStep] = useState<0 | 1 | 2 | 3>(0)
+  const [copied, setCopied] = useState(false)
   const [data, setData] = useState<DiagnosticState>({
     hoursPerWeek: "",
     peopleDependent: "",
@@ -43,7 +44,20 @@ export function ProblemDiagnosticSection() {
 
   const reset = () => {
     setData({ hoursPerWeek: "", peopleDependent: "", valuePerMonth: "" })
+    setCopied(false)
     setStep(0)
+  }
+
+  const copySummary = async () => {
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(summary)
+        setCopied(true)
+        window.setTimeout(() => setCopied(false), 1400)
+      }
+    } catch {
+      // ignore (clipboard permissions / unsupported)
+    }
   }
 
   const saveAndScrollToContact = () => {
@@ -55,7 +69,7 @@ export function ProblemDiagnosticSection() {
 
   return (
     <section id="diagnostic" className="py-20 px-6 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 blueprint-grid opacity-45 pointer-events-none" />
+      <div className="absolute inset-0 blueprint-grid opacity-20 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto">
         <ScrollAnimation direction="fade">
           <div className="max-w-3xl">
@@ -129,8 +143,29 @@ export function ProblemDiagnosticSection() {
                     <p className="font-mono text-xs tracking-widest text-muted-foreground">
                       {t("diagnostic.summaryLabel")}
                     </p>
-                    <div className="glass rounded-xl p-4 border border-border/40">
-                      <pre className="whitespace-pre-wrap text-sm font-mono text-foreground/90">
+                    <div className="relative rounded-xl border border-white/10 bg-[#0F172A] overflow-hidden">
+                      <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
+                        <div className="flex items-center gap-2">
+                          <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
+                          <span className="ml-2 font-mono text-[11px] tracking-widest text-slate-300">
+                            inventing://diagnostic
+                          </span>
+                        </div>
+                        <Button
+                          type="button"
+                          size="icon-sm"
+                          variant="ghost"
+                          onClick={copySummary}
+                          className="text-slate-200 hover:text-white"
+                          aria-label={copied ? t("diagnostic.copied") : t("diagnostic.copy")}
+                          title={copied ? t("diagnostic.copied") : t("diagnostic.copy")}
+                        >
+                          {copied ? <CheckIcon className="w-4 h-4" /> : <CopyIcon className="w-4 h-4" />}
+                        </Button>
+                      </div>
+                      <pre className="whitespace-pre-wrap text-sm font-mono text-slate-200 px-4 py-4 leading-relaxed">
                         {summary}
                       </pre>
                     </div>
