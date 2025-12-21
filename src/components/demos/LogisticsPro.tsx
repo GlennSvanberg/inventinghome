@@ -134,7 +134,7 @@ function ReconcileToast({ state }: { state: ToastState }) {
             <div className="mt-1 text-sm text-muted-foreground">
               {isProcessing
                 ? 'Processing 1,200 fuel transactions…'
-                : 'Done in 1.2s (replaces 4 hours of manual data entry).'}
+                : '1,200 transactions matched and posted.'}
             </div>
             <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
               <div
@@ -255,7 +255,7 @@ export function LogisticsPro() {
             <div className="flex items-center gap-2 text-sm">
               <FileWarning className="h-4 w-4 text-red-300" />
               <span className="font-medium">
-                Viewing: Fleet-Master-Final-v4.xlsx (LEGACY VIEW)
+                Import preview: Fleet-Master-Final-v4.xlsx
               </span>
             </div>
             <Button
@@ -285,16 +285,14 @@ export function LogisticsPro() {
                   LogisticsPro Dashboard
                 </h1>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  A clean ops dashboard replacing spreadsheet chaos in fleet dispatch.
+                  Dispatch, fuel, invoicing, and compliance overview.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
-            <Badge className="glass-primary border-primary/25 text-foreground">
-              Swedish Engineering
-            </Badge>
+            <Badge className="glass-primary border-primary/25 text-foreground">Ops</Badge>
             <Badge variant="secondary" className="border border-white/10">
               Live Ops
             </Badge>
@@ -452,7 +450,7 @@ export function LogisticsPro() {
             <div className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <ShieldCheck className="h-4 w-4 text-primary" />
-                <span>Blueprint‑grade controls. Audit‑ready data. Operator‑first UX.</span>
+                <span>Changes are logged and attributable.</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Badge variant="secondary" className="border-white/10">

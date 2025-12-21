@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from '@tanstack/react-router'
 import {
   Camera,
   CheckCircle2,
@@ -341,43 +340,26 @@ export function BuildFlow() {
               <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
                 <span className="font-medium text-foreground">BuildFlow</span>
                 <Badge variant="secondary" className="border-white/10">
-                  Task-driven workflows
+                  Workspace
                 </Badge>
-                <Badge className="glass-primary border-primary/25 text-foreground">Mobile-first</Badge>
+                <Badge className="glass-primary border-primary/25 text-foreground">Today</Badge>
               </div>
               <h1 className="mt-2 font-display text-2xl tracking-tight sm:text-3xl">
-                The Construction Workflow
+                Work Queue
               </h1>
               <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-                Replace “who updates the sheet?” with clear actions, ownership, and instant reporting.
+                Tasks needing your input across active projects.
               </p>
             </div>
           </div>
 
           <div className="flex flex-col items-start gap-2 sm:items-end">
-            <div className="text-xs font-medium text-muted-foreground">Paradigm Shift</div>
-            <div className="inline-flex rounded-2xl border border-white/10 bg-white/5 p-1">
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                disabled
-                className={cn(
-                  'h-8 rounded-xl px-3 text-foreground/60',
-                  'disabled:opacity-100 disabled:pointer-events-none',
-                )}
-              >
-                <Table2 className="mr-2 h-4 w-4" />
-                Sheet View
-              </Button>
-              <Button
-                type="button"
-                size="sm"
-                className="h-8 rounded-xl px-3 glass-button glass-button-hover text-primary-foreground"
-              >
-                <Workflow className="mr-2 h-4 w-4" />
-                Workflow View
-              </Button>
+            <div className="text-xs font-medium text-muted-foreground">Synced 2 min ago</div>
+            <div className="flex items-center gap-2">
+              <Badge variant="secondary" className="border-white/10">
+                Online
+              </Badge>
+              <Badge className="glass-primary border-primary/25 text-foreground">Auto-save</Badge>
             </div>
           </div>
         </header>
@@ -389,10 +371,10 @@ export function BuildFlow() {
               <CardTitle className="flex items-center justify-between gap-3">
                 <span className="inline-flex items-center gap-2">
                   <ClipboardList className="h-5 w-5 text-primary" />
-                  My Personal Task Inbox
+                  My Tasks
                 </span>
                 <Badge variant="secondary" className="border-white/10">
-                  urgent
+                  priority
                 </Badge>
               </CardTitle>
             </CardHeader>
@@ -459,7 +441,7 @@ export function BuildFlow() {
                           {isDone ? (
                             <>
                               <CheckCircle2 className="mr-2 h-4 w-4 text-emerald-300" />
-                              Done
+                              Completed
                             </>
                           ) : (
                             task.ctaLabel
@@ -469,10 +451,6 @@ export function BuildFlow() {
                     </div>
                   )
                 })}
-              </div>
-
-              <div className="mt-4 text-xs text-muted-foreground">
-                This inbox is personal—clear ownership replaces “who updates the sheet?”
               </div>
             </CardContent>
           </Card>
@@ -502,9 +480,6 @@ export function BuildFlow() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-4 text-xs text-muted-foreground">
-                No chasing updates. The feed is the truth.
-              </div>
             </CardContent>
           </Card>
 
@@ -535,9 +510,9 @@ export function BuildFlow() {
               <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div className="min-w-0">
-                    <div className="text-sm font-semibold">The “Excel Killer” feature</div>
+                    <div className="text-sm font-semibold">Daily Summary</div>
                     <div className="mt-1 text-xs text-muted-foreground">
-                      Generate a board-ready daily report in seconds.
+                      Generate a shareable update for stakeholders.
                     </div>
                   </div>
                   <Button
@@ -546,7 +521,7 @@ export function BuildFlow() {
                     onClick={() => setReportOpen(true)}
                   >
                     <FileText className="mr-2 h-4 w-4" />
-                    Generate Daily Report
+                    Generate Summary
                   </Button>
                 </div>
               </div>
@@ -560,10 +535,10 @@ export function BuildFlow() {
               <CardTitle className="flex items-center justify-between gap-3">
                 <span className="inline-flex items-center gap-2">
                   <Workflow className="h-5 w-5 text-primary" />
-                  Action Cards (no tables)
+                  Quick Actions
                 </span>
                 <Badge variant="secondary" className="border-white/10">
-                  mobile-friendly
+                  shortcuts
                 </Badge>
               </CardTitle>
             </CardHeader>
@@ -607,42 +582,6 @@ export function BuildFlow() {
             </CardContent>
           </Card>
         </section>
-
-        <section className="mt-6">
-          <Card className="border border-primary/35 bg-primary/10 text-foreground shadow-[0_0_0_1px_rgba(96,165,250,0.15)]">
-            <CardContent className="p-6">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div className="min-w-0">
-                  <div className="text-sm font-semibold">Jump to other demos</div>
-                  <div className="mt-1 text-sm text-muted-foreground">
-                    Compare workflow UX vs dispatch dashboards.
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2 sm:flex-row">
-                  <Link
-                    to="/demo/logistics"
-                    className={cn(
-                      'inline-flex h-9 items-center justify-center rounded-4xl px-4 text-sm font-medium',
-                      'bg-primary text-primary-foreground hover:bg-primary/92 transition-colors',
-                    )}
-                  >
-                    <Truck className="mr-2 h-4 w-4" />
-                    See Logistics Fleet Demo
-                  </Link>
-                  <Link
-                    to="/demo"
-                    className={cn(
-                      'inline-flex h-9 items-center justify-center rounded-4xl px-4 text-sm font-medium',
-                      'border border-white/15 bg-white/5 hover:bg-white/10 transition-colors',
-                    )}
-                  >
-                    All demos
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
       </div>
 
       <AlertDialog open={reportOpen} onOpenChange={setReportOpen}>
@@ -651,10 +590,8 @@ export function BuildFlow() {
             <div className="grid h-14 w-14 place-items-center rounded-2xl border border-primary/25 bg-primary/10 text-primary">
               <FileText className="h-7 w-7" />
             </div>
-            <AlertDialogTitle>Generate Daily Report</AlertDialogTitle>
+            <AlertDialogTitle>Generate Daily Summary</AlertDialogTitle>
             <div className="text-sm text-muted-foreground">
-              Normally, this takes 45 minutes of Excel data entry.
-              <br />
               Generating now…
             </div>
           </AlertDialogHeader>
@@ -672,7 +609,7 @@ export function BuildFlow() {
                 {reportPhase === 'done' ? (
                   <span className="inline-flex items-center gap-1 text-emerald-200">
                     <CheckCircle2 className="h-3.5 w-3.5" />
-                    Done. Sent to the Board.
+                    Done. Sent to stakeholders.
                   </span>
                 ) : (
                   'Generating…'
