@@ -85,9 +85,7 @@ export function SaaSHeroSection() {
                         <div className="h-8 rounded-md bg-muted/30" />
                         <div className="h-8 rounded-md bg-muted/30" />
                       </div>
-                      <p className="mt-3 text-xs text-slate-400 font-mono">
-                        FINAL_v3_COPY_DO_NOT_DELETE.xlsx
-                      </p>
+                      <p className="mt-3 text-xs text-slate-400 font-mono">{t("hero.visualBeforeNote")}</p>
                     </div>
                   </div>
 
