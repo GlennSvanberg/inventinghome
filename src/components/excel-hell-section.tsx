@@ -25,38 +25,42 @@ function SpreadsheetMock({ title, meta }: { title: string; meta: string }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="p-0">
-        <div className="grid grid-cols-12 gap-px bg-border/40">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <div
-              key={`h-${i}`}
-              className="bg-[#0F172A]/70 text-[10px] text-slate-300 font-mono px-2 py-1"
-            >
-              {String.fromCharCode(65 + i)}
-            </div>
-          ))}
-          {rows.map((row, r) =>
-            row.map((value, c) => {
-              const isHeaderRow = r === 0
-              const isError =
-                typeof value === "string" &&
-                (value.includes("#REF!") || value.includes("#N/A") || value.includes("??"))
-              const isFormula = typeof value === "string" && value.startsWith("=")
-              return (
-                <div
-                  key={`c-${r}-${c}`}
-                  className={[
-                    "bg-[#0B1220] px-2 py-2 font-mono text-[10px] text-slate-200/90",
-                    "min-h-[26px]",
-                    isHeaderRow ? "bg-[#0F172A]/80 text-slate-300" : "",
-                    isFormula ? "text-primary/90" : "",
-                    isError ? "text-amber-300" : "",
-                  ].join(" ")}
-                >
-                  <span className="block truncate">{value}</span>
-                </div>
-              )
-            })
-          )}
+        {/* On mobile the 12-col grid collapses into unreadable tiny cells.
+            Give it a min-width and allow horizontal scroll only below md. */}
+        <div className="overflow-x-auto md:overflow-visible overscroll-x-contain">
+          <div className="grid grid-cols-12 gap-px bg-border/40 min-w-[920px] md:min-w-0">
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div
+                key={`h-${i}`}
+                className="bg-[#0F172A]/70 text-[11px] md:text-[10px] text-slate-300 font-mono px-2 py-1"
+              >
+                {String.fromCharCode(65 + i)}
+              </div>
+            ))}
+            {rows.map((row, r) =>
+              row.map((value, c) => {
+                const isHeaderRow = r === 0
+                const isError =
+                  typeof value === "string" &&
+                  (value.includes("#REF!") || value.includes("#N/A") || value.includes("??"))
+                const isFormula = typeof value === "string" && value.startsWith("=")
+                return (
+                  <div
+                    key={`c-${r}-${c}`}
+                    className={[
+                      "bg-[#0B1220] px-2 py-2 font-mono text-[11px] md:text-[10px] text-slate-200/90",
+                      "min-h-[28px] md:min-h-[26px]",
+                      isHeaderRow ? "bg-[#0F172A]/80 text-slate-300" : "",
+                      isFormula ? "text-primary/90" : "",
+                      isError ? "text-amber-300" : "",
+                    ].join(" ")}
+                  >
+                    <span className="block truncate">{value}</span>
+                  </div>
+                )
+              })
+            )}
+          </div>
         </div>
       </CardContent>
     </Card>
