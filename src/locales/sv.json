@@ -5,7 +5,7 @@
   },
   "hero": {
     "kicker": "Skräddarsytt SaaS på abonnemang",
-    "kickerZeroUpfront": "0 SEK i startkostnad",
+    "kickerZeroUpfront": "0 i startkostnad",
     "headline": "Sluta driva din mångmiljon‑logistik och produktion i Excel.",
     "subheadline": "Vi bygger den skräddarsydda mjukvaran du behöver för att eliminera teknisk skuld och administrativt kaos. Ingen startkostnad. Fast månadsabonnemang.",
     "ctaPrimary": "Boka problem‑discovery",
@@ -35,7 +35,7 @@
       },
       "engineering": {
         "title": "2) Ingenjörsarbetet",
-        "body": "Vi bygger er dedikerade SaaS‑modul. Vi tar utvecklingsrisken; ni betalar 0 SEK för bygget."
+        "body": "Vi bygger er dedikerade SaaS‑modul. Vi tar utvecklingsrisken; ni betalar inget i startkostnad för bygget."
       },
       "optimization": {
         "title": "3) Optimeringen",
@@ -45,11 +45,11 @@
   },
   "whyInventing": {
     "kicker": "VARFÖR INVENTING",
-    "heading": "Svenska standarder. Polsk leverans. Byggt för fabriker och flöden.",
+    "heading": "Höga standarder. Snabb leverans. Byggt för fabriker och flöden.",
     "description": "Vi bygger skräddarsytt SaaS för logistik och tillverkning: snabbt att leverera, svårt att slå sönder och designat för verkligheten i operations.",
     "items": {
       "swedish": {
-        "title": "Svenska ingenjörsstandarder",
+        "title": "Ingenjörsstandarder",
         "body": "Förutsägbar leverans, pragmatiska beslut och system som inte faller isär kl. 02:00."
       },
       "aiSpeed": {
@@ -64,7 +64,7 @@
   },
   "trust": {
     "kicker": "FÖRTROENDE / SOCIAL PROOF",
-    "heading": "Svensk pragmatism. Polsk ambition. Global skala.",
+    "heading": "Pragmatisk leverans. Ambitiöst bygge. Stabil skala.",
     "description": "Om er verksamhet hänger på kalkylblad, ersätter vi dem med ett säkert, skalbart SaaS som matchar ert arbetssätt — och minskar admin‑kaos.",
     "badgeScarcity": "3 platser kvar för Q1 2025",
     "badgeLine": "Abonnemang • Ingen startkostnad • Dedikerat SaaS",
@@ -87,7 +87,7 @@
     },
     "q3": {
       "label": "Vad vore det värt att få detta automatiserat till nästa månad?",
-      "placeholder": "t.ex. 25 000 EUR/mån"
+      "placeholder": "t.ex. 25 000 / mån"
     },
     "summaryLabel": "KOPIERA/PASTA IN I KONTAKTFORMULÄRET",
     "summaryTemplate": "Problemdiagnos\n- Timmar/vecka copy‑paste: {{hours}}\n- Roller beroende av ett kalkylblad: {{people}}\n- Uppskattat värde om automatiserat till nästa månad: {{value}}\n\nKontext: logistik / tillverkning",
@@ -111,7 +111,7 @@
       "name": "Namn",
       "namePlaceholder": "Ditt namn",
       "email": "E-post",
-      "emailPlaceholder": "din.epost@exempel.se",
+      "emailPlaceholder": "din.email@example.com",
       "company": "Företag",
       "companyPlaceholder": "Ditt företag",
       "phone": "Telefon",

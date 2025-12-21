@@ -53,14 +53,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {/* Logo - Fixed position top left */}
-        <div className="fixed top-4 left-4 z-50">
-          <img 
-            src="/logo.png" 
-            alt="Inventing Logo" 
-            className="w-12 h-12 md:w-16 md:h-16 object-contain"
-          />
-        </div>
         <Suspense fallback={null}>
           {children}
         </Suspense>

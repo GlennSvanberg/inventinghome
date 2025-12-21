@@ -5,7 +5,7 @@
   },
   "hero": {
     "kicker": "Custom SaaS on Subscription",
-    "kickerZeroUpfront": "0 SEK Upfront",
+    "kickerZeroUpfront": "0 Upfront",
     "headline": "Stop Managing Your Multi‑Million Logistics & Manufacturing Business in Excel.",
     "subheadline": "We build the custom software you need to eliminate technical debt and admin chaos. Zero Upfront Cost. Fixed Monthly Subscription.",
     "ctaPrimary": "Book Your Problem Discovery",
@@ -35,7 +35,7 @@
       },
       "engineering": {
         "title": "2) The Engineering",
-        "body": "We build your dedicated SaaS module. We take the development risk; you pay 0 SEK for the build."
+        "body": "We build your dedicated SaaS module. We take the development risk; you pay nothing upfront for the build."
       },
       "optimization": {
         "title": "3) The Optimization",
@@ -45,11 +45,11 @@
   },
   "whyInventing": {
     "kicker": "WHY INVENTING",
-    "heading": "Swedish standards. Polish execution. Built for factories & fleets.",
+    "heading": "High standards. Fast execution. Built for factories & fleets.",
     "description": "We build custom SaaS for logistics and manufacturing: fast to ship, hard to break, and designed around the reality of operations.",
     "items": {
       "swedish": {
-        "title": "Swedish engineering standards",
+        "title": "Engineering standards",
         "body": "Predictable delivery, pragmatic decisions, and systems that don’t break at 2 AM."
       },
       "aiSpeed": {
@@ -64,7 +64,7 @@
   },
   "trust": {
     "kicker": "SOCIAL PROOF / TRUST",
-    "heading": "Swedish Pragmatism. Polish Ambition. Global Scale.",
+    "heading": "Pragmatic delivery. Ambitious build. Reliable scale.",
     "description": "If your operation depends on spreadsheets, we’ll replace them with a secure, scalable SaaS that matches your workflow—and reduces admin chaos.",
     "badgeScarcity": "3 slots available for Q1 2025",
     "badgeLine": "Subscription • No upfront cost • Dedicated SaaS",
@@ -87,7 +87,7 @@
     },
     "q3": {
       "label": "What would it be worth to have this automated by next month?",
-      "placeholder": "e.g. 25,000 EUR/month"
+      "placeholder": "e.g. 25,000 / month"
     },
     "summaryLabel": "COPY/PASTE INTO THE CONTACT FORM",
     "summaryTemplate": "Problem Diagnostic\n- Hours/week copy‑pasting: {{hours}}\n- Roles depending on one spreadsheet: {{people}}\n- Estimated value if automated by next month: {{value}}\n\nContext: Logistics / Manufacturing",
@@ -115,7 +115,7 @@
       "company": "Company",
       "companyPlaceholder": "Your company",
       "phone": "Phone",
-      "phonePlaceholder": "+46 70 123 45 67",
+      "phonePlaceholder": "e.g. +46 70 123 45 67",
       "message": "Message",
       "messagePlaceholder": "Paste your diagnostic summary or describe the spreadsheet...",
       "required": "*",
