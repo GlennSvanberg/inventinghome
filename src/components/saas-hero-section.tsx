@@ -9,7 +9,7 @@ export function SaaSHeroSection() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 blueprint-grid pointer-events-none" />
+      <div className="absolute inset-0 blueprint-grid opacity-35 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20">
@@ -59,7 +59,7 @@ export function SaaSHeroSection() {
             <p className="mt-6 text-sm text-muted-foreground font-mono">{t("hero.microProof")}</p>
           </div>
 
-          <div className="lg:col-span-5 lg:pt-10">
+          <div className="hidden lg:block lg:col-span-5 lg:pt-10">
             <Card className="glass-strong overflow-hidden">
               <CardHeader className="border-b border-border/40">
                 <CardTitle className="font-mono text-sm">{t("hero.visualTitle")}</CardTitle>
