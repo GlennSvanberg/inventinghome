@@ -10,6 +10,7 @@
     "subheadline": "Budujemy dedykowane oprogramowanie, które ogranicza chaos administracyjny i dług techniczny. Bez kosztu startowego. Stały miesięczny abonament.",
     "ctaPrimary": "Umów rozmowę wstępną",
     "ctaSecondary": "Zrób 60‑sek. diagnostykę",
+    "ctaDemo": "Zobacz live demo",
     "visualTitle": "Od chaosu w arkuszach → do czystego dashboardu",
     "visualBefore": "PRZED",
     "visualAfter": "PO",
@@ -139,69 +140,6 @@
   "footer": {
     "tagline": "Dedykowane SaaS w abonamencie. Dla zespołów operacyjnych.",
     "copyright": "Wszelkie prawa zastrzeżone."
-  },
-  "demos": {
-    "notFound": {
-      "kicker": "Demo Engine",
-      "title": "Nie znaleziono demo",
-      "body": "Ten slug demo nie jest zarejestrowany. Poproś Inventing o włączenie go w rejestrze demo."
-    },
-    "logisticsPro": {
-      "legacyBanner": "Podgląd: {{file}} (WIDOK LEGACY)",
-      "dismissBanner": "Zamknij banner legacy",
-      "title": "LogisticsPro Dashboard",
-      "subtitle": "Czysty dashboard operacyjny zamiast chaosu w arkuszach dispatchu.",
-      "badgeSwedishEngineering": "Swedish Engineering",
-      "badgeLiveOps": "Live Ops",
-      "metrics": {
-        "activeDrivers": {
-          "label": "Aktywni kierowcy",
-          "note": "Dostępność floty w czasie rzeczywistym."
-        },
-        "fuelEfficiency": {
-          "label": "Spalanie",
-          "note": "Telemetria paliwa z wykrywaniem anomalii."
-        },
-        "unallocatedInvoices": {
-          "label": "Nieprzypisane faktury",
-          "note": "Automatyczne dopasowanie faktur do tras i kierowców."
-        },
-        "esgCompliance": {
-          "label": "Zgodność ESG",
-          "ok": "OK"
-        }
-      },
-      "dispatch": {
-        "title": "Dyspozytornia kierowców",
-        "subtitle": "Statusy na żywo, ETA, zdarzenia graniczne i wyjątki.",
-        "reconcileFuel": "Rozlicz paliwo",
-        "quickInsight": "Trend paliwa",
-        "columns": {
-          "driver": "Kierowca",
-          "truck": "Pojazd",
-          "route": "Trasa",
-          "eta": "ETA",
-          "status": "Status",
-          "actions": "Akcje"
-        },
-        "actionReconcile": "Rozlicz"
-      },
-      "status": {
-        "onRoad": "W trasie",
-        "rest": "Odpoczynek",
-        "borderCross": "Przekroczenie granicy",
-        "available": "Dostępny"
-      },
-      "reconcile": {
-        "toastTitleProcessing": "Rozlicz paliwo",
-        "toastTitleDone": "Rozliczenie zakończone",
-        "toastBodyProcessing": "Przetwarzanie 1 200 transakcji paliwowych…",
-        "toastBodyDone": "Gotowe w 1,2 s (zastępuje 4 godziny ręcznego wprowadzania danych)."
-      },
-      "footerNote": "Kontrola klasy enterprise. Dane gotowe do audytu. UX dla operatorów.",
-      "auditTrail": "Audit Trail",
-      "rbac": "RBAC"
-    }
   }
 }
 

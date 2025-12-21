@@ -10,6 +10,7 @@
     "subheadline": "Vi bygger skräddarsydd mjukvara som minskar admin‑kaos och teknisk skuld. Ingen startkostnad. Fast månadsabonnemang.",
     "ctaPrimary": "Boka ett kartläggningssamtal",
     "ctaSecondary": "Gör 60‑sekundersdiagnosen",
+    "ctaDemo": "Se live‑demos",
     "visualTitle": "Från kalkylbladskaos → till en tydlig dashboard",
     "visualBefore": "FÖRE",
     "visualAfter": "EFTER",
@@ -139,69 +140,6 @@
   "footer": {
     "tagline": "Skräddarsytt SaaS på abonnemang. För team som vill få bort kalkylbladskaos.",
     "copyright": "Alla rättigheter förbehållna."
-  },
-  "demos": {
-    "notFound": {
-      "kicker": "Demo Engine",
-      "title": "Demo hittades inte",
-      "body": "Den här demo‑sluggen är inte registrerad. Be Inventing aktivera den i demo‑registret."
-    },
-    "logisticsPro": {
-      "legacyBanner": "Visar: {{file}} (LEGACY VIEW)",
-      "dismissBanner": "Stäng legacy‑banderoll",
-      "title": "LogisticsPro Dashboard",
-      "subtitle": "En ren drift‑dashboard som ersätter kalkylbladskaos i dispatch.",
-      "badgeSwedishEngineering": "Swedish Engineering",
-      "badgeLiveOps": "Live Ops",
-      "metrics": {
-        "activeDrivers": {
-          "label": "Aktiva förare",
-          "note": "Live‑tillgänglighet i hela flottan."
-        },
-        "fuelEfficiency": {
-          "label": "Bränsleeffektivitet",
-          "note": "Telemetri med avvikelsekontroll."
-        },
-        "unallocatedInvoices": {
-          "label": "Omatchade fakturor",
-          "note": "Auto‑matcha fakturor till rutter & förare."
-        },
-        "esgCompliance": {
-          "label": "ESG‑efterlevnad",
-          "ok": "OK"
-        }
-      },
-      "dispatch": {
-        "title": "Driver Dispatch",
-        "subtitle": "Realtidsstatus, ETA, gränshändelser och undantag.",
-        "reconcileFuel": "Avstäm bränsle",
-        "quickInsight": "Bränsletrend",
-        "columns": {
-          "driver": "Förare",
-          "truck": "Lastbil",
-          "route": "Rutt",
-          "eta": "ETA",
-          "status": "Status",
-          "actions": "Åtgärder"
-        },
-        "actionReconcile": "Avstäm"
-      },
-      "status": {
-        "onRoad": "På väg",
-        "rest": "Vila",
-        "borderCross": "Gränspassage",
-        "available": "Tillgänglig"
-      },
-      "reconcile": {
-        "toastTitleProcessing": "Avstäm bränsle",
-        "toastTitleDone": "Avstämning klar",
-        "toastBodyProcessing": "Bearbetar 1 200 bränsletransaktioner…",
-        "toastBodyDone": "Klart på 1,2 s (ersätter 4 timmar manuell inmatning)."
-      },
-      "footerNote": "Blueprint‑nivå på kontroll. Audit‑redo data. Byggt för operatörer.",
-      "auditTrail": "Audit Trail",
-      "rbac": "RBAC"
-    }
   }
 }
 

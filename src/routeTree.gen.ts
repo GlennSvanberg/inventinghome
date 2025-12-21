@@ -9,19 +9,25 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as DemoRouteImport } from './routes/demo'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoSlugRouteImport } from './routes/demo.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
+const DemoRoute = DemoRouteImport.update({
+  id: '/demo',
+  path: '/demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DemoSlugRoute = DemoSlugRouteImport.update({
-  id: '/demo/$slug',
-  path: '/demo/$slug',
-  getParentRoute: () => rootRouteImport,
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => DemoRoute,
 } as any)
 const ApiContactRoute = ApiContactRouteImport.update({
   id: '/api/contact',
@@ -31,36 +37,46 @@ const ApiContactRoute = ApiContactRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/demo': typeof DemoRouteWithChildren
   '/api/contact': typeof ApiContactRoute
   '/demo/$slug': typeof DemoSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/demo': typeof DemoRouteWithChildren
   '/api/contact': typeof ApiContactRoute
   '/demo/$slug': typeof DemoSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/demo': typeof DemoRouteWithChildren
   '/api/contact': typeof ApiContactRoute
   '/demo/$slug': typeof DemoSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/contact' | '/demo/$slug'
+  fullPaths: '/' | '/demo' | '/api/contact' | '/demo/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/contact' | '/demo/$slug'
-  id: '__root__' | '/' | '/api/contact' | '/demo/$slug'
+  to: '/' | '/demo' | '/api/contact' | '/demo/$slug'
+  id: '__root__' | '/' | '/demo' | '/api/contact' | '/demo/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DemoRoute: typeof DemoRouteWithChildren
   ApiContactRoute: typeof ApiContactRoute
-  DemoSlugRoute: typeof DemoSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/demo': {
+      id: '/demo'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -70,10 +86,10 @@ declare module '@tanstack/react-router' {
     }
     '/demo/$slug': {
       id: '/demo/$slug'
-      path: '/demo/$slug'
+      path: '/$slug'
       fullPath: '/demo/$slug'
       preLoaderRoute: typeof DemoSlugRouteImport
-      parentRoute: typeof rootRouteImport
+      parentRoute: typeof DemoRoute
     }
     '/api/contact': {
       id: '/api/contact'
@@ -85,10 +101,20 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface DemoRouteChildren {
+  DemoSlugRoute: typeof DemoSlugRoute
+}
+
+const DemoRouteChildren: DemoRouteChildren = {
+  DemoSlugRoute: DemoSlugRoute,
+}
+
+const DemoRouteWithChildren = DemoRoute._addFileChildren(DemoRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DemoRoute: DemoRouteWithChildren,
   ApiContactRoute: ApiContactRoute,
-  DemoSlugRoute: DemoSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

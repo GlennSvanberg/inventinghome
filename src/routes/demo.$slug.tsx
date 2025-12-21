@@ -1,8 +1,9 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { useTranslation } from 'react-i18next'
+import { Link, createFileRoute } from '@tanstack/react-router'
 import { getDemoBySlug } from '@/components/demos/registry'
 import { Badge } from '@/components/ui/badge'
+import { buttonVariants } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
 
 export const Route = createFileRoute('/demo/$slug')({
   component: DemoRoute,
@@ -20,7 +21,6 @@ export const Route = createFileRoute('/demo/$slug')({
 })
 
 function DemoRoute() {
-  const { t } = useTranslation()
   const { slug } = Route.useParams()
   const demo = getDemoBySlug(slug)
 
@@ -32,11 +32,9 @@ function DemoRoute() {
           <Card className="glass-strong border-white/10 p-6">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <div className="text-sm text-muted-foreground">
-                  {t('demos.notFound.kicker')}
-                </div>
+                <div className="text-sm text-muted-foreground">Demo Engine</div>
                 <h1 className="mt-2 text-2xl font-semibold tracking-tight">
-                  {t('demos.notFound.title')}
+                  Demo not found
                 </h1>
               </div>
               <Badge variant="secondary" className="border-white/10">
@@ -44,8 +42,16 @@ function DemoRoute() {
               </Badge>
             </div>
             <p className="mt-4 text-sm text-muted-foreground">
-              {t('demos.notFound.body')}
+              This demo slug is not registered.
             </p>
+            <div className="mt-5">
+              <Link
+                to="/demo"
+                className={cn(buttonVariants({ variant: 'secondary' }), 'border-white/10')}
+              >
+                Back to demos
+              </Link>
+            </div>
           </Card>
         </div>
       </main>
