@@ -50,11 +50,9 @@ export function ProblemDiagnosticSection() {
 
   const copySummary = async () => {
     try {
-      if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(summary)
-        setCopied(true)
-        window.setTimeout(() => setCopied(false), 1400)
-      }
+      await navigator.clipboard.writeText(summary)
+      setCopied(true)
+      window.setTimeout(() => setCopied(false), 1400)
     } catch {
       // ignore (clipboard permissions / unsupported)
     }

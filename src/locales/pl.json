@@ -1,52 +1,55 @@
 {
   "meta": {
     "title": "Inventing — Dedykowane SaaS w abonamencie",
-    "description": "Dedykowane rozwiązania SaaS w stałym abonamencie (bez kosztu startowego) dla liderów logistyki i produkcji. Zamień chaos arkuszy na bezpieczne, skalowalne oprogramowanie dopasowane do Twojego procesu."
+    "description": "Dedykowane SaaS w stałym abonamencie (bez kosztu startowego). Zamień chaos arkuszy na bezpieczne, skalowalne oprogramowanie dopasowane do Twojego procesu."
   },
   "hero": {
     "kicker": "Dedykowane SaaS w abonamencie",
-    "kickerZeroUpfront": "0 na start",
-    "headline": "Przestań zarządzać wielomilionową logistyką i produkcją w Excelu.",
-    "subheadline": "Budujemy dedykowane oprogramowanie, które eliminuje dług techniczny i chaos administracyjny. Bez kosztu startowego. Stały miesięczny abonament.",
-    "ctaPrimary": "Umów rozmowę discovery",
+    "kickerZeroUpfront": "0 zł na start",
+    "headline": "Przestań prowadzić firmę w Excelu.",
+    "subheadline": "Budujemy dedykowane oprogramowanie, które ogranicza chaos administracyjny i dług techniczny. Bez kosztu startowego. Stały miesięczny abonament.",
+    "ctaPrimary": "Umów rozmowę wstępną",
     "ctaSecondary": "Zrób 60‑sek. diagnostykę",
     "visualTitle": "Od chaosu w arkuszach → do czystego dashboardu",
     "visualBefore": "PRZED",
     "visualAfter": "PO",
     "visualDashboard": "Dashboard operacyjny",
     "visualLive": "NA ŻYWO",
-    "visualMetric1": "Wysyłki na czas",
+    "visualMetric1": "Czas realizacji",
     "visualMetric2": "Czas admin",
-    "microProof": "Dla liderów operacji, którzy potrzebują niezawodności — nie kolejnego narzędzia do pilnowania."
+    "visualBeforeNote": "Wiele wersji. Brak jednego źródła prawdy.",
+    "microProof": "Dla zespołów, które potrzebują niezawodności — nie kolejnego narzędzia do pilnowania."
   },
   "excelHell": {
     "kicker": "„PIEKŁO EXCELA”",
-    "heading": "Excel jest genialny. Ale magazyn to nie miejsce na formuły.",
-    "copy": "Excel to arcydzieło oprogramowania, ale to niebezpieczne miejsce do prowadzenia magazynu. Gdy „ludzka baza danych” odchodzi albo formuła się psuje, staje przychód. Zamieniamy Twoje „Piekło Excela” w bezpieczne, skalowalne SaaS dopasowane do Twojego konkretnego workflow."
+    "heading": "Excel jest świetny. Ale to ryzykowny fundament biznesu.",
+    "copy": "Excel to świetne narzędzie, ale ryzykowne jako „kręgosłup” operacji. Gdy formuła się psuje albo nie ma osoby, która „zna ten arkusz”, praca staje. Zamieniamy zależność od arkuszy na bezpieczne, skalowalne SaaS dopasowane do Twojego procesu.",
+    "mockTitle": "Tracker_Operacji.xlsx",
+    "mockMeta": "Za dużo kolumn"
   },
   "partnership": {
     "kicker": "MODEL „ZERO‑RYZYKA”",
-    "heading": "My bierzemy ryzyko budowy. Ty zostajesz z efektem.",
-    "description": "Trzy kroki od zależności od arkuszy do dedykowanego modułu SaaS — a potem stały miesięczny abonament, gdy system działa (hosting, bezpieczeństwo i aktualizacje w cenie).",
+    "heading": "My bierzemy ryzyko budowy. Ty dostajesz efekt.",
+    "description": "Trzy kroki od zależności od arkuszy do dedykowanego modułu SaaS — a potem stały miesięczny abonament po uruchomieniu (hosting, bezpieczeństwo i aktualizacje w cenie).",
     "steps": {
       "extraction": {
-        "title": "1) Ekstrakcja",
-        "body": "Siadamy z Twoim zespołem i mapujemy ręczne, „brudne” procesy stojące za arkuszem."
+        "title": "1) Diagnoza",
+        "body": "Siadamy z Twoim zespołem i mapujemy ręczne kroki ukryte za arkuszem."
       },
       "engineering": {
         "title": "2) Inżynieria",
-        "body": "Budujemy dedykowany moduł SaaS. My bierzemy ryzyko developmentu; Ty nie płacisz nic na start za budowę."
+        "body": "Budujemy dedykowany moduł SaaS. My bierzemy ryzyko developmentu — Ty nie płacisz nic na start za budowę."
       },
       "optimization": {
-        "title": "3) Optymalizacja",
-        "body": "Po uruchomieniu płacisz stały miesięczny abonament. My ogarniamy hosting, bezpieczeństwo i aktualizacje. Ty skupiasz się na wzroście."
+        "title": "3) Utrzymanie i rozwój",
+        "body": "Po uruchomieniu płacisz stały miesięczny abonament. My ogarniamy hosting, bezpieczeństwo i aktualizacje — Ty skupiasz się na biznesie."
       }
     }
   },
   "whyInventing": {
     "kicker": "DLACZEGO INVENTING",
-    "heading": "Wysokie standardy. Szybka realizacja. Dla fabryk i flot.",
-    "description": "Budujemy dedykowane SaaS dla logistyki i produkcji: szybkie we wdrożeniu, trudne do zepsucia i zaprojektowane pod realia operacji.",
+    "heading": "Wysokie standardy. Szybka realizacja. Dla ludzi od „dowożenia”.",
+    "description": "Budujemy dedykowane SaaS: szybkie we wdrożeniu, trudne do zepsucia i zaprojektowane pod to, jak praca naprawdę wygląda.",
     "items": {
       "swedish": {
         "title": "Standardy inżynierskie",
@@ -58,7 +61,7 @@
       },
       "b2b": {
         "title": "Specjalizacja B2B w operacjach",
-        "body": "Nie robimy „stron”. Robimy narzędzia liczące marże paliwowe, śledzące ESG i automatyzujące plany hal magazynowych."
+        "body": "Nie robimy „stron”. Budujemy narzędzia wewnętrzne, które zastępują arkusze, e‑maile i ręczne przekazywanie informacji — z uprawnieniami, historią zmian i wiarygodnymi danymi."
       }
     }
   },
@@ -68,7 +71,7 @@
     "description": "Jeśli Twoja operacja zależy od arkuszy, zastąpimy je bezpiecznym, skalowalnym SaaS dopasowanym do workflow — i ograniczymy chaos administracyjny.",
     "badgeScarcity": "3 miejsca dostępne na Q1 2025",
     "badgeLine": "Abonament • Bez kosztu startowego • Dedykowane SaaS",
-    "cta": "Umów discovery",
+    "cta": "Umów rozmowę wstępną",
     "micro": "15–30 min. Bez przygotowań. Przynieś arkusz."
   },
   "diagnostic": {
@@ -78,7 +81,7 @@
     "cardTitle": "Diagnostyka 60 sekund",
     "cardDescription": "Bez e‑maila. Służy do szybszego briefu.",
     "q1": {
-      "label": "Ile godzin tygodniowo spędzasz na kopiuj‑wklej między plikami?",
+      "label": "Ile godzin tygodniowo spędzasz na kopiowaniu i wklejaniu między plikami?",
       "placeholder": "np. 6"
     },
     "q2": {
@@ -92,7 +95,7 @@
     "summaryLabel": "SKOPIUJ I WKLEJ DO FORMULARZA",
     "copy": "Kopiuj",
     "copied": "Skopiowano",
-    "summaryTemplate": "Diagnostyka problemu\n- Godz./tydz. kopiuj‑wklej: {{hours}}\n- Role zależne od jednego arkusza: {{people}}\n- Szacowana wartość automatyzacji do przyszłego miesiąca: {{value}}\n\nKontekst: logistyka / produkcja",
+    "summaryTemplate": "Diagnostyka problemu\n- Godz./tydz. kopiowanie i wklejanie: {{hours}}\n- Role zależne od jednego arkusza: {{people}}\n- Szacowana wartość automatyzacji do przyszłego miesiąca: {{value}}\n\nKontekst: Do czego służy arkusz? (finanse, planowanie, raporty…)",
     "reset": "Zacznij od nowa",
     "back": "Wstecz",
     "next": "Dalej",
@@ -100,12 +103,12 @@
     "cta": "Wyślij to do Inventing",
     "sideTitle": "Co dalej po kliknięciu „Wyślij”?",
     "sideDescription": "Odpowiemy planem, który łatwo zweryfikujesz.",
-    "sideBullet1": "Doprecyzujemy workflow i źródła danych (ERP, WMS, TMS, dostawcy).",
+    "sideBullet1": "Doprecyzujemy proces i źródła danych (ERP, CRM, księgowość, narzędzia wewnętrzne).",
     "sideBullet2": "Zaproponujemy pierwszy moduł usuwający największe wąskie gardło.",
     "sideBullet3": "Dostajesz ofertę stałego abonamentu — bez „niespodziewanych” faktur."
   },
   "contact": {
-    "heading": "Umów rozmowę discovery",
+    "heading": "Umów rozmowę wstępną",
     "description": "Powiedz, co się sypie. Zmapujemy proces i zaproponujemy moduł w abonamencie.",
     "cardTitle": "Poproś o rozmowę",
     "cardDescription": "Odpowiemy w ciągu 1 dnia roboczego.",

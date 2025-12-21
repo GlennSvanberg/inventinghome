@@ -23,7 +23,7 @@ export const Route = createRootRoute({
       {
         name: 'description',
         content:
-          'Custom SaaS solutions on a fixed monthly subscription (no upfront cost) for logistics and manufacturing leaders. Replace spreadsheet chaos with secure, scalable software tailored to your workflow.',
+          'Custom SaaS on a fixed monthly subscription (no upfront cost). Replace spreadsheet chaos with secure, scalable software tailored to your workflow.',
       },
     ],
     links: [

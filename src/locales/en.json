@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Inventing — Custom SaaS on Subscription",
-    "description": "Custom SaaS solutions on a fixed monthly subscription (no upfront cost) for logistics and manufacturing leaders. Replace spreadsheet chaos with secure, scalable software tailored to your workflow."
+    "description": "Custom SaaS on a fixed monthly subscription (no upfront cost). Replace spreadsheet chaos with secure, scalable software tailored to your workflow."
   },
   "hero": {
     "kicker": "Custom SaaS on Subscription",
     "kickerZeroUpfront": "0 Upfront",
-    "headline": "Stop Managing Your Multi‑Million Logistics & Manufacturing Business in Excel.",
-    "subheadline": "We build the custom software you need to eliminate technical debt and admin chaos. Zero Upfront Cost. Fixed Monthly Subscription.",
+    "headline": "Stop Running Your Business in Excel.",
+    "subheadline": "We build the custom software you need to cut admin chaos and technical debt. No upfront cost. Fixed monthly subscription.",
     "ctaPrimary": "Book Your Problem Discovery",
     "ctaSecondary": "Run the 60‑second Diagnostic",
     "visualTitle": "From spreadsheet chaos → clean ops dashboard",
@@ -15,14 +15,17 @@
     "visualAfter": "AFTER",
     "visualDashboard": "Operations Dashboard",
     "visualLive": "LIVE",
-    "visualMetric1": "On‑time dispatch",
+    "visualMetric1": "Cycle time",
     "visualMetric2": "Admin time",
+    "visualBeforeNote": "Multiple versions. No single source of truth.",
     "microProof": "Built for operations leaders who need reliability, not another tool to babysit."
   },
   "excelHell": {
     "kicker": "THE “EXCEL HELL”",
-    "heading": "Excel is a masterpiece. It’s a dangerous place to run a warehouse.",
-    "copy": "Excel is a masterpiece of software, but it’s a dangerous place to run a warehouse. When your “human‑database” quits or a formula breaks, your revenue stops. We turn your “Excel Hell” into a secure, scalable SaaS tailored to your specific workflow."
+    "heading": "Excel is brilliant. It’s a risky place to run your business.",
+    "copy": "Excel is brilliant software, but it’s risky as the backbone of your operation. When a formula breaks or the one person who “knows the sheet” is away, work grinds to a halt. We turn spreadsheet dependency into a secure, scalable SaaS tailored to your workflow.",
+    "mockTitle": "Operations_Tracker.xlsx",
+    "mockMeta": "Too many columns"
   },
   "partnership": {
     "kicker": "THE “ZERO‑RISK” PARTNERSHIP MODEL",
@@ -45,8 +48,8 @@
   },
   "whyInventing": {
     "kicker": "WHY INVENTING",
-    "heading": "High standards. Fast execution. Built for factories & fleets.",
-    "description": "We build custom SaaS for logistics and manufacturing: fast to ship, hard to break, and designed around the reality of operations.",
+    "heading": "High standards. Fast execution. Built for operators.",
+    "description": "We build custom SaaS: fast to ship, hard to break, and designed around how work actually gets done.",
     "items": {
       "swedish": {
         "title": "Engineering standards",
@@ -58,7 +61,7 @@
       },
       "b2b": {
         "title": "B2B operations specialization",
-        "body": "We don’t make “websites.” We make tools that calculate fuel margins, track ESG metrics, and automate warehouse floor‑plans."
+        "body": "We don’t build “websites.” We build internal tools that replace spreadsheets, emails, and manual handoffs—with audit trails, permissions, and reliable data."
       }
     }
   },
@@ -92,7 +95,7 @@
     "summaryLabel": "COPY/PASTE INTO THE CONTACT FORM",
     "copy": "Copy",
     "copied": "Copied",
-    "summaryTemplate": "Problem Diagnostic\n- Hours/week copy‑pasting: {{hours}}\n- Roles depending on one spreadsheet: {{people}}\n- Estimated value if automated by next month: {{value}}\n\nContext: Logistics / Manufacturing",
+    "summaryTemplate": "Problem Diagnostic\n- Hours/week copy‑pasting: {{hours}}\n- Roles depending on one spreadsheet: {{people}}\n- Estimated value if automated by next month: {{value}}\n\nContext: What is the spreadsheet used for? (finance, scheduling, reporting…)",
     "reset": "Start over",
     "back": "Back",
     "next": "Next",
@@ -100,7 +103,7 @@
     "cta": "Send this to Inventing",
     "sideTitle": "What happens after you click send?",
     "sideDescription": "We respond with a plan you can sanity‑check.",
-    "sideBullet1": "We clarify the workflow and data sources (ERP, WMS, TMS, suppliers).",
+    "sideBullet1": "We clarify the workflow and data sources (ERP, CRM, accounting, internal tools).",
     "sideBullet2": "We outline a first module that removes the biggest bottleneck.",
     "sideBullet3": "You get a fixed subscription proposal—no surprise invoices."
   },

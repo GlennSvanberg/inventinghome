@@ -1,84 +1,87 @@
 {
   "meta": {
     "title": "Inventing — Skräddarsytt SaaS på abonnemang",
-    "description": "Skräddarsydda SaaS‑lösningar på fast månadsabonnemang (ingen startkostnad) för logistik- och tillverkningsledare. Byt kalkylbladskaos mot säker, skalbar mjukvara anpassad till ert arbetssätt."
+    "description": "Skräddarsydda SaaS‑lösningar på ett fast månadsabonnemang (utan startkostnad). Byt kalkylbladskaos mot säker, skalbar mjukvara som följer ert arbetssätt."
   },
   "hero": {
     "kicker": "Skräddarsytt SaaS på abonnemang",
-    "kickerZeroUpfront": "0 i startkostnad",
-    "headline": "Sluta driva din mångmiljon‑logistik och produktion i Excel.",
-    "subheadline": "Vi bygger den skräddarsydda mjukvaran du behöver för att eliminera teknisk skuld och administrativt kaos. Ingen startkostnad. Fast månadsabonnemang.",
-    "ctaPrimary": "Boka problem‑discovery",
+    "kickerZeroUpfront": "0 kr i startkostnad",
+    "headline": "Sluta driva verksamheten i Excel.",
+    "subheadline": "Vi bygger skräddarsydd mjukvara som minskar admin‑kaos och teknisk skuld. Ingen startkostnad. Fast månadsabonnemang.",
+    "ctaPrimary": "Boka ett kartläggningssamtal",
     "ctaSecondary": "Gör 60‑sekundersdiagnosen",
-    "visualTitle": "Från kalkylbladskaos → till ren operations‑dashboard",
+    "visualTitle": "Från kalkylbladskaos → till en tydlig dashboard",
     "visualBefore": "FÖRE",
     "visualAfter": "EFTER",
-    "visualDashboard": "Operations‑dashboard",
+    "visualDashboard": "Dashboard",
     "visualLive": "LIVE",
-    "visualMetric1": "Leverans i tid",
+    "visualMetric1": "Ledtid",
     "visualMetric2": "Admin‑tid",
-    "microProof": "För operationsledare som behöver pålitlighet — inte ännu ett verktyg att passa."
+    "visualBeforeNote": "Flera versioner. Ingen gemensam källa att lita på.",
+    "microProof": "För team som behöver pålitlighet — inte ännu ett verktyg att underhålla."
   },
   "excelHell": {
-    "kicker": "”EXCEL‑HELvetet”",
-    "heading": "Excel är ett mästerverk. Men ett farligt ställe att driva ett lager.",
-    "copy": "Excel är ett mästerverk av mjukvara, men ett farligt ställe att driva ett lager. När er ”mänskliga databas” slutar eller en formel går sönder, stannar intäkterna. Vi förvandlar ert ”Excel‑helvete” till ett säkert, skalbart SaaS anpassat till ert specifika arbetssätt."
+    "kicker": "EXCEL‑KAOSET",
+    "heading": "Excel är briljant. Men ett riskfyllt ställe att driva verksamhet.",
+    "copy": "Excel är briljant mjukvara, men riskfyllt som ryggrad i verksamheten. När en formel spricker eller personen som ”kan arket” är borta stannar arbetet. Vi gör om ert kalkylbladsberoende till ett säkert, skalbart SaaS som följer ert arbetssätt.",
+    "mockTitle": "Verksamhets_Tracker.xlsx",
+    "mockMeta": "Alldeles för många kolumner"
   },
   "partnership": {
-    "kicker": "”NOLL‑RISK”‑MODELLEN",
-    "heading": "Vi tar byggrisken. Ni behåller uppsidan.",
-    "description": "Tre steg från kalkylbladsberoende till en dedikerad SaaS‑modul — sedan fast månadsabonnemang när det är live (hosting, säkerhet och uppdateringar ingår).",
+    "kicker": "NOLL‑RISK‑MODELLEN",
+    "heading": "Vi tar risken i bygget. Ni får effekten.",
+    "description": "Tre steg från kalkylbladsberoende till en dedikerad SaaS‑modul — och sedan ett fast månadsabonnemang när den är i drift (hosting, säkerhet och uppdateringar ingår).",
     "steps": {
       "extraction": {
-        "title": "1) Extraktionen",
-        "body": "Vi sitter med ert team och kartlägger de stökiga manuella processerna bakom kalkylbladet."
+        "title": "1) Kartläggning",
+        "body": "Vi sitter med er och kartlägger de manuella stegen bakom kalkylbladet."
       },
       "engineering": {
-        "title": "2) Ingenjörsarbetet",
-        "body": "Vi bygger er dedikerade SaaS‑modul. Vi tar utvecklingsrisken; ni betalar inget i startkostnad för bygget."
+        "title": "2) Bygg",
+        "body": "Vi bygger er dedikerade SaaS‑modul. Vi tar utvecklingsrisken — ni betalar inget i startkostnad."
       },
       "optimization": {
-        "title": "3) Optimeringen",
-        "body": "När det är live betalar ni ett fast månadsabonnemang. Vi hanterar hosting, säkerhet och uppdateringar. Ni fokuserar på tillväxt."
+        "title": "3) Drift & förbättring",
+        "body": "När den är live betalar ni ett fast månadsabonnemang. Vi sköter hosting, säkerhet och uppdateringar — ni fokuserar på verksamheten."
       }
     }
   },
   "whyInventing": {
     "kicker": "VARFÖR INVENTING",
-    "heading": "Höga standarder. Snabb leverans. Byggt för fabriker och flöden.",
-    "description": "Vi bygger skräddarsytt SaaS för logistik och tillverkning: snabbt att leverera, svårt att slå sönder och designat för verkligheten i operations.",
+    "heading": "Höga standarder. Snabb leverans. Byggt för vardagen.",
+    "description": "Vi bygger skräddarsytt SaaS: snabbt att leverera, svårt att slå sönder och designat efter hur arbetet faktiskt görs.",
     "items": {
       "swedish": {
         "title": "Ingenjörsstandarder",
         "body": "Förutsägbar leverans, pragmatiska beslut och system som inte faller isär kl. 02:00."
       },
       "aiSpeed": {
-        "title": "Hög hastighet med AI‑stöd",
+        "title": "Snabbt tempo med AI‑stöd",
         "body": "Kortare cykler utan att tumma på kvalitet — automatisera nästa månad, inte nästa år."
       },
       "b2b": {
-        "title": "B2B‑specialisering i operations",
-        "body": "Vi bygger inte ”webbplatser”. Vi bygger verktyg som räknar bränslemarginaler, spårar ESG och automatiserar lagerlayouter."
+        "title": "B2B‑specialister på interna verktyg",
+        "body": "Vi bygger inte ”webbplatser”. Vi bygger interna system som ersätter kalkylblad, mejltrådar och manuella överlämningar — med behörigheter, spårbarhet och pålitlig data."
       }
     }
   },
   "trust": {
-    "kicker": "FÖRTROENDE / SOCIAL PROOF",
+    "kicker": "FÖRTROENDE",
     "heading": "Pragmatisk leverans. Ambitiöst bygge. Stabil skala.",
-    "description": "Om er verksamhet hänger på kalkylblad, ersätter vi dem med ett säkert, skalbart SaaS som matchar ert arbetssätt — och minskar admin‑kaos.",
+    "description": "Om er verksamhet hänger på kalkylblad, ersätter vi dem med ett säkert, skalbart SaaS som följer ert arbetssätt — och minskar admin‑kaos.",
     "badgeScarcity": "3 platser kvar för Q1 2025",
     "badgeLine": "Abonnemang • Ingen startkostnad • Dedikerat SaaS",
-    "cta": "Boka problem‑discovery",
+    "cta": "Boka ett kartläggningssamtal",
     "micro": "15–30 min. Ingen förberedelse. Ta med kalkylbladet."
   },
   "diagnostic": {
     "kicker": "PROBLEMDIAGNOS",
     "heading": "Hur dyrt är ert kalkylbladsberoende?",
-    "description": "Svara på 3 frågor. Vi gör om det till en avgränsad problemformulering inför discovery‑mötet.",
+    "description": "Svara på tre frågor. Vi gör om det till en tydlig problemformulering inför samtalet.",
     "cardTitle": "60‑sekundersdiagnos",
-    "cardDescription": "Ingen e‑post krävs. Använd för att briefa oss snabbare.",
+    "cardDescription": "Ingen e‑post krävs. Använd den för att ge oss en snabb brief.",
     "q1": {
-      "label": "Hur många timmar i veckan lägger ni på att copy‑paste mellan filer?",
+      "label": "Hur många timmar i veckan går åt till att kopiera och klistra in mellan filer?",
       "placeholder": "t.ex. 6"
     },
     "q2": {
@@ -92,27 +95,27 @@
     "summaryLabel": "KOPIERA/PASTA IN I KONTAKTFORMULÄRET",
     "copy": "Kopiera",
     "copied": "Kopierat",
-    "summaryTemplate": "Problemdiagnos\n- Timmar/vecka copy‑paste: {{hours}}\n- Roller beroende av ett kalkylblad: {{people}}\n- Uppskattat värde om automatiserat till nästa månad: {{value}}\n\nKontext: logistik / tillverkning",
+    "summaryTemplate": "Problemdiagnos\n- Timmar/vecka med kopiera/klistra in: {{hours}}\n- Roller som är beroende av ett kalkylblad: {{people}}\n- Uppskattat värde om automatiserat till nästa månad: {{value}}\n\nKontext: Vad används kalkylbladet till? (ekonomi, planering, rapporter…)",
     "reset": "Börja om",
     "back": "Tillbaka",
     "next": "Nästa",
     "finish": "Se sammanfattning",
     "cta": "Skicka detta till Inventing",
     "sideTitle": "Vad händer efter att du klickar ”Skicka”?",
-    "sideDescription": "Vi svarar med en plan du kan sanity‑checka.",
-    "sideBullet1": "Vi klargör workflow och datakällor (ERP, WMS, TMS, leverantörer).",
-    "sideBullet2": "Vi föreslår en första modul som tar bort största flaskhalsen.",
-    "sideBullet3": "Ni får ett fast abonnemangsförslag — inga överraskningsfakturor."
+    "sideDescription": "Vi återkommer med en plan du kan rimlighetskolla.",
+    "sideBullet1": "Vi reder ut arbetsflödet och datakällorna (ERP, CRM, ekonomi, interna system).",
+    "sideBullet2": "Vi föreslår en första modul som tar bort den största flaskhalsen.",
+    "sideBullet3": "Ni får ett förslag på fast abonnemang — utan överraskningar."
   },
   "contact": {
-    "heading": "Boka discovery‑möte",
-    "description": "Berätta vad som fallerar. Vi kartlägger workflow och föreslår en abonnemangsmodul.",
+    "heading": "Boka ett kartläggningssamtal",
+    "description": "Berätta vad som strular. Vi kartlägger arbetsflödet och föreslår en första modul på abonnemang.",
     "cardTitle": "Be om ett möte",
     "cardDescription": "Vi återkommer inom 1 arbetsdag.",
     "form": {
       "name": "Namn",
       "namePlaceholder": "Ditt namn",
-      "email": "E-post",
+      "email": "E‑post",
       "emailPlaceholder": "din.email@example.com",
       "company": "Företag",
       "companyPlaceholder": "Ditt företag",
@@ -125,16 +128,16 @@
       "sending": "Skickar...",
       "success": "Skickat — vi föreslår tider inom kort.",
       "errors": {
-        "nameRequired": "Namn krävs",
-        "emailRequired": "E-post krävs",
+        "nameRequired": "Namn är obligatoriskt",
+        "emailRequired": "E‑post är obligatoriskt",
         "emailInvalid": "Vänligen ange en giltig e-postadress",
-        "messageRequired": "Meddelande krävs",
-        "sendFailed": "Kunde inte skicka meddelandet. Vänligen försök igen."
+        "messageRequired": "Meddelande är obligatoriskt",
+        "sendFailed": "Kunde inte skicka. Försök igen."
       }
     }
   },
   "footer": {
-    "tagline": "Skräddarsytt SaaS på abonnemang. För operations‑team.",
+    "tagline": "Skräddarsytt SaaS på abonnemang. För team som vill få bort kalkylbladskaos.",
     "copyright": "Alla rättigheter förbehållna."
   }
 }
