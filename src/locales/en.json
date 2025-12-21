@@ -90,6 +90,8 @@
       "placeholder": "e.g. 25,000 / month"
     },
     "summaryLabel": "COPY/PASTE INTO THE CONTACT FORM",
+    "copy": "Copy",
+    "copied": "Copied",
     "summaryTemplate": "Problem Diagnostic\n- Hours/week copy‑pasting: {{hours}}\n- Roles depending on one spreadsheet: {{people}}\n- Estimated value if automated by next month: {{value}}\n\nContext: Logistics / Manufacturing",
     "reset": "Start over",
     "back": "Back",

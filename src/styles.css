@@ -14,8 +14,8 @@
     --card-foreground: oklch(0.141 0.005 285.823);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.141 0.005 285.823);
-    /* Action Blue */
-    --primary: oklch(0.62 0.16 252);
+    /* Action Blue (bright + vibrant) */
+    --primary: #3B82F6;
     --primary-foreground: oklch(0.985 0 0);
     --secondary: oklch(0.967 0.001 286.375);
     --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -50,18 +50,21 @@
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.21 0.006 285.885);
     --popover-foreground: oklch(0.985 0 0);
-    /* Action Blue */
-    --primary: oklch(0.72 0.16 252);
-    --primary-foreground: oklch(0.141 0.005 285.823);
+    /* Action Blue (pops on dark) */
+    --primary: #60A5FA;
+    /* Ensure blue buttons have high-contrast white text */
+    --primary-foreground: #FFFFFF;
     --secondary: oklch(0.274 0.006 286.033);
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.274 0.006 286.033);
-    --muted-foreground: oklch(0.705 0.015 286.067);
+    /* Minimum contrast for muted text on dark */
+    --muted-foreground: #94A3B8;
     --accent: oklch(0.274 0.006 286.033);
     --accent-foreground: oklch(0.985 0 0);
     --destructive: oklch(0.704 0.191 22.216);
     --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
+    /* Slightly stronger input border visibility */
+    --input: oklch(1 0 0 / 22%);
     --ring: oklch(0.552 0.016 285.938);
     --chart-1: oklch(0.808 0.114 19.571);
     --chart-2: oklch(0.637 0.237 25.331);
@@ -131,7 +134,7 @@
     scroll-behavior: smooth;
     }
   body {
-    @apply font-sans bg-background text-foreground;
+    @apply font-sans bg-background text-foreground leading-relaxed;
     }
 }
 
@@ -401,10 +404,10 @@
 /* Blueprint/grid overlay */
 .blueprint-grid {
   background-image:
-    linear-gradient(to right, oklch(from var(--border) l c h / 0.18) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(from var(--border) l c h / 0.18) 1px, transparent 1px),
     linear-gradient(to right, oklch(from var(--border) l c h / 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(from var(--border) l c h / 0.08) 1px, transparent 1px);
+    linear-gradient(to bottom, oklch(from var(--border) l c h / 0.08) 1px, transparent 1px),
+    linear-gradient(to right, oklch(from var(--border) l c h / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(from var(--border) l c h / 0.05) 1px, transparent 1px);
   background-size: 56px 56px, 56px 56px, 14px 14px, 14px 14px;
   background-position: 0 0, 0 0, 0 0, 0 0;
   mask-image: radial-gradient(80% 60% at 50% 20%, black 40%, transparent 100%);

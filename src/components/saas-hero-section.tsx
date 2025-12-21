@@ -16,10 +16,16 @@ export function SaaSHeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
             <div className="flex flex-wrap items-center gap-2 mb-6">
-              <Badge variant="secondary" className="glass font-mono text-xs tracking-wide">
+              <Badge
+                variant="secondary"
+                className="glass font-mono text-xs tracking-wide font-semibold border border-white/20 text-slate-200"
+              >
                 {t("hero.kicker")}
               </Badge>
-              <Badge variant="secondary" className="glass font-mono text-xs tracking-wide">
+              <Badge
+                variant="secondary"
+                className="glass font-mono text-xs tracking-wide font-semibold border border-white/20 text-slate-200"
+              >
                 {t("hero.kickerZeroUpfront")}
               </Badge>
             </div>
@@ -70,8 +76,8 @@ export function SaaSHeroSection() {
                     <p className="font-mono text-xs tracking-widest text-muted-foreground mb-2">
                       {t("hero.visualBefore")}
                     </p>
-                    <div className="glass rounded-xl p-4 border border-border/40">
-                      <p className="font-mono text-xs text-muted-foreground mb-2">
+                    <div className="rounded-xl p-4 border border-white/10 bg-[#0F172A]/80">
+                      <p className="font-mono text-xs text-slate-200/90 mb-2">
                         =IFERROR(VLOOKUP(...),0)
                       </p>
                       <div className="grid grid-cols-3 gap-2">
@@ -79,7 +85,7 @@ export function SaaSHeroSection() {
                         <div className="h-8 rounded-md bg-muted/30" />
                         <div className="h-8 rounded-md bg-muted/30" />
                       </div>
-                      <p className="mt-3 text-xs text-muted-foreground font-mono">
+                      <p className="mt-3 text-xs text-slate-400 font-mono">
                         FINAL_v3_COPY_DO_NOT_DELETE.xlsx
                       </p>
                     </div>
@@ -97,13 +103,13 @@ export function SaaSHeroSection() {
                       <div className="mt-4 grid grid-cols-2 gap-3">
                         <div className="rounded-lg border border-border/40 p-3">
                           <p className="font-mono text-[10px] text-muted-foreground">{t("hero.visualMetric1")}</p>
-                          <p className="mt-1 font-display text-xl font-black text-foreground">
+                          <p className="mt-1 font-display text-xl font-black text-white">
                             98.4%
                           </p>
                         </div>
                         <div className="rounded-lg border border-border/40 p-3">
                           <p className="font-mono text-[10px] text-muted-foreground">{t("hero.visualMetric2")}</p>
-                          <p className="mt-1 font-display text-xl font-black text-foreground">
+                          <p className="mt-1 font-display text-xl font-black text-white">
                             -31%
                           </p>
                         </div>

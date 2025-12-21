@@ -26,7 +26,7 @@ export function WhyInventingSection() {
 
   return (
     <section className="py-20 px-6 bg-muted/20 relative overflow-hidden">
-      <div className="absolute inset-0 blueprint-grid opacity-35 pointer-events-none" />
+      <div className="absolute inset-0 blueprint-grid opacity-18 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto">
         <ScrollAnimation direction="fade">
           <div className="max-w-3xl">

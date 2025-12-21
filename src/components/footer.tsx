@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="py-14 px-6 border-t border-border/50 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 blueprint-grid opacity-25 pointer-events-none" />
+      <div className="absolute inset-0 blueprint-grid opacity-18 pointer-events-none" />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-7">
