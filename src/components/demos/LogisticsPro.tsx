@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import {
   ArrowRightLeft,
   BadgeCheck,
@@ -34,36 +33,34 @@ function formatPLN(value: number) {
 }
 
 function StatusBadge({ status }: { status: DriverStatus }) {
-  const { t } = useTranslation()
-
   const config = useMemo(() => {
     switch (status) {
       case 'onRoad':
         return {
-          label: t('demos.logisticsPro.status.onRoad'),
+          label: 'On Road',
           className:
             'bg-sky-500/15 text-sky-200 border border-sky-500/30 hover:bg-sky-500/20',
         }
       case 'rest':
         return {
-          label: t('demos.logisticsPro.status.rest'),
+          label: 'Rest',
           className:
             'bg-amber-500/15 text-amber-200 border border-amber-500/30 hover:bg-amber-500/20',
         }
       case 'border':
         return {
-          label: t('demos.logisticsPro.status.borderCross'),
+          label: 'Border Cross',
           className:
             'bg-fuchsia-500/15 text-fuchsia-200 border border-fuchsia-500/30 hover:bg-fuchsia-500/20',
         }
       case 'available':
         return {
-          label: t('demos.logisticsPro.status.available'),
+          label: 'Available',
           className:
             'bg-emerald-500/15 text-emerald-200 border border-emerald-500/30 hover:bg-emerald-500/20',
         }
     }
-  }, [status, t])
+  }, [status])
 
   return (
     <span
@@ -79,7 +76,6 @@ function StatusBadge({ status }: { status: DriverStatus }) {
 }
 
 function ProgressBar({ value }: { value: number }) {
-  const { t } = useTranslation()
   const clamped = Math.min(100, Math.max(0, value))
   return (
     <div className="mt-3">
@@ -90,7 +86,7 @@ function ProgressBar({ value }: { value: number }) {
         />
       </div>
       <div className="mt-2 text-xs text-muted-foreground">
-        {clamped}% {clamped >= 85 ? t('demos.logisticsPro.metrics.esgCompliance.ok') : ''}
+        {clamped}% {clamped >= 85 ? 'OK' : ''}
       </div>
     </div>
   )
@@ -103,7 +99,6 @@ type ToastState =
     }
 
 function ReconcileToast({ state }: { state: ToastState }) {
-  const { t } = useTranslation()
   if (!state) return null
 
   const isProcessing = state.phase === 'processing'
@@ -134,14 +129,12 @@ function ReconcileToast({ state }: { state: ToastState }) {
           </div>
           <div className="min-w-0 flex-1">
             <div className="text-sm font-semibold text-foreground">
-              {isProcessing
-                ? t('demos.logisticsPro.reconcile.toastTitleProcessing')
-                : t('demos.logisticsPro.reconcile.toastTitleDone')}
+              {isProcessing ? 'Reconcile Fuel' : 'Reconcile Complete'}
             </div>
             <div className="mt-1 text-sm text-muted-foreground">
               {isProcessing
-                ? t('demos.logisticsPro.reconcile.toastBodyProcessing')
-                : t('demos.logisticsPro.reconcile.toastBodyDone')}
+                ? 'Processing 1,200 fuel transactions…'
+                : 'Done in 1.2s (replaces 4 hours of manual data entry).'}
             </div>
             <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
               <div
@@ -176,8 +169,6 @@ function ReconcileToast({ state }: { state: ToastState }) {
 }
 
 export function LogisticsPro() {
-  const { t } = useTranslation()
-
   const [showLegacyBanner, setShowLegacyBanner] = useState(true)
   const [legacyFadingOut, setLegacyFadingOut] = useState(false)
   const [toast, setToast] = useState<ToastState>(null)
@@ -264,9 +255,7 @@ export function LogisticsPro() {
             <div className="flex items-center gap-2 text-sm">
               <FileWarning className="h-4 w-4 text-red-300" />
               <span className="font-medium">
-                {t('demos.logisticsPro.legacyBanner', {
-                  file: 'Fleet-Master-Final-v4.xlsx',
-                })}
+                Viewing: Fleet-Master-Final-v4.xlsx (LEGACY VIEW)
               </span>
             </div>
             <Button
@@ -278,7 +267,7 @@ export function LogisticsPro() {
                 setLegacyFadingOut(true)
                 window.setTimeout(() => setShowLegacyBanner(false), 350)
               }}
-              aria-label={t('demos.logisticsPro.dismissBanner')}
+              aria-label="Dismiss legacy banner"
             >
               <X className="h-4 w-4" />
             </Button>
@@ -293,10 +282,10 @@ export function LogisticsPro() {
               </div>
               <div>
                 <h1 className="font-display text-2xl tracking-tight sm:text-3xl">
-                  {t('demos.logisticsPro.title')}
+                  LogisticsPro Dashboard
                 </h1>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  {t('demos.logisticsPro.subtitle')}
+                  A clean ops dashboard replacing spreadsheet chaos in fleet dispatch.
                 </p>
               </div>
             </div>
@@ -304,10 +293,10 @@ export function LogisticsPro() {
 
           <div className="flex items-center gap-2">
             <Badge className="glass-primary border-primary/25 text-foreground">
-              {t('demos.logisticsPro.badgeSwedishEngineering')}
+              Swedish Engineering
             </Badge>
             <Badge variant="secondary" className="border border-white/10">
-              {t('demos.logisticsPro.badgeLiveOps')}
+              Live Ops
             </Badge>
           </div>
         </header>
@@ -316,9 +305,7 @@ export function LogisticsPro() {
           <Card className="glass-strong glass-hover border-white/10 p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <div className="text-xs text-muted-foreground">
-                  {t('demos.logisticsPro.metrics.activeDrivers.label')}
-                </div>
+                <div className="text-xs text-muted-foreground">Active Drivers</div>
                 <div className="mt-2 text-2xl font-semibold tracking-tight">
                   38<span className="text-muted-foreground">/42</span>
                 </div>
@@ -328,16 +315,14 @@ export function LogisticsPro() {
               </div>
             </div>
             <div className="mt-3 text-xs text-muted-foreground">
-              {t('demos.logisticsPro.metrics.activeDrivers.note')}
+              Live availability across the fleet.
             </div>
           </Card>
 
           <Card className="glass-strong glass-hover border-white/10 p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <div className="text-xs text-muted-foreground">
-                  {t('demos.logisticsPro.metrics.fuelEfficiency.label')}
-                </div>
+                <div className="text-xs text-muted-foreground">Fuel Efficiency</div>
                 <div className="mt-2 text-2xl font-semibold tracking-tight">
                   31.4<span className="text-muted-foreground">L / 100km</span>
                 </div>
@@ -347,16 +332,14 @@ export function LogisticsPro() {
               </div>
             </div>
             <div className="mt-3 text-xs text-muted-foreground">
-              {t('demos.logisticsPro.metrics.fuelEfficiency.note')}
+              Anomaly‑aware fuel telemetry.
             </div>
           </Card>
 
           <Card className="glass-strong glass-hover border-white/10 p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <div className="text-xs text-muted-foreground">
-                  {t('demos.logisticsPro.metrics.unallocatedInvoices.label')}
-                </div>
+                <div className="text-xs text-muted-foreground">Unallocated Invoices</div>
                 <div className="mt-2 text-2xl font-semibold tracking-tight">
                   {formatPLN(142000)}
                 </div>
@@ -366,16 +349,14 @@ export function LogisticsPro() {
               </div>
             </div>
             <div className="mt-3 text-xs text-muted-foreground">
-              {t('demos.logisticsPro.metrics.unallocatedInvoices.note')}
+              Auto‑match invoices to routes & drivers.
             </div>
           </Card>
 
           <Card className="glass-strong glass-hover border-white/10 p-4">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <div className="text-xs text-muted-foreground">
-                  {t('demos.logisticsPro.metrics.esgCompliance.label')}
-                </div>
+                <div className="text-xs text-muted-foreground">ESG Compliance</div>
                 <div className="mt-2 flex items-center gap-2 text-2xl font-semibold tracking-tight">
                   88<span className="text-muted-foreground">%</span>
                 </div>
@@ -396,11 +377,9 @@ export function LogisticsPro() {
                   <Clock className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold">
-                    {t('demos.logisticsPro.dispatch.title')}
-                  </div>
+                  <div className="text-sm font-semibold">Driver Dispatch</div>
                   <div className="mt-1 text-xs text-muted-foreground">
-                    {t('demos.logisticsPro.dispatch.subtitle')}
+                    Real‑time status, ETAs, border events, and exceptions.
                   </div>
                 </div>
               </div>
@@ -412,11 +391,11 @@ export function LogisticsPro() {
                   onClick={handleReconcileFuel}
                 >
                   <ArrowRightLeft className="mr-2 h-4 w-4" />
-                  {t('demos.logisticsPro.dispatch.reconcileFuel')}
+                  Reconcile Fuel
                 </Button>
                 <Button type="button" variant="secondary" className="border-white/10">
                   <Fuel className="mr-2 h-4 w-4" />
-                  {t('demos.logisticsPro.dispatch.quickInsight')}
+                  Fuel Trend
                 </Button>
               </div>
             </div>
@@ -425,24 +404,12 @@ export function LogisticsPro() {
               <table className="w-full min-w-[780px] text-left text-sm">
                 <thead className="bg-white/5">
                   <tr className="text-xs text-muted-foreground">
-                    <th className="px-4 py-3 font-medium">
-                      {t('demos.logisticsPro.dispatch.columns.driver')}
-                    </th>
-                    <th className="px-4 py-3 font-medium">
-                      {t('demos.logisticsPro.dispatch.columns.truck')}
-                    </th>
-                    <th className="px-4 py-3 font-medium">
-                      {t('demos.logisticsPro.dispatch.columns.route')}
-                    </th>
-                    <th className="px-4 py-3 font-medium">
-                      {t('demos.logisticsPro.dispatch.columns.eta')}
-                    </th>
-                    <th className="px-4 py-3 font-medium">
-                      {t('demos.logisticsPro.dispatch.columns.status')}
-                    </th>
-                    <th className="px-4 py-3 font-medium text-right">
-                      {t('demos.logisticsPro.dispatch.columns.actions')}
-                    </th>
+                    <th className="px-4 py-3 font-medium">Driver</th>
+                    <th className="px-4 py-3 font-medium">Truck</th>
+                    <th className="px-4 py-3 font-medium">Route</th>
+                    <th className="px-4 py-3 font-medium">ETA</th>
+                    <th className="px-4 py-3 font-medium">Status</th>
+                    <th className="px-4 py-3 font-medium text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -473,7 +440,7 @@ export function LogisticsPro() {
                           className="text-foreground/80 hover:text-foreground hover:bg-white/5"
                           onClick={handleReconcileFuel}
                         >
-                          {t('demos.logisticsPro.dispatch.actionReconcile')}
+                          Reconcile
                         </Button>
                       </td>
                     </tr>
@@ -485,19 +452,19 @@ export function LogisticsPro() {
             <div className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <ShieldCheck className="h-4 w-4 text-primary" />
-                <span>{t('demos.logisticsPro.footerNote')}</span>
+                <span>Blueprint‑grade controls. Audit‑ready data. Operator‑first UX.</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Badge variant="secondary" className="border-white/10">
                   <span className="inline-flex items-center gap-1">
                     <BadgeCheck className="h-3.5 w-3.5 text-primary" />
-                    {t('demos.logisticsPro.auditTrail')}
+                    Audit Trail
                   </span>
                 </Badge>
                 <Badge variant="secondary" className="border-white/10">
                   <span className="inline-flex items-center gap-1">
                     <ShieldCheck className="h-3.5 w-3.5 text-primary" />
-                    {t('demos.logisticsPro.rbac')}
+                    RBAC
                   </span>
                 </Badge>
               </div>

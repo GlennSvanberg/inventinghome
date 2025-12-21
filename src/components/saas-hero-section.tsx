@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next"
 import { ArrowRightIcon } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Link } from "@tanstack/react-router"
+import { cn } from "@/lib/utils"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -60,6 +62,16 @@ export function SaaSHeroSection() {
               >
                 {t("hero.ctaSecondary")}
               </Button>
+
+              <Link
+                to="/demo"
+                className={cn(
+                  buttonVariants({ variant: "secondary", size: "lg" }),
+                  "h-auto px-7 py-6 text-lg border border-white/10"
+                )}
+              >
+                {t("hero.ctaDemo")}
+              </Link>
             </div>
 
             <p className="mt-6 text-sm text-muted-foreground font-mono">{t("hero.microProof")}</p>
