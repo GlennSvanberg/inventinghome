@@ -1,5 +1,5 @@
-import { ArrowRightIcon, MapPinIcon } from "lucide-react"
 import { useTranslation } from "react-i18next"
+import { ArrowRightIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -21,10 +21,6 @@ export function SaaSHeroSection() {
               </Badge>
               <Badge variant="secondary" className="glass font-mono text-xs tracking-wide">
                 {t("hero.kickerZeroUpfront")}
-              </Badge>
-              <Badge variant="secondary" className="glass font-mono text-xs tracking-wide">
-                <MapPinIcon className="w-3.5 h-3.5 mr-1" />
-                {t("hero.kickerLocations")}
               </Badge>
             </div>
 

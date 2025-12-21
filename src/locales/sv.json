@@ -1,15 +1,14 @@
 {
   "meta": {
     "title": "Inventing — Skräddarsytt SaaS på abonnemang",
-    "description": "Skräddarsydda SaaS‑lösningar på fast månadsabonnemang (ingen startkostnad) för logistik- och tillverkningsledare i Sverige och Polen. Byt kalkylbladskaos mot säker, skalbar mjukvara anpassad till ert arbetssätt."
+    "description": "Skräddarsydda SaaS‑lösningar på fast månadsabonnemang (ingen startkostnad) för logistik- och tillverkningsledare. Byt kalkylbladskaos mot säker, skalbar mjukvara anpassad till ert arbetssätt."
   },
   "hero": {
     "kicker": "Skräddarsytt SaaS på abonnemang",
     "kickerZeroUpfront": "0 SEK i startkostnad",
-    "kickerLocations": "Poznań • Göteborg",
     "headline": "Sluta driva din mångmiljon‑logistik och produktion i Excel.",
     "subheadline": "Vi bygger den skräddarsydda mjukvaran du behöver för att eliminera teknisk skuld och administrativt kaos. Ingen startkostnad. Fast månadsabonnemang.",
-    "ctaPrimary": "Boka problem‑discovery (Poznań/Göteborg)",
+    "ctaPrimary": "Boka problem‑discovery",
     "ctaSecondary": "Gör 60‑sekundersdiagnosen",
     "visualTitle": "Från kalkylbladskaos → till ren operations‑dashboard",
     "visualBefore": "FÖRE",
@@ -32,7 +31,7 @@
     "steps": {
       "extraction": {
         "title": "1) Extraktionen",
-        "body": "Vi sitter med ert team i Poznań/Göteborg och kartlägger de stökiga manuella processerna bakom kalkylbladet."
+        "body": "Vi sitter med ert team och kartlägger de stökiga manuella processerna bakom kalkylbladet."
       },
       "engineering": {
         "title": "2) Ingenjörsarbetet",
@@ -91,7 +90,7 @@
       "placeholder": "t.ex. 25 000 EUR/mån"
     },
     "summaryLabel": "KOPIERA/PASTA IN I KONTAKTFORMULÄRET",
-    "summaryTemplate": "Problemdiagnos\n- Timmar/vecka copy‑paste: {{hours}}\n- Roller beroende av ett kalkylblad: {{people}}\n- Uppskattat värde om automatiserat till nästa månad: {{value}}\n\nKontext: logistik / tillverkning\nPlatsönskemål: Poznań eller Göteborg",
+    "summaryTemplate": "Problemdiagnos\n- Timmar/vecka copy‑paste: {{hours}}\n- Roller beroende av ett kalkylblad: {{people}}\n- Uppskattat värde om automatiserat till nästa månad: {{value}}\n\nKontext: logistik / tillverkning",
     "reset": "Börja om",
     "back": "Tillbaka",
     "next": "Nästa",
@@ -133,18 +132,7 @@
     }
   },
   "footer": {
-    "tagline": "Skräddarsytt SaaS på abonnemang. Byggt i Sverige och Polen.",
-    "localPresenceLabel": "Lokal närvaro",
-    "locations": {
-      "poznan": {
-        "title": "Poznań, Polen",
-        "lines": "Workshops på plats • Leverans på polska"
-      },
-      "gothenburg": {
-        "title": "Göteborg, Sverige",
-        "lines": "Workshops på plats • Svenska standarder"
-      }
-    },
+    "tagline": "Skräddarsytt SaaS på abonnemang. För operations‑team.",
     "copyright": "Alla rättigheter förbehållna."
   }
 }

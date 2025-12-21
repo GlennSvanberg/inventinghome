@@ -1,15 +1,14 @@
 {
   "meta": {
     "title": "Inventing — Dedykowane SaaS w abonamencie",
-    "description": "Dedykowane rozwiązania SaaS w stałym abonamencie (bez kosztu startowego) dla liderów logistyki i produkcji w Polsce i Szwecji. Zamień chaos arkuszy na bezpieczne, skalowalne oprogramowanie dopasowane do Twojego procesu."
+    "description": "Dedykowane rozwiązania SaaS w stałym abonamencie (bez kosztu startowego) dla liderów logistyki i produkcji. Zamień chaos arkuszy na bezpieczne, skalowalne oprogramowanie dopasowane do Twojego procesu."
   },
   "hero": {
     "kicker": "Dedykowane SaaS w abonamencie",
     "kickerZeroUpfront": "0 SEK na start",
-    "kickerLocations": "Poznań • Göteborg",
     "headline": "Przestań zarządzać wielomilionową logistyką i produkcją w Excelu.",
     "subheadline": "Budujemy dedykowane oprogramowanie, które eliminuje dług techniczny i chaos administracyjny. Bez kosztu startowego. Stały miesięczny abonament.",
-    "ctaPrimary": "Umów discovery: problem i proces (Poznań/Göteborg)",
+    "ctaPrimary": "Umów rozmowę discovery",
     "ctaSecondary": "Zrób 60‑sek. diagnostykę",
     "visualTitle": "Od chaosu w arkuszach → do czystego dashboardu",
     "visualBefore": "PRZED",
@@ -32,7 +31,7 @@
     "steps": {
       "extraction": {
         "title": "1) Ekstrakcja",
-        "body": "Siadamy z Twoim zespołem w Poznaniu/Göteborgu i mapujemy ręczne, „brudne” procesy stojące za arkuszem."
+        "body": "Siadamy z Twoim zespołem i mapujemy ręczne, „brudne” procesy stojące za arkuszem."
       },
       "engineering": {
         "title": "2) Inżynieria",
@@ -91,7 +90,7 @@
       "placeholder": "np. 25 000 EUR/mies."
     },
     "summaryLabel": "SKOPIUJ I WKLEJ DO FORMULARZA",
-    "summaryTemplate": "Diagnostyka problemu\n- Godz./tydz. kopiuj‑wklej: {{hours}}\n- Role zależne od jednego arkusza: {{people}}\n- Szacowana wartość automatyzacji do przyszłego miesiąca: {{value}}\n\nKontekst: logistyka / produkcja\nPreferowana lokalizacja: Poznań lub Göteborg",
+    "summaryTemplate": "Diagnostyka problemu\n- Godz./tydz. kopiuj‑wklej: {{hours}}\n- Role zależne od jednego arkusza: {{people}}\n- Szacowana wartość automatyzacji do przyszłego miesiąca: {{value}}\n\nKontekst: logistyka / produkcja",
     "reset": "Zacznij od nowa",
     "back": "Wstecz",
     "next": "Dalej",
@@ -133,18 +132,7 @@
     }
   },
   "footer": {
-    "tagline": "Dedykowane SaaS w abonamencie. Budowane w Szwecji i w Polsce.",
-    "localPresenceLabel": "Obecność lokalna",
-    "locations": {
-      "poznan": {
-        "title": "Poznań, Polska",
-        "lines": "Warsztaty na miejscu • Delivery po polsku"
-      },
-      "gothenburg": {
-        "title": "Göteborg, Szwecja",
-        "lines": "Warsztaty na miejscu • Szwedzkie standardy"
-      }
-    },
+    "tagline": "Dedykowane SaaS w abonamencie. Dla zespołów operacyjnych.",
     "copyright": "Wszelkie prawa zastrzeżone."
   }
 }
