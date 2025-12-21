@@ -139,6 +139,69 @@
   "footer": {
     "tagline": "Custom SaaS solutions on subscription. Built for operations teams.",
     "copyright": "All rights reserved."
+  },
+  "demos": {
+    "notFound": {
+      "kicker": "Demo Engine",
+      "title": "Demo not found",
+      "body": "This demo slug is not registered. Ask Inventing to enable it in the demo registry."
+    },
+    "logisticsPro": {
+      "legacyBanner": "Viewing: {{file}} (LEGACY VIEW)",
+      "dismissBanner": "Dismiss legacy banner",
+      "title": "LogisticsPro Dashboard",
+      "subtitle": "A clean ops dashboard replacing spreadsheet chaos in fleet dispatch.",
+      "badgeSwedishEngineering": "Swedish Engineering",
+      "badgeLiveOps": "Live Ops",
+      "metrics": {
+        "activeDrivers": {
+          "label": "Active Drivers",
+          "note": "Live availability across the fleet."
+        },
+        "fuelEfficiency": {
+          "label": "Fuel Efficiency",
+          "note": "Anomaly‑aware fuel telemetry."
+        },
+        "unallocatedInvoices": {
+          "label": "Unallocated Invoices",
+          "note": "Auto‑match invoices to routes & drivers."
+        },
+        "esgCompliance": {
+          "label": "ESG Compliance",
+          "ok": "OK"
+        }
+      },
+      "dispatch": {
+        "title": "Driver Dispatch",
+        "subtitle": "Real‑time status, ETAs, border events, and exceptions.",
+        "reconcileFuel": "Reconcile Fuel",
+        "quickInsight": "Fuel Trend",
+        "columns": {
+          "driver": "Driver",
+          "truck": "Truck",
+          "route": "Route",
+          "eta": "ETA",
+          "status": "Status",
+          "actions": "Actions"
+        },
+        "actionReconcile": "Reconcile"
+      },
+      "status": {
+        "onRoad": "On Road",
+        "rest": "Rest",
+        "borderCross": "Border Cross",
+        "available": "Available"
+      },
+      "reconcile": {
+        "toastTitleProcessing": "Reconcile Fuel",
+        "toastTitleDone": "Reconcile Complete",
+        "toastBodyProcessing": "Processing 1,200 fuel transactions…",
+        "toastBodyDone": "Done in 1.2s (replaces 4 hours of manual data entry)."
+      },
+      "footerNote": "Blueprint‑grade controls. Audit‑ready data. Operator‑first UX.",
+      "auditTrail": "Audit Trail",
+      "rbac": "RBAC"
+    }
   }
 }
 

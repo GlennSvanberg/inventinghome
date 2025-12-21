@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DemoSlugRouteImport } from './routes/demo.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoSlugRoute = DemoSlugRouteImport.update({
+  id: '/demo/$slug',
+  path: '/demo/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiContactRoute = ApiContactRouteImport.update({
@@ -26,27 +32,31 @@ const ApiContactRoute = ApiContactRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/api/contact': typeof ApiContactRoute
+  '/demo/$slug': typeof DemoSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/api/contact': typeof ApiContactRoute
+  '/demo/$slug': typeof DemoSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/api/contact': typeof ApiContactRoute
+  '/demo/$slug': typeof DemoSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/contact'
+  fullPaths: '/' | '/api/contact' | '/demo/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/contact'
-  id: '__root__' | '/' | '/api/contact'
+  to: '/' | '/api/contact' | '/demo/$slug'
+  id: '__root__' | '/' | '/api/contact' | '/demo/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ApiContactRoute: typeof ApiContactRoute
+  DemoSlugRoute: typeof DemoSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/$slug': {
+      id: '/demo/$slug'
+      path: '/demo/$slug'
+      fullPath: '/demo/$slug'
+      preLoaderRoute: typeof DemoSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/contact': {
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ApiContactRoute: ApiContactRoute,
+  DemoSlugRoute: DemoSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
