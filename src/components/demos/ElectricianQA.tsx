@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import { Link } from '@tanstack/react-router'
 import {
   ArrowLeft,
   BadgeCheck,
@@ -411,20 +410,14 @@ export function ElectricianQA() {
                   ))}
                 </div>
 
-                <div className="mt-6 rounded-xl border border-primary/25 bg-primary/10 p-4">
-                  <div className="text-sm font-semibold">This is a real workflow demo</div>
-                  <div className="mt-1 text-sm text-muted-foreground">
-                    Touch-first, task-driven, and wizard-based—built to feel like a daily mobile app.
+                <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
+                  <div className="flex items-center justify-between gap-3 text-sm">
+                    <span className="font-semibold">Offline-ready</span>
+                    <Badge className="glass-primary border-primary/25 text-foreground">Sync on</Badge>
                   </div>
-                </div>
-
-                <div className="mt-6">
-                  <Link
-                    to="/demo"
-                    className="inline-flex h-9 items-center justify-center rounded-4xl border border-white/15 bg-white/5 px-4 text-sm font-medium hover:bg-white/10 transition-colors w-full"
-                  >
-                    Back to all demos
-                  </Link>
+                  <div className="mt-1 text-sm text-muted-foreground">
+                    Checklists auto-save and sync when connection is available.
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -452,7 +445,7 @@ export function ElectricianQA() {
                   <div className="animate-in fade-in slide-in-from-right-2 duration-200">
                     <div className="text-sm font-semibold">Step 1 — Site & Installation Details</div>
                     <div className="mt-1 text-sm text-muted-foreground">
-                      Set the context. The assistant adapts the checklist to the installation type.
+                      Set the context to load the right checklist.
                     </div>
 
                     <div className="mt-5 space-y-5">
@@ -485,8 +478,8 @@ export function ElectricianQA() {
                                     <div className="text-sm font-semibold">{opt.label}</div>
                                     <div className="mt-1 text-xs text-muted-foreground">
                                       {opt.value === 'new'
-                                        ? 'Fresh commissioning workflow.'
-                                        : 'Validate changes + re-test impacted circuits.'}
+                                      ? 'New commissioning record.'
+                                      : 'Validate changes and re-test impacted circuits.'}
                                     </div>
                                   </div>
                                 </div>
@@ -532,7 +525,7 @@ export function ElectricianQA() {
                             <div className="min-w-0">
                               <div className="text-sm font-semibold">Adaptive checklist</div>
                               <div className="mt-1 text-sm text-muted-foreground">
-                                Step 3 will switch to tests specific to{' '}
+                                Tests and required uploads are based on{' '}
                                 <span className="text-foreground">{installationType ? typeLabel : 'your selection'}</span>.
                               </div>
                             </div>
@@ -548,7 +541,7 @@ export function ElectricianQA() {
                   <div className="animate-in fade-in slide-in-from-right-2 duration-200">
                     <div className="text-sm font-semibold">Step 2 — Pre-Test Visual Inspection</div>
                     <div className="mt-1 text-sm text-muted-foreground">
-                      Always applicable. This creates an audit trail (photos + checks).
+                      Capture checks and photos for the site record.
                     </div>
 
                     <div className="mt-5 space-y-3">
@@ -587,7 +580,7 @@ export function ElectricianQA() {
                           <div className="min-w-0">
                             <div className="text-sm font-semibold">Take Photo of Main Panel.</div>
                             <div className="mt-1 text-xs text-muted-foreground">
-                              Stored with the commissioning report (simulated).
+                              Stored with the commissioning report.
                             </div>
                           </div>
                           <HapticButton
@@ -601,7 +594,7 @@ export function ElectricianQA() {
                               setPanelPhotoUploaded(true)
                               pushToast({
                                 title: 'Photo Uploaded!',
-                                message: 'Main panel photo saved to this site record.',
+                                message: 'Main panel photo saved to the site record.',
                                 variant: 'success',
                                 icon: 'camera',
                               })
@@ -648,7 +641,7 @@ export function ElectricianQA() {
                             <div className="shrink-0 text-sm text-muted-foreground">MΩ</div>
                           </div>
                           <div className="mt-2 text-xs text-muted-foreground">
-                            Enter the measured value from your tester (simulated).
+                            Enter the measured value from your tester.
                           </div>
                         </div>
 
@@ -664,7 +657,7 @@ export function ElectricianQA() {
                             <div className="shrink-0 text-sm text-muted-foreground">Ω</div>
                           </div>
                           <div className="mt-2 text-xs text-muted-foreground">
-                            Used to validate disconnection times (audit trail).
+                            Used to validate disconnection times and compliance.
                           </div>
                         </div>
 
@@ -678,7 +671,7 @@ export function ElectricianQA() {
                           <div className="min-w-0">
                             <div className="text-sm font-semibold">Confirm RCD/RCBO trip times.</div>
                             <div className="mt-1 text-xs text-muted-foreground">
-                              Record verified trip performance (simulated).
+                              Record verified trip performance.
                             </div>
                           </div>
                         </label>
@@ -721,7 +714,7 @@ export function ElectricianQA() {
                           <div className="flex items-start justify-between gap-3">
                             <div className="min-w-0">
                               <div className="text-sm font-semibold">Upload Fluke Test Report.</div>
-                              <div className="mt-1 text-xs text-muted-foreground">PDF/HTML export (simulated).</div>
+                              <div className="mt-1 text-xs text-muted-foreground">PDF/HTML export.</div>
                             </div>
                             <HapticButton
                               type="button"
@@ -734,7 +727,7 @@ export function ElectricianQA() {
                                 setFlukeReportUploaded(true)
                                 pushToast({
                                   title: 'Report Uploaded!',
-                                  message: 'Fluke certification report archived to this site.',
+                                  message: 'Certification report archived to the site record.',
                                   variant: 'success',
                                   icon: 'file',
                                 })
@@ -787,7 +780,7 @@ export function ElectricianQA() {
                           />
                           <div className="min-w-0">
                             <div className="text-sm font-semibold">Log insulation test results (Megger).</div>
-                            <div className="mt-1 text-xs text-muted-foreground">Simulated entry—stored in the audit log.</div>
+                            <div className="mt-1 text-xs text-muted-foreground">Stored in the audit log.</div>
                           </div>
                         </label>
                         <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 hover:bg-white/7 transition-colors">
@@ -828,7 +821,7 @@ export function ElectricianQA() {
                           />
                           <div className="min-w-0">
                             <div className="text-sm font-semibold">Record lux readings in key zones.</div>
-                            <div className="mt-1 text-xs text-muted-foreground">Simulated entry to meet handover requirements.</div>
+                          <div className="mt-1 text-xs text-muted-foreground">Saved for handover requirements.</div>
                           </div>
                         </label>
                         <label className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 hover:bg-white/7 transition-colors">
@@ -882,7 +875,7 @@ export function ElectricianQA() {
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
                             <div className="text-sm font-semibold">Client/Supervisor Sign-off.</div>
-                            <div className="mt-1 text-xs text-muted-foreground">Simulated e-signature capture.</div>
+                            <div className="mt-1 text-xs text-muted-foreground">E-signature capture.</div>
                           </div>
                           <HapticButton
                             type="button"
@@ -913,7 +906,7 @@ export function ElectricianQA() {
                           </div>
                           <div className="mt-3 h-10 w-full rounded-lg border border-white/10 bg-white/5" />
                           <div className="mt-2 text-xs text-muted-foreground">
-                            Tap “E-Sign” to simulate drawing a signature.
+                            Tap “E-Sign” to capture a signature.
                           </div>
                         </div>
                       </div>
@@ -927,7 +920,7 @@ export function ElectricianQA() {
                         onClick={() => {
                           pushToast({
                             title: 'Report generated and archived!',
-                            message: 'Commissioning report saved to the site record (simulated).',
+                            message: 'Commissioning report saved to the site record.',
                             variant: 'success',
                             icon: 'file',
                           })
@@ -939,42 +932,6 @@ export function ElectricianQA() {
                     </div>
                   </div>
                 ) : null}
-              </CardContent>
-            </Card>
-
-            {/* In-demo navigation card */}
-            <Card className="border border-primary/35 bg-primary/10 text-foreground shadow-[0_0_0_1px_rgba(96,165,250,0.15)]">
-              <CardContent className="p-6">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="min-w-0">
-                    <div className="text-sm font-semibold">See other demos</div>
-                    <div className="mt-1 text-sm text-muted-foreground">
-                      Compare this wizard workflow with the other live experiences.
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2 sm:flex-row">
-                    <Link
-                      to="/demo/logistics"
-                      className={cn(
-                        'inline-flex h-9 items-center justify-center rounded-4xl px-4 text-sm font-medium',
-                        'bg-primary text-primary-foreground hover:bg-primary/92 transition-colors',
-                      )}
-                    >
-                      <Network className="mr-2 h-4 w-4" />
-                      See Logistics Demo
-                    </Link>
-                    <Link
-                      to="/demo/task"
-                      className={cn(
-                        'inline-flex h-9 items-center justify-center rounded-4xl px-4 text-sm font-medium',
-                        'border border-white/15 bg-white/5 hover:bg-white/10 transition-colors',
-                      )}
-                    >
-                      <Zap className="mr-2 h-4 w-4" />
-                      See BuildFlow Demo
-                    </Link>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </main>
