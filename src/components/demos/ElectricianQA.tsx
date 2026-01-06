@@ -383,6 +383,7 @@ export function ElectricianQA() {
                       key={s.id}
                       type="button"
                       onClick={() => resetWizardForSite(s)}
+                      trackaton-on-click={`electricianqa-select-site-${s.id}`}
                       className={cn(
                         'w-full text-left',
                         'rounded-xl border border-white/10 bg-white/5 p-4',
@@ -590,6 +591,7 @@ export function ElectricianQA() {
                               'glass-button glass-button-hover text-primary-foreground',
                               panelPhotoUploaded ? 'opacity-80' : '',
                             )}
+                            trackaton-on-click="electricianqa-upload-panel-photo"
                             onClick={() => {
                               setPanelPhotoUploaded(true)
                               pushToast({
@@ -723,6 +725,7 @@ export function ElectricianQA() {
                                 'glass-button glass-button-hover text-primary-foreground',
                                 flukeReportUploaded ? 'opacity-80' : '',
                               )}
+                              trackaton-on-click="electricianqa-upload-fluke-report"
                               onClick={() => {
                                 setFlukeReportUploaded(true)
                                 pushToast({
@@ -882,6 +885,7 @@ export function ElectricianQA() {
                             size="sm"
                             variant="secondary"
                             className={cn('border-white/10', signatureCaptured ? 'opacity-80' : '')}
+                            trackaton-on-click="electricianqa-e-sign"
                             onClick={() => {
                               setSignatureCaptured(true)
                               pushToast({
@@ -917,6 +921,7 @@ export function ElectricianQA() {
                         type="button"
                         className={cn('glass-button glass-button-hover text-primary-foreground w-full', !canGoNext ? 'opacity-60' : '')}
                         disabled={!canGoNext}
+                        trackaton-on-click="electricianqa-generate-report"
                         onClick={() => {
                           pushToast({
                             title: 'Report generated and archived!',
@@ -946,6 +951,7 @@ export function ElectricianQA() {
                   type="button"
                   variant="secondary"
                   className="border-white/10"
+                  trackaton-on-click="electricianqa-back"
                   onClick={() => {
                     if (step === 1) {
                       setSelectedSite(null)
@@ -963,6 +969,7 @@ export function ElectricianQA() {
                   type="button"
                   className={cn('glass-button glass-button-hover text-primary-foreground flex-1', !canGoNext ? 'opacity-60' : '')}
                   disabled={!canGoNext}
+                  trackaton-on-click="electricianqa-next"
                   onClick={() => {
                     if (step === 4) return
                     goNext()

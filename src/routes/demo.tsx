@@ -71,6 +71,7 @@ function DemoIndex() {
                   <Link
                     to="/demo/$slug"
                     params={{ slug: demo.slug }}
+                    trackaton-on-click={`demo-open-${demo.slug}`}
                     className={cn(
                       buttonVariants({ variant: 'default' }),
                       'glass-button glass-button-hover',

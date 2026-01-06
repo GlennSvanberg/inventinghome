@@ -263,6 +263,7 @@ export function LogisticsPro() {
               variant="ghost"
               size="sm"
               className="h-8 px-2 text-red-100/80 hover:text-red-50 hover:bg-red-500/10"
+              trackaton-on-click="logisticspro-dismiss-banner"
               onClick={() => {
                 setLegacyFadingOut(true)
                 window.setTimeout(() => setShowLegacyBanner(false), 350)
@@ -386,12 +387,18 @@ export function LogisticsPro() {
                 <Button
                   type="button"
                   className="glass-button glass-button-hover text-primary-foreground"
+                  trackaton-on-click="logisticspro-reconcile-fuel"
                   onClick={handleReconcileFuel}
                 >
                   <ArrowRightLeft className="mr-2 h-4 w-4" />
                   Reconcile Fuel
                 </Button>
-                <Button type="button" variant="secondary" className="border-white/10">
+                <Button 
+                  type="button" 
+                  variant="secondary" 
+                  className="border-white/10"
+                  trackaton-on-click="logisticspro-fuel-trend"
+                >
                   <Fuel className="mr-2 h-4 w-4" />
                   Fuel Trend
                 </Button>
@@ -436,6 +443,7 @@ export function LogisticsPro() {
                           variant="ghost"
                           size="sm"
                           className="text-foreground/80 hover:text-foreground hover:bg-white/5"
+                          trackaton-on-click={`logisticspro-reconcile-row-${row.id}`}
                           onClick={handleReconcileFuel}
                         >
                           Reconcile

@@ -253,6 +253,7 @@ export function ContactFormSection() {
                     type="submit"
                     size="lg"
                     disabled={submitState === "loading"}
+                    trackaton-on-click="contact-form-submit"
                     className="min-w-32"
                   >
                     {submitState === "loading" ? (

@@ -42,6 +42,7 @@ export function SaaSHeroSection() {
               <Button
                 size="lg"
                 className="h-auto px-8 py-6 text-lg glass-button glass-button-hover"
+                trackaton-on-click="hero-cta-primary"
                 onClick={() => {
                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                 }}
@@ -54,6 +55,7 @@ export function SaaSHeroSection() {
                 size="lg"
                 variant="outline"
                 className="h-auto px-7 py-6 text-lg glass"
+                trackaton-on-click="hero-cta-secondary"
                 onClick={() => {
                   document.getElementById("diagnostic")?.scrollIntoView({ behavior: "smooth" })
                 }}

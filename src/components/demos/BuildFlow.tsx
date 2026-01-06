@@ -435,6 +435,7 @@ export function BuildFlow() {
                             'shrink-0',
                             isDone ? 'border-white/10' : 'glass-button glass-button-hover',
                           )}
+                          trackaton-on-click={`buildflow-complete-task-${task.id}`}
                           onClick={() => completeTask(task.id)}
                           disabled={isDone}
                         >
@@ -518,6 +519,7 @@ export function BuildFlow() {
                   <Button
                     type="button"
                     className="glass-button glass-button-hover text-primary-foreground"
+                    trackaton-on-click="buildflow-generate-summary"
                     onClick={() => setReportOpen(true)}
                   >
                     <FileText className="mr-2 h-4 w-4" />
@@ -568,6 +570,7 @@ export function BuildFlow() {
                               type="button"
                               size="sm"
                               className="glass-button glass-button-hover text-primary-foreground"
+                              trackaton-on-click={`buildflow-quick-action-${a.id}`}
                               onClick={() => queueAction(`${a.cta}: ${a.title}`)}
                             >
                               {a.cta}
@@ -625,6 +628,7 @@ export function BuildFlow() {
                 type="button"
                 className="glass-button glass-button-hover text-primary-foreground"
                 disabled={reportPhase !== 'done'}
+                trackaton-on-click="buildflow-view-summary"
                 onClick={() => setReportOpen(false)}
               >
                 View summary

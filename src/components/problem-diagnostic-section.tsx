@@ -156,6 +156,7 @@ export function ProblemDiagnosticSection() {
                           size="icon-sm"
                           variant="ghost"
                           onClick={copySummary}
+                          trackaton-on-click="diagnostic-copy-summary"
                           className="text-slate-200 hover:text-white"
                           aria-label={copied ? t("diagnostic.copied") : t("diagnostic.copy")}
                           title={copied ? t("diagnostic.copied") : t("diagnostic.copy")}
@@ -175,6 +176,7 @@ export function ProblemDiagnosticSection() {
                     variant="ghost"
                     className="justify-start"
                     onClick={reset}
+                    trackaton-on-click="diagnostic-reset"
                     type="button"
                   >
                     <RotateCcwIcon className="w-4 h-4 mr-2" />
@@ -187,6 +189,7 @@ export function ProblemDiagnosticSection() {
                         variant="outline"
                         className="glass"
                         type="button"
+                        trackaton-on-click="diagnostic-back"
                         onClick={() => setStep((s) => (s === 0 ? 0 : ((s - 1) as 0 | 1 | 2)))}
                       >
                         {t("diagnostic.back")}
@@ -198,6 +201,7 @@ export function ProblemDiagnosticSection() {
                         type="button"
                         disabled={!canGoNext}
                         className="glass-button glass-button-hover"
+                        trackaton-on-click="diagnostic-next"
                         onClick={() => setStep((s) => ((s + 1) as 0 | 1 | 2 | 3))}
                       >
                         {t("diagnostic.next")}
@@ -210,6 +214,7 @@ export function ProblemDiagnosticSection() {
                         type="button"
                         disabled={!canGoNext}
                         className="glass-button glass-button-hover"
+                        trackaton-on-click="diagnostic-finish"
                         onClick={() => setStep(3)}
                       >
                         {t("diagnostic.finish")}
@@ -221,6 +226,7 @@ export function ProblemDiagnosticSection() {
                       <Button
                         type="button"
                         className="glass-button glass-button-hover"
+                        trackaton-on-click="diagnostic-cta-contact"
                         onClick={saveAndScrollToContact}
                       >
                         {t("diagnostic.cta")}

@@ -30,6 +30,7 @@ export function Footer() {
               <LanguageSelector />
               <Link
                 to="/demo"
+                trackaton-on-click="footer-demo-link"
                 className={cn(
                   buttonVariants({ variant: 'secondary', size: 'sm' }),
                   'border border-white/10'

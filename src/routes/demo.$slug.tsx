@@ -47,6 +47,7 @@ function DemoRoute() {
             <div className="mt-5">
               <Link
                 to="/demo"
+                trackaton-on-click="demo-back-to-list"
                 className={cn(buttonVariants({ variant: 'secondary' }), 'border-white/10')}
               >
                 Back to demos

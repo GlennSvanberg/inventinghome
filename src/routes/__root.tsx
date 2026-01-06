@@ -41,6 +41,14 @@ export const Route = createRootRoute({
         href: '/logo.png',
       },
     ],
+    scripts: [
+      {
+        src: 'https://www.trackaton.com/track.js',
+        'data-website-id': 'jd7a48cmq444qk6nqr8pymx11x7ypr7r',
+        'data-endpoint': 'https://resolute-orca-949.convex.site/api/e',
+        async: true,
+      },
+    ],
   }),
 
   shellComponent: RootDocument,
