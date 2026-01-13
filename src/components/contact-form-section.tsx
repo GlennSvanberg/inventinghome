@@ -1,16 +1,27 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import { AlertCircleIcon, CheckCircleIcon, LoaderIcon, MailIcon } from "lucide-react"
+import { useEffect, useState } from 'react'
+import {
+  AlertCircleIcon,
+  CheckCircleIcon,
+  LoaderIcon,
+  MailIcon,
+} from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { Button } from "@/components/ui/button"
-import { ScrollAnimation } from "@/components/scroll-animation"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Field, FieldGroup } from "@/components/ui/field"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { DIAGNOSTIC_STORAGE_KEY } from "@/components/problem-diagnostic-section"
+import { Button } from '@/components/ui/button'
+import { ScrollAnimation } from '@/components/scroll-animation'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+import { Field, FieldGroup } from '@/components/ui/field'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { DIAGNOSTIC_STORAGE_KEY } from '@/components/problem-diagnostic-section'
 
 type FormState = {
   name: string
@@ -20,35 +31,49 @@ type FormState = {
   message: string
 }
 
-type SubmitState = "idle" | "loading" | "success" | "error"
+type SubmitState = 'idle' | 'loading' | 'success' | 'error'
 
 export function ContactFormSection() {
   const { t } = useTranslation()
   const [formData, setFormData] = useState<FormState>({
-    name: "",
-    email: "",
-    company: "",
-    phone: "",
-    message: "",
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: '',
   })
-  const [submitState, setSubmitState] = useState<SubmitState>("idle")
-  const [errorMessage, setErrorMessage] = useState<string>("")
+  const [submitState, setSubmitState] = useState<SubmitState>('idle')
+  const [errorMessage, setErrorMessage] = useState<string>('')
 
   useEffect(() => {
-    if (typeof window === "undefined") return
-    try {
-      const prefill = localStorage.getItem(DIAGNOSTIC_STORAGE_KEY)
-      if (prefill && !formData.message.trim()) {
-        setFormData((prev) => ({ ...prev, message: prefill }))
-        localStorage.removeItem(DIAGNOSTIC_STORAGE_KEY)
+    if (typeof window === 'undefined') return
+
+    const handlePrefill = () => {
+      try {
+        const prefill = localStorage.getItem(DIAGNOSTIC_STORAGE_KEY)
+        if (prefill) {
+          setFormData((prev) => ({ ...prev, message: prefill }))
+          // We don't necessarily want to remove it until they submit or refresh, 
+          // or we can remove it if we successfully pre-fill.
+          localStorage.removeItem(DIAGNOSTIC_STORAGE_KEY)
+        }
+      } catch {
+        // ignore
       }
-    } catch {
-      // ignore
     }
-  }, [formData.message])
+
+    // Check once on mount
+    handlePrefill()
+
+    // Listen for custom event
+    window.addEventListener('inventing-diagnostic-updated', handlePrefill)
+    return () => {
+      window.removeEventListener('inventing-diagnostic-updated', handlePrefill)
+    }
+  }, [])
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -76,52 +101,59 @@ export function ContactFormSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setErrorMessage("")
+    setErrorMessage('')
 
     if (!validateForm()) {
-      setSubmitState("error")
+      setSubmitState('error')
       return
     }
 
-    setSubmitState("loading")
+    setSubmitState('loading')
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
+      const response = await fetch('/api/contact', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       })
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.message || t('contact.form.errors.sendFailed'))
+        throw new Error(
+          errorData.message || t('contact.form.errors.sendFailed'),
+        )
       }
 
-      setSubmitState("success")
+      setSubmitState('success')
       setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        message: "",
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: '',
       })
 
       // Reset success message after 5 seconds
       setTimeout(() => {
-        setSubmitState("idle")
+        setSubmitState('idle')
       }, 5000)
     } catch (error) {
-      setSubmitState("error")
+      setSubmitState('error')
       setErrorMessage(
-        error instanceof Error ? error.message : t('contact.form.errors.sendFailed')
+        error instanceof Error
+          ? error.message
+          : t('contact.form.errors.sendFailed'),
       )
     }
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-muted/20 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 px-6 bg-muted/20 relative overflow-hidden"
+    >
       <div className="absolute inset-0 blueprint-grid opacity-18 pointer-events-none" />
       <div className="max-w-2xl mx-auto">
         <ScrollAnimation direction="fade">
@@ -139,7 +171,7 @@ export function ContactFormSection() {
           <Card className="glass-strong glass-hover relative overflow-hidden">
             {/* Glass shine effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            
+
             <CardHeader className="relative z-10">
               <CardTitle className="flex items-center gap-2">
                 <div className="glass-primary rounded-lg p-2">
@@ -147,132 +179,140 @@ export function ContactFormSection() {
                 </div>
                 {t('contact.cardTitle')}
               </CardTitle>
-              <CardDescription>
-                {t('contact.cardDescription')}
-              </CardDescription>
+              <CardDescription>{t('contact.cardDescription')}</CardDescription>
             </CardHeader>
             <CardContent className="relative z-10">
-            <form onSubmit={handleSubmit}>
-              <FieldGroup>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit}>
+                <FieldGroup>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Field>
+                      <Label htmlFor="name">
+                        {t('contact.form.name')}{' '}
+                        <span className="text-destructive">
+                          {t('contact.form.required')}
+                        </span>
+                      </Label>
+                      <Input
+                        id="name"
+                        name="name"
+                        type="text"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        disabled={submitState === 'loading'}
+                        placeholder={t('contact.form.namePlaceholder')}
+                      />
+                    </Field>
+
+                    <Field>
+                      <Label htmlFor="email">
+                        {t('contact.form.email')}{' '}
+                        <span className="text-destructive">
+                          {t('contact.form.required')}
+                        </span>
+                      </Label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        disabled={submitState === 'loading'}
+                        placeholder={t('contact.form.emailPlaceholder')}
+                      />
+                    </Field>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Field>
+                      <Label htmlFor="company">
+                        {t('contact.form.company')}
+                      </Label>
+                      <Input
+                        id="company"
+                        name="company"
+                        type="text"
+                        value={formData.company}
+                        onChange={handleChange}
+                        disabled={submitState === 'loading'}
+                        placeholder={t('contact.form.companyPlaceholder')}
+                      />
+                    </Field>
+
+                    <Field>
+                      <Label htmlFor="phone">{t('contact.form.phone')}</Label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        disabled={submitState === 'loading'}
+                        placeholder={t('contact.form.phonePlaceholder')}
+                      />
+                    </Field>
+                  </div>
+
                   <Field>
-                    <Label htmlFor="name">
-                      {t('contact.form.name')} <span className="text-destructive">{t('contact.form.required')}</span>
+                    <Label htmlFor="message">
+                      {t('contact.form.message')}{' '}
+                      <span className="text-destructive">
+                        {t('contact.form.required')}
+                      </span>
                     </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      value={formData.name}
+                    <Textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleChange}
                       required
-                      disabled={submitState === "loading"}
-                      placeholder={t('contact.form.namePlaceholder')}
+                      disabled={submitState === 'loading'}
+                      placeholder={t('contact.form.messagePlaceholder')}
+                      rows={6}
                     />
                   </Field>
 
-                  <Field>
-                    <Label htmlFor="email">
-                      {t('contact.form.email')} <span className="text-destructive">{t('contact.form.required')}</span>
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      disabled={submitState === "loading"}
-                      placeholder={t('contact.form.emailPlaceholder')}
-                    />
+                  {/* Error message */}
+                  {submitState === 'error' && errorMessage && (
+                    <div className="flex items-center gap-2 text-destructive text-sm p-3 bg-destructive/10 rounded-lg border border-destructive/20">
+                      <AlertCircleIcon className="w-4 h-4" />
+                      <span>{errorMessage}</span>
+                    </div>
+                  )}
+
+                  {/* Success message */}
+                  {submitState === 'success' && (
+                    <div className="flex items-center gap-2 text-primary text-sm p-3 bg-primary/10 rounded-lg border border-primary/20">
+                      <CheckCircleIcon className="w-4 h-4" />
+                      <span>{t('contact.form.success')}</span>
+                    </div>
+                  )}
+
+                  <Field orientation="horizontal" className="justify-end">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      disabled={submitState === 'loading'}
+                      trackaton-on-click="contact-form-submit"
+                      className="min-w-32"
+                    >
+                      {submitState === 'loading' ? (
+                        <>
+                          <LoaderIcon className="w-4 h-4 mr-2 animate-spin" />
+                          {t('contact.form.sending')}
+                        </>
+                      ) : (
+                        t('contact.form.send')
+                      )}
+                    </Button>
                   </Field>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Field>
-                    <Label htmlFor="company">{t('contact.form.company')}</Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      type="text"
-                      value={formData.company}
-                      onChange={handleChange}
-                      disabled={submitState === "loading"}
-                      placeholder={t('contact.form.companyPlaceholder')}
-                    />
-                  </Field>
-
-                  <Field>
-                    <Label htmlFor="phone">{t('contact.form.phone')}</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      disabled={submitState === "loading"}
-                      placeholder={t('contact.form.phonePlaceholder')}
-                    />
-                  </Field>
-                </div>
-
-                <Field>
-                  <Label htmlFor="message">
-                    {t('contact.form.message')} <span className="text-destructive">{t('contact.form.required')}</span>
-                  </Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    disabled={submitState === "loading"}
-                    placeholder={t('contact.form.messagePlaceholder')}
-                    rows={6}
-                  />
-                </Field>
-
-                {/* Error message */}
-                {submitState === "error" && errorMessage && (
-                  <div className="flex items-center gap-2 text-destructive text-sm p-3 bg-destructive/10 rounded-lg border border-destructive/20">
-                    <AlertCircleIcon className="w-4 h-4" />
-                    <span>{errorMessage}</span>
-                  </div>
-                )}
-
-                {/* Success message */}
-                {submitState === "success" && (
-                  <div className="flex items-center gap-2 text-primary text-sm p-3 bg-primary/10 rounded-lg border border-primary/20">
-                    <CheckCircleIcon className="w-4 h-4" />
-                    <span>{t('contact.form.success')}</span>
-                  </div>
-                )}
-
-                <Field orientation="horizontal" className="justify-end">
-                  <Button
-                    type="submit"
-                    size="lg"
-                    disabled={submitState === "loading"}
-                    trackaton-on-click="contact-form-submit"
-                    className="min-w-32"
-                  >
-                    {submitState === "loading" ? (
-                      <>
-                        <LoaderIcon className="w-4 h-4 mr-2 animate-spin" />
-                        {t('contact.form.sending')}
-                      </>
-                    ) : (
-                      t('contact.form.send')
-                    )}
-                  </Button>
-                </Field>
-              </FieldGroup>
-            </form>
-          </CardContent>
-        </Card>
+                </FieldGroup>
+              </form>
+            </CardContent>
+          </Card>
         </ScrollAnimation>
       </div>
     </section>
   )
 }
-

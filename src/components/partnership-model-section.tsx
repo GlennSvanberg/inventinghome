@@ -1,26 +1,26 @@
-import { useTranslation } from "react-i18next"
-import { ClipboardListIcon, TrendingUpIcon, WrenchIcon } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ScrollAnimation } from "@/components/scroll-animation"
+import { useTranslation } from 'react-i18next'
+import { CoinsIcon, CalendarClockIcon, ArrowUpRightIcon } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ScrollAnimation } from '@/components/scroll-animation'
 
 export function PartnershipModelSection() {
   const { t } = useTranslation()
 
   const steps = [
     {
-      icon: ClipboardListIcon,
-      title: t("partnership.steps.extraction.title"),
-      body: t("partnership.steps.extraction.body"),
+      icon: CoinsIcon,
+      title: t('partnership.steps.extraction.title'),
+      body: t('partnership.steps.extraction.body'),
     },
     {
-      icon: WrenchIcon,
-      title: t("partnership.steps.engineering.title"),
-      body: t("partnership.steps.engineering.body"),
+      icon: CalendarClockIcon,
+      title: t('partnership.steps.engineering.title'),
+      body: t('partnership.steps.engineering.body'),
     },
     {
-      icon: TrendingUpIcon,
-      title: t("partnership.steps.optimization.title"),
-      body: t("partnership.steps.optimization.body"),
+      icon: ArrowUpRightIcon,
+      title: t('partnership.steps.optimization.title'),
+      body: t('partnership.steps.optimization.body'),
     },
   ] as const
 
@@ -31,13 +31,13 @@ export function PartnershipModelSection() {
         <ScrollAnimation direction="fade">
           <div className="max-w-3xl">
             <p className="font-mono text-xs tracking-widest text-primary/90 mb-3">
-              {t("partnership.kicker")}
+              {t('partnership.kicker')}
             </p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight font-display">
-              {t("partnership.heading")}
+              {t('partnership.heading')}
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              {t("partnership.description")}
+              {t('partnership.description')}
             </p>
           </div>
         </ScrollAnimation>
@@ -47,10 +47,14 @@ export function PartnershipModelSection() {
             const Icon = step.icon
             const title = step.title
             const titleMatch = title.match(/^(\d+\)\s*)(.*)$/)
-            const stepNumber = titleMatch?.[1]?.trim() ?? ""
+            const stepNumber = titleMatch?.[1]?.trim() ?? ''
             const stepTitle = titleMatch?.[2] ?? title
             return (
-              <ScrollAnimation key={step.title} direction="up" delay={idx * 100}>
+              <ScrollAnimation
+                key={step.title}
+                direction="up"
+                delay={idx * 100}
+              >
                 <Card className="glass glass-hover h-full">
                   <CardHeader>
                     <div className="flex items-center gap-3">
@@ -60,7 +64,7 @@ export function PartnershipModelSection() {
                       <CardTitle className="text-xl font-bold">
                         {stepNumber ? (
                           <>
-                            <span className="text-slate-200">{stepNumber}</span>{" "}
+                            <span className="text-slate-200">{stepNumber}</span>{' '}
                             <span className="text-foreground">{stepTitle}</span>
                           </>
                         ) : (
@@ -70,7 +74,9 @@ export function PartnershipModelSection() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">{step.body}</p>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {step.body}
+                    </p>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
@@ -81,4 +87,3 @@ export function PartnershipModelSection() {
     </section>
   )
 }
-

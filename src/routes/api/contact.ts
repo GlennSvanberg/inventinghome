@@ -15,13 +15,16 @@ export const Route = createFileRoute('/api/contact')({
       POST: async ({ request }) => {
         try {
           // Parse request body
-          const body = await request.json() as ContactRequestBody
+          const body = (await request.json()) as ContactRequestBody
 
           // Validate required fields
           if (!body.name || !body.email || !body.message) {
             return new Response(
-              JSON.stringify({ success: false, message: 'Name, email, and message are required' }),
-              { status: 400, headers: { 'Content-Type': 'application/json' } }
+              JSON.stringify({
+                success: false,
+                message: 'Name, email, and message are required',
+              }),
+              { status: 400, headers: { 'Content-Type': 'application/json' } },
             )
           }
 
@@ -29,14 +32,19 @@ export const Route = createFileRoute('/api/contact')({
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
           if (!emailRegex.test(body.email)) {
             return new Response(
-              JSON.stringify({ success: false, message: 'Invalid email format' }),
-              { status: 400, headers: { 'Content-Type': 'application/json' } }
+              JSON.stringify({
+                success: false,
+                message: 'Invalid email format',
+              }),
+              { status: 400, headers: { 'Content-Type': 'application/json' } },
             )
           }
 
           // Get SMTP configuration from environment variables
           const smtpHost = process.env.SMTP_HOST
-          const smtpPort = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 587
+          const smtpPort = process.env.SMTP_PORT
+            ? parseInt(process.env.SMTP_PORT)
+            : 587
           const smtpUser = process.env.SMTP_USER
           const smtpPassword = process.env.SMTP_PASSWORD
           const smtpFrom = process.env.SMTP_FROM || smtpUser
@@ -45,8 +53,11 @@ export const Route = createFileRoute('/api/contact')({
           if (!smtpHost || !smtpUser || !smtpPassword) {
             console.error('SMTP configuration is missing')
             return new Response(
-              JSON.stringify({ success: false, message: 'Email service is not configured' }),
-              { status: 500, headers: { 'Content-Type': 'application/json' } }
+              JSON.stringify({
+                success: false,
+                message: 'Email service is not configured',
+              }),
+              { status: 500, headers: { 'Content-Type': 'application/json' } },
             )
           }
 
@@ -112,7 +123,7 @@ ${body.message}
                   ? error.message
                   : 'Failed to send message. Please try again later.',
             }),
-            { status: 500, headers: { 'Content-Type': 'application/json' } }
+            { status: 500, headers: { 'Content-Type': 'application/json' } },
           )
         }
       },

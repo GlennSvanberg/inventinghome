@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { ScrollAnimation } from "@/components/scroll-animation"
+import { ScrollAnimation } from '@/components/scroll-animation'
 
 export function ValuePropositionSection() {
   const { t } = useTranslation()
@@ -8,7 +8,7 @@ export function ValuePropositionSection() {
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10" />
-      
+
       {/* Decorative elements - static */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
@@ -23,10 +23,10 @@ export function ValuePropositionSection() {
               {/* Quote */}
               <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
                 <span className="text-foreground">
-                  {t('valueProposition.quote')}{" "}
+                  {t('valueProposition.quote')}{' '}
                   <span className="bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent">
                     {t('valueProposition.quoteHighlight')}
-                  </span>{" "}
+                  </span>{' '}
                   {t('valueProposition.quoteEnd')}
                 </span>
               </blockquote>
@@ -46,4 +46,3 @@ export function ValuePropositionSection() {
     </section>
   )
 }
-

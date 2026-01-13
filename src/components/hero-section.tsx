@@ -1,6 +1,6 @@
-import { ArrowRightIcon } from "lucide-react"
+import { ArrowRightIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
 
 export function HeroSection() {
   const { t } = useTranslation()
@@ -9,7 +9,7 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-primary/5" />
-      
+
       {/* Static geometric shapes - no animations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -36,7 +36,7 @@ export function HeroSection() {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 mb-8 font-medium max-w-3xl mx-auto leading-relaxed">
-            {t('hero.tagline')}{" "}
+            {t('hero.tagline')}{' '}
             <span className="bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent font-semibold">
               {t('hero.taglineHighlight')}
             </span>
@@ -49,7 +49,9 @@ export function HeroSection() {
             size="lg"
             className="text-lg px-8 py-6 h-auto group glass-button glass-button-hover !bg-transparent"
             onClick={() => {
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+              document
+                .getElementById('contact')
+                ?.scrollIntoView({ behavior: 'smooth' })
             }}
           >
             {t('hero.cta')}
@@ -60,4 +62,3 @@ export function HeroSection() {
     </section>
   )
 }
-

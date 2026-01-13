@@ -15,12 +15,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
           <div className="md:col-span-7">
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="Inventing Logo" className="w-10 h-10 object-contain" />
+              <img
+                src="/logo.png"
+                alt="Inventing Logo"
+                className="w-10 h-10 object-contain"
+              />
               <div>
                 <h3 className="text-2xl font-black leading-none">
                   <span className="font-display">Inventing</span>
                 </h3>
-                <p className="mt-2 text-sm text-muted-foreground">{t('footer.tagline')}</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {t('footer.tagline')}
+                </p>
               </div>
             </div>
           </div>
@@ -28,16 +34,6 @@ export function Footer() {
           <div className="md:col-span-5 flex flex-col items-start md:items-end gap-4">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:justify-end">
               <LanguageSelector />
-              <Link
-                to="/demo"
-                trackaton-on-click="footer-demo-link"
-                className={cn(
-                  buttonVariants({ variant: 'secondary', size: 'sm' }),
-                  'border border-white/10'
-                )}
-              >
-                {t('footer.ctaDemo')}
-              </Link>
             </div>
             <div className="text-sm text-muted-foreground">
               © {currentYear} Inventing. {t('footer.copyright')}
@@ -48,4 +44,3 @@ export function Footer() {
     </footer>
   )
 }
-
