@@ -8,12 +8,12 @@ import plTranslations from '../locales/pl.json'
 // Detect language synchronously
 const detectLanguage = (): string => {
   if (typeof window === 'undefined') return 'en'
-  
+
   try {
     const savedLang = localStorage.getItem('i18nextLng')
     const browserLang = navigator.language.split('-')[0]
     const supportedLangs = ['en', 'sv', 'pl']
-    
+
     if (savedLang && supportedLangs.includes(savedLang)) {
       return savedLang
     }
@@ -23,7 +23,7 @@ const detectLanguage = (): string => {
   } catch {
     // Fallback to 'en' if detection fails
   }
-  
+
   return 'en'
 }
 
@@ -48,4 +48,3 @@ i18n.use(initReactI18next).init({
 })
 
 export default i18n
-

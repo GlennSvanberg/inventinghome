@@ -1,19 +1,149 @@
-import { useTranslation } from "react-i18next"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ScrollAnimation } from "@/components/scroll-animation"
+import { useTranslation } from 'react-i18next'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ScrollAnimation } from '@/components/scroll-animation'
 
 function SpreadsheetMock({ title, meta }: { title: string; meta: string }) {
   const rows: Array<Array<string>> = [
-    ["Owner", "Process", "Status", "Updated", "Notes", "Value", "Source", "Version", "Link", "Sheet", "ID", "Flags"],
-    ["Sara", "Onboarding", "OK", "Today", "manual step", "12", "email", "v7", "—", "Leads", "1042", ""],
-    ["—", "Billing", "??", "3 days", "who changed?", "#REF!", "copy/paste", "v5", "—", "Finance", "889", "⚠"],
-    ["Alex", "Reporting", "OK", "Yesterday", "needs filter", "98", "CSV", "v6", "—", "KPI", "771", ""],
-    ["Sara", "Onboarding", "OK", "Today", "duplicate row", "12", "email", "v7", "—", "Leads", "1042", "dup"],
-    ["—", "Scheduling", "Late", "2 days", "missing data", "#N/A", "manual", "v3", "—", "Ops", "552", "⚠"],
-    ["Mika", "Support", "OK", "Today", "—", "7", "form", "v4", "—", "Tickets", "301", ""],
-    ["—", "Approvals", "Blocked", "1 week", "waiting", "—", "slack", "v2", "—", "Admin", "120", "⚠"],
-    ["Jo", "Inventory", "OK", "Today", "—", "44", "API?", "v1", "—", "Stock", "44", ""],
-    ["—", "Sales", "OK", "Today", "formula fragile", "=IFERROR(...)","sheet", "v9", "—", "Deals", "9", ""],
+    [
+      'Owner',
+      'Process',
+      'Status',
+      'Updated',
+      'Notes',
+      'Value',
+      'Source',
+      'Version',
+      'Link',
+      'Sheet',
+      'ID',
+      'Flags',
+    ],
+    [
+      'Sara',
+      'Onboarding',
+      'OK',
+      'Today',
+      'manual step',
+      '12',
+      'email',
+      'v7',
+      '—',
+      'Leads',
+      '1042',
+      '',
+    ],
+    [
+      '—',
+      'Billing',
+      '??',
+      '3 days',
+      'who changed?',
+      '#REF!',
+      'copy/paste',
+      'v5',
+      '—',
+      'Finance',
+      '889',
+      '⚠',
+    ],
+    [
+      'Alex',
+      'Reporting',
+      'OK',
+      'Yesterday',
+      'needs filter',
+      '98',
+      'CSV',
+      'v6',
+      '—',
+      'KPI',
+      '771',
+      '',
+    ],
+    [
+      'Sara',
+      'Onboarding',
+      'OK',
+      'Today',
+      'duplicate row',
+      '12',
+      'email',
+      'v7',
+      '—',
+      'Leads',
+      '1042',
+      'dup',
+    ],
+    [
+      '—',
+      'Scheduling',
+      'Late',
+      '2 days',
+      'missing data',
+      '#N/A',
+      'manual',
+      'v3',
+      '—',
+      'Ops',
+      '552',
+      '⚠',
+    ],
+    [
+      'Mika',
+      'Support',
+      'OK',
+      'Today',
+      '—',
+      '7',
+      'form',
+      'v4',
+      '—',
+      'Tickets',
+      '301',
+      '',
+    ],
+    [
+      '—',
+      'Approvals',
+      'Blocked',
+      '1 week',
+      'waiting',
+      '—',
+      'slack',
+      'v2',
+      '—',
+      'Admin',
+      '120',
+      '⚠',
+    ],
+    [
+      'Jo',
+      'Inventory',
+      'OK',
+      'Today',
+      '—',
+      '44',
+      'API?',
+      'v1',
+      '—',
+      'Stock',
+      '44',
+      '',
+    ],
+    [
+      '—',
+      'Sales',
+      'OK',
+      'Today',
+      'formula fragile',
+      '=IFERROR(...)',
+      'sheet',
+      'v9',
+      '—',
+      'Deals',
+      '9',
+      '',
+    ],
   ]
 
   return (
@@ -41,24 +171,27 @@ function SpreadsheetMock({ title, meta }: { title: string; meta: string }) {
               row.map((value, c) => {
                 const isHeaderRow = r === 0
                 const isError =
-                  typeof value === "string" &&
-                  (value.includes("#REF!") || value.includes("#N/A") || value.includes("??"))
-                const isFormula = typeof value === "string" && value.startsWith("=")
+                  typeof value === 'string' &&
+                  (value.includes('#REF!') ||
+                    value.includes('#N/A') ||
+                    value.includes('??'))
+                const isFormula =
+                  typeof value === 'string' && value.startsWith('=')
                 return (
                   <div
                     key={`c-${r}-${c}`}
                     className={[
-                      "bg-[#0B1220] px-2 py-2 font-mono text-[11px] md:text-[10px] text-slate-200/90",
-                      "min-h-[28px] md:min-h-[26px]",
-                      isHeaderRow ? "bg-[#0F172A]/80 text-slate-300" : "",
-                      isFormula ? "text-primary/90" : "",
-                      isError ? "text-amber-300" : "",
-                    ].join(" ")}
+                      'bg-[#0B1220] px-2 py-2 font-mono text-[11px] md:text-[10px] text-slate-200/90',
+                      'min-h-[28px] md:min-h-[26px]',
+                      isHeaderRow ? 'bg-[#0F172A]/80 text-slate-300' : '',
+                      isFormula ? 'text-primary/90' : '',
+                      isError ? 'text-amber-300' : '',
+                    ].join(' ')}
                   >
                     <span className="block truncate">{value}</span>
                   </div>
                 )
-              })
+              }),
             )}
           </div>
         </div>
@@ -78,23 +211,25 @@ export function ExcelHellSection() {
           <ScrollAnimation direction="fade">
             <div>
               <p className="font-mono text-xs tracking-widest text-primary/90 mb-3">
-                {t("excelHell.kicker")}
+                {t('excelHell.kicker')}
               </p>
               <h2 className="text-4xl md:text-5xl font-black tracking-tight font-display">
-                {t("excelHell.heading")}
+                {t('excelHell.heading')}
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                {t("excelHell.copy")}
+                {t('excelHell.copy')}
               </p>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation direction="up">
-            <SpreadsheetMock title={t("excelHell.mockTitle")} meta={t("excelHell.mockMeta")} />
+            <SpreadsheetMock
+              title={t('excelHell.mockTitle')}
+              meta={t('excelHell.mockMeta')}
+            />
           </ScrollAnimation>
         </div>
       </div>
     </section>
   )
 }
-

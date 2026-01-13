@@ -1,146 +1,158 @@
 {
   "meta": {
-    "title": "Inventing — Custom SaaS on Subscription",
-    "description": "Custom SaaS on a fixed monthly subscription (no upfront cost). Replace spreadsheet chaos with secure, scalable software tailored to your workflow."
+    "title": "Inventing — Scale Up Without Hiring More",
+    "description": "We transform Excel chaos into smart systems for growing SMEs. Empower your staff, don't replace them. 0 upfront cost."
   },
   "hero": {
-    "kicker": "Custom SaaS on Subscription",
-    "kickerZeroUpfront": "0 Upfront",
-    "headline": "Stop Running Your Business in Excel.",
-    "subheadline": "We build the custom software you need to cut admin chaos and technical debt. No upfront cost. Fixed monthly subscription.",
-    "ctaPrimary": "Book Your Problem Discovery",
-    "ctaSecondary": "Run the 60‑second Diagnostic",
-    "ctaDemo": "View live demos",
-    "visualTitle": "From spreadsheet chaos → clean ops dashboard",
-    "visualBefore": "BEFORE",
-    "visualAfter": "AFTER",
-    "visualDashboard": "Operations Dashboard",
+    "kicker": "Industrial-Grade Software for SMEs",
+    "kickerZeroUpfront": "0 Upfront Cost",
+    "headline": "Scale Up Without Hiring More.",
+    "subheadline": "We turn manual Excel work into smart systems. Instead of spending months training new hires in old spreadsheets, we empower your existing team to handle twice the volume – with half the effort.",
+    "ctaPrimary": "Book a Discovery Call",
+    "ctaSecondary": "60-Second Diagnostic",
+    "visualTitle": "From Excel Chaos → Automated Workflow",
+    "visualBefore": "BEFORE (Person-Dependent)",
+    "visualAfter": "AFTER (System-Supported)",
+    "visualDashboard": "Operations System",
     "visualLive": "LIVE",
-    "visualMetric1": "Cycle time",
-    "visualMetric2": "Admin time",
-    "visualBeforeNote": "Multiple versions. No single source of truth.",
-    "microProof": "Built for operations leaders who need reliability, not another tool to babysit."
+    "visualMetric1": "Capacity",
+    "visualMetric2": "Admin",
+    "visualBeforeNote": "Excel Hell: One formula error away from a total shutdown.",
+    "microProof": "Specializing in mission-critical software for logistics, manufacturing, and service sectors."
   },
   "excelHell": {
-    "kicker": "THE “EXCEL HELL”",
-    "heading": "Excel is brilliant. It’s a risky place to run your business.",
-    "copy": "Excel is brilliant software, but it’s risky as the backbone of your operation. When a formula breaks or the one person who “knows the sheet” is away, work grinds to a halt. We turn spreadsheet dependency into a secure, scalable SaaS tailored to your workflow.",
-    "mockTitle": "Operations_Tracker.xlsx",
-    "mockMeta": "Too many columns"
+    "kicker": "DON'T HIRE – AUTOMATE",
+    "heading": "Excel chaos is the bottleneck to your growth.",
+    "copy": "Growing SMEs often think they need more admin staff to handle the mess. But the problem isn't a lack of people – it's a lack of robust systems. We build the software that removes the manual friction slowing you down.",
+    "mockTitle": "Manual_Workload_V7_FINAL.xlsx",
+    "mockMeta": "Real-time Excel Hell"
   },
   "partnership": {
-    "kicker": "THE “ZERO‑RISK” PARTNERSHIP MODEL",
-    "heading": "We take the build risk. You keep the upside.",
-    "description": "Three steps from spreadsheet dependency to a dedicated SaaS module—then a fixed monthly subscription once it’s live (hosting, security, updates included).",
+    "kicker": "PRICING & RISK",
+    "heading": "We take the risk. You get the results.",
+    "description": "Our model is built for long-term partnership. We cover the entire development cost – you only pay once the system delivers value.",
     "steps": {
       "extraction": {
-        "title": "1) The Extraction",
-        "body": "We sit with your team to map the messy manual processes behind the spreadsheet."
+        "title": "1) 0 Upfront Fee",
+        "body": "We build at our own risk. If our solution doesn't solve your friction, you don't pay anything."
       },
       "engineering": {
-        "title": "2) The Engineering",
-        "body": "We build your dedicated SaaS module. We take the development risk; you pay nothing upfront for the build."
+        "title": "2) Fixed Monthly Rate",
+        "body": "Predictable like a salary, but cheaper. A fixed monthly cost covering hosting, support, and ongoing improvements."
       },
       "optimization": {
-        "title": "3) The Optimization",
-        "body": "Once live, you pay a fixed monthly subscription. We handle hosting, security, and updates. You focus on growth."
+        "title": "3) Scalable Growth",
+        "body": "Once live, handle increased volumes without proportional increases in administrative headcount."
       }
     }
   },
-  "whyInventing": {
-    "kicker": "WHY INVENTING",
-    "heading": "High standards. Fast execution. Built for operators.",
-    "description": "We build custom SaaS: fast to ship, hard to break, and designed around how work actually gets done.",
+  "empowerTeam": {
+    "kicker": "PEOPLE FIRST",
+    "heading": "Empower your team, don't replace them.",
+    "description": "We don't build software to replace people; we build it to give them time for high-value work.",
     "items": {
-      "swedish": {
-        "title": "Engineering standards",
-        "body": "Predictable delivery, pragmatic decisions, and systems that don’t break at 2 AM."
+      "training": {
+        "title": "Eliminate Training Debt",
+        "body": "New hires take months to learn \"your way\" of doing Excel. Our software is intuitive and guides them from day one."
       },
-      "aiSpeed": {
-        "title": "High‑speed AI‑assisted development",
-        "body": "Shorter cycles without cutting corners—so you can automate next month, not next year."
+      "value": {
+        "title": "Focus on High-Value Work",
+        "body": "Let your team talk to customers and solve problems while our software handles the data logistics flawlessly."
       },
-      "b2b": {
-        "title": "B2B operations specialization",
-        "body": "We don’t build “websites.” We build internal tools that replace spreadsheets, emails, and manual handoffs—with audit trails, permissions, and reliable data."
+      "reliability": {
+        "title": "Enterprise Reliability",
+        "body": "Industrial-grade reliability. We build software that doesn't break, using principles from global industry leaders."
       }
+    }
+  },
+  "boring": {
+    "kicker": "MISSION-CRITICAL",
+    "heading": "Reliable infrastructure, not AI hype.",
+    "description": "We don't sell trendy buzzwords. We build the \"boring\" but essential software that keeps your business running 24/7.",
+    "items": {
+      "orders": "Automated order flows",
+      "logistics": "Real-time logistics tracking",
+      "invoicing": "Error-free invoicing bridges"
     }
   },
   "trust": {
-    "kicker": "SOCIAL PROOF / TRUST",
-    "heading": "Pragmatic delivery. Ambitious build. Reliable scale.",
-    "description": "If your operation depends on spreadsheets, we’ll replace them with a secure, scalable SaaS that matches your workflow—and reduces admin chaos.",
-    "badgeScarcity": "3 slots available for Q1 2025",
-    "badgeLine": "Subscription • No upfront cost • Dedicated SaaS",
-    "cta": "Book Your Problem Discovery",
-    "micro": "15–30 min. No prep. Bring the spreadsheet."
+    "kicker": "WHY US",
+    "heading": "Expertise in industrial innovation.",
+    "description": "Our founder is an expert developer with a background in heavy industry. We know how to build systems that survive the real world.",
+    "badgeScarcity": "3 slots remaining for Q1 2026",
+    "badgeLine": "Subscription • No Upfront Cost • Industrial Standards",
+    "cta": "Book a Discovery Call",
+    "micro": "15–30 min. No prep needed. Just straight talk."
   },
   "diagnostic": {
     "kicker": "PROBLEM DIAGNOSTIC",
-    "heading": "How expensive is your spreadsheet dependency?",
-    "description": "Answer 3 questions. We’ll turn it into a scoped problem statement for your discovery call.",
-    "cardTitle": "60‑second Diagnostic",
-    "cardDescription": "No email required. Use it to brief us faster.",
+    "heading": "How much admin time are you wasting?",
+    "description": "Answer three short questions. We'll turn it into a concrete ROI calculation for our discovery call.",
+    "cardTitle": "60-Second Diagnostic",
+    "cardDescription": "No email required. Quick and anonymous.",
     "q1": {
-      "label": "How many hours a week do you spend copy‑pasting data between files?",
-      "placeholder": "e.g. 6"
+      "label": "How many hours per week are spent on manual data entry?",
+      "placeholder": "e.g., 10"
     },
     "q2": {
-      "label": "How many people’s jobs depend on a single spreadsheet?",
-      "placeholder": "e.g. 3"
+      "label": "How many employees depend on Excel to do their jobs?",
+      "placeholder": "e.g., 4"
     },
     "q3": {
-      "label": "What would it be worth to have this automated by next month?",
-      "placeholder": "e.g. 25,000 / month"
+      "label": "What would it be worth to avoid hiring another admin role?",
+      "placeholder": "e.g., $4,000 / month"
     },
     "summaryLabel": "COPY/PASTE INTO THE CONTACT FORM",
-    "copy": "Copy",
-    "copied": "Copied",
-    "summaryTemplate": "Problem Diagnostic\n- Hours/week copy‑pasting: {{hours}}\n- Roles depending on one spreadsheet: {{people}}\n- Estimated value if automated by next month: {{value}}\n\nContext: What is the spreadsheet used for? (finance, scheduling, reporting…)",
-    "reset": "Start over",
+    "copy": "Copy Results",
+    "copied": "Copied!",
+    "summaryTemplate": "Problem Diagnostic\n- Manual hours/week: {{hours}}\n- Excel-dependent staff: {{people}}\n- Estimated savings value: {{value}}\n- Estimated yearly manual cost: {{yearlyCost}}\n- Suggested automation price: {{suggestedPrice}} / mo\n\nContext: We need to automate...",
+    "reset": "Start Over",
     "back": "Back",
     "next": "Next",
-    "finish": "See summary",
-    "cta": "Send this to Inventing",
-    "sideTitle": "What happens after you click send?",
-    "sideDescription": "We respond with a plan you can sanity‑check.",
-    "sideBullet1": "We clarify the workflow and data sources (ERP, CRM, accounting, internal tools).",
-    "sideBullet2": "We outline a first module that removes the biggest bottleneck.",
-    "sideBullet3": "You get a fixed subscription proposal—no surprise invoices."
+    "finish": "See Summary",
+    "cta": "Send Diagnostic to Us",
+    "sideTitle": "What Happens Next?",
+    "sideDescription": "We'll follow up with a plan to eliminate your administrative debt.",
+    "sideBullet1": "Mapping of bottlenecks (ERP, CRM, Inventory).",
+    "sideBullet2": "Proposal for a first module with immediate impact.",
+    "sideBullet3": "Fixed monthly pricing with no hidden fees.",
+    "result": {
+      "yearlyCost": "This process costs your company approx. {{cost}} / year in manual labor alone.",
+      "pitch": "We can automate this entire workflow for approx. {{price}} / month.",
+      "subPitch": "That's less than 10% of the \"Excel Tax\" you're paying today."
+    }
   },
   "contact": {
-    "heading": "Book Your Problem Discovery",
-    "description": "Tell us what’s breaking. We’ll map the workflow and propose a subscription module.",
-    "cardTitle": "Request a discovery call",
-    "cardDescription": "We’ll reply within 1 business day.",
+    "heading": "Ready to Stop Hiring for Admin?",
+    "description": "Tell us about your manual processes. We'll get back to you with a solution within 24 hours.",
+    "cardTitle": "Request a Call",
+    "cardDescription": "No-obligation discovery meeting.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
       "email": "Email",
-      "emailPlaceholder": "your.email@example.com",
+      "emailPlaceholder": "name@company.com",
       "company": "Company",
       "companyPlaceholder": "Your company",
       "phone": "Phone",
-      "phonePlaceholder": "e.g. +46 70 123 45 67",
-      "message": "Message",
-      "messagePlaceholder": "Paste your diagnostic summary or describe the spreadsheet...",
+      "phonePlaceholder": "+123 456 789",
+      "message": "What do you want to automate?",
+      "messagePlaceholder": "Briefly describe your biggest Excel paint point...",
       "required": "*",
-      "send": "Request call",
+      "send": "Send Request",
       "sending": "Sending...",
-      "success": "Request sent — we’ll propose times shortly.",
+      "success": "Thank you! We'll be in touch shortly.",
       "errors": {
         "nameRequired": "Name is required",
         "emailRequired": "Email is required",
-        "emailInvalid": "Please enter a valid email address",
+        "emailInvalid": "Invalid email address",
         "messageRequired": "Message is required",
-        "sendFailed": "Failed to send message. Please try again."
+        "sendFailed": "Failed to send. Please try again."
       }
     }
   },
   "footer": {
-    "tagline": "Custom SaaS solutions on subscription. Built for operations teams.",
-    "ctaDemo": "View live demos",
-    "copyright": "All rights reserved."
+    "tagline": "Specializing in SME automation. Don't hire – automate.",
+    "copyright": "© 2026 Inventing. All rights reserved."
   }
 }
-

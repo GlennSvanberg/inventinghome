@@ -9,14 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as DemoRouteImport } from './routes/demo'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DemoSlugRouteImport } from './routes/demo.$slug'
+import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
+import { Route as AdminContactsRouteImport } from './routes/admin/contacts'
 
-const DemoRoute = DemoRouteImport.update({
-  id: '/demo',
-  path: '/demo',
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -24,57 +25,70 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DemoSlugRoute = DemoSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => DemoRoute,
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AdminRoute,
 } as any)
 const ApiContactRoute = ApiContactRouteImport.update({
   id: '/api/contact',
   path: '/api/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminContactsRoute = AdminContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => AdminRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/demo': typeof DemoRouteWithChildren
+  '/admin': typeof AdminRouteWithChildren
+  '/admin/contacts': typeof AdminContactsRoute
   '/api/contact': typeof ApiContactRoute
-  '/demo/$slug': typeof DemoSlugRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/demo': typeof DemoRouteWithChildren
+  '/admin/contacts': typeof AdminContactsRoute
   '/api/contact': typeof ApiContactRoute
-  '/demo/$slug': typeof DemoSlugRoute
+  '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/demo': typeof DemoRouteWithChildren
+  '/admin': typeof AdminRouteWithChildren
+  '/admin/contacts': typeof AdminContactsRoute
   '/api/contact': typeof ApiContactRoute
-  '/demo/$slug': typeof DemoSlugRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/demo' | '/api/contact' | '/demo/$slug'
+  fullPaths: '/' | '/admin' | '/admin/contacts' | '/api/contact' | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/demo' | '/api/contact' | '/demo/$slug'
-  id: '__root__' | '/' | '/demo' | '/api/contact' | '/demo/$slug'
+  to: '/' | '/admin/contacts' | '/api/contact' | '/admin'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/admin/contacts'
+    | '/api/contact'
+    | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DemoRoute: typeof DemoRouteWithChildren
+  AdminRoute: typeof AdminRouteWithChildren
   ApiContactRoute: typeof ApiContactRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/demo': {
-      id: '/demo'
-      path: '/demo'
-      fullPath: '/demo'
-      preLoaderRoute: typeof DemoRouteImport
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -84,12 +98,12 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/demo/$slug': {
-      id: '/demo/$slug'
-      path: '/$slug'
-      fullPath: '/demo/$slug'
-      preLoaderRoute: typeof DemoSlugRouteImport
-      parentRoute: typeof DemoRoute
+    '/admin/': {
+      id: '/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof AdminRoute
     }
     '/api/contact': {
       id: '/api/contact'
@@ -98,22 +112,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/contacts': {
+      id: '/admin/contacts'
+      path: '/contacts'
+      fullPath: '/admin/contacts'
+      preLoaderRoute: typeof AdminContactsRouteImport
+      parentRoute: typeof AdminRoute
+    }
   }
 }
 
-interface DemoRouteChildren {
-  DemoSlugRoute: typeof DemoSlugRoute
+interface AdminRouteChildren {
+  AdminContactsRoute: typeof AdminContactsRoute
+  AdminIndexRoute: typeof AdminIndexRoute
 }
 
-const DemoRouteChildren: DemoRouteChildren = {
-  DemoSlugRoute: DemoSlugRoute,
+const AdminRouteChildren: AdminRouteChildren = {
+  AdminContactsRoute: AdminContactsRoute,
+  AdminIndexRoute: AdminIndexRoute,
 }
 
-const DemoRouteWithChildren = DemoRoute._addFileChildren(DemoRouteChildren)
+const AdminRouteWithChildren = AdminRoute._addFileChildren(AdminRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DemoRoute: DemoRouteWithChildren,
+  AdminRoute: AdminRouteWithChildren,
   ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport

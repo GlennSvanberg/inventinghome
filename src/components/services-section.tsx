@@ -1,12 +1,13 @@
 import { useTranslation } from 'react-i18next'
-import { 
-  BotIcon, 
-  GlobeIcon, 
-  SparklesIcon, 
-  ZapIcon 
-} from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ScrollAnimation } from "@/components/scroll-animation"
+import { BotIcon, GlobeIcon, SparklesIcon, ZapIcon } from 'lucide-react'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { ScrollAnimation } from '@/components/scroll-animation'
 
 export function ServicesSection() {
   const { t } = useTranslation()
@@ -14,23 +15,23 @@ export function ServicesSection() {
   const services = [
     {
       icon: GlobeIcon,
-      titleKey: "services.buildWebsite.title",
-      descriptionKey: "services.buildWebsite.description",
+      titleKey: 'services.buildWebsite.title',
+      descriptionKey: 'services.buildWebsite.description',
     },
     {
       icon: SparklesIcon,
-      titleKey: "services.customTransformation.title",
-      descriptionKey: "services.customTransformation.description",
+      titleKey: 'services.customTransformation.title',
+      descriptionKey: 'services.customTransformation.description',
     },
     {
       icon: BotIcon,
-      titleKey: "services.aiAutomation.title",
-      descriptionKey: "services.aiAutomation.description",
+      titleKey: 'services.aiAutomation.title',
+      descriptionKey: 'services.aiAutomation.description',
     },
     {
       icon: ZapIcon,
-      titleKey: "services.removingAdmin.title",
-      descriptionKey: "services.removingAdmin.description",
+      titleKey: 'services.removingAdmin.title',
+      descriptionKey: 'services.removingAdmin.description',
     },
   ]
 
@@ -62,7 +63,7 @@ export function ServicesSection() {
                 <Card className="glass glass-hover group relative overflow-hidden">
                   {/* Glass shine effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  
+
                   <CardHeader className="relative z-10">
                     <div className="w-14 h-14 rounded-2xl glass-primary flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                       <Icon className="w-7 h-7 text-primary group-hover:rotate-12 transition-transform duration-300" />
@@ -85,4 +86,3 @@ export function ServicesSection() {
     </section>
   )
 }
-

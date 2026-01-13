@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useTranslation } from 'react-i18next'
 import { GlobeIcon } from 'lucide-react'
@@ -28,10 +28,7 @@ export function LanguageSelector() {
   }
 
   return (
-    <Select
-      value={i18n.language || 'en'}
-      onValueChange={handleLanguageChange}
-    >
+    <Select value={i18n.language || 'en'} onValueChange={handleLanguageChange}>
       <SelectTrigger className="w-[140px]">
         <GlobeIcon className="w-4 h-4 mr-2" />
         <SelectValue />
@@ -46,4 +43,3 @@ export function LanguageSelector() {
     </Select>
   )
 }
-
