@@ -1,4 +1,5 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
+import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const Route = createFileRoute('/admin/')({
@@ -13,8 +14,16 @@ function AdminDashboard() {
           Admin <span className="text-primary italic">Backoffice</span>
         </h1>
         <p className="text-muted-foreground mt-2">
-          Manage your business operations and data.
+          Choose a workflow to manage inbound contacts or discover new leads.
         </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Button asChild>
+            <Link to="/admin/contacts">Inbound Contacts</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link to="/admin/leads">Lead Discovery</Link>
+          </Button>
+        </div>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -39,13 +48,34 @@ function AdminDashboard() {
           <Card className="glass-strong h-full border-primary/10 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
             <CardHeader>
               <CardTitle className="text-sm font-mono uppercase tracking-wider text-primary group-hover:text-primary-foreground transition-colors">
-                Recent Activity
+                Inbound Contacts
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-black group-hover:text-primary transition-colors">12 New Contacts</div>
+              <div className="text-3xl font-black group-hover:text-primary transition-colors">Review Inbox</div>
               <p className="text-xs text-muted-foreground mt-2">
-                In the last 24 hours.
+                Triage form submissions and manage outreach status.
+              </p>
+            </CardContent>
+          </Card>
+        </Link>
+
+        <Link
+          to="/admin/leads"
+          className="block group"
+        >
+          <Card className="glass-strong h-full border-primary/10 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+            <CardHeader>
+              <CardTitle className="text-sm font-mono uppercase tracking-wider text-primary group-hover:text-primary-foreground transition-colors">
+                Lead Discovery
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-3xl font-black group-hover:text-primary transition-colors">
+                Find Leads
+              </div>
+              <p className="text-xs text-muted-foreground mt-2">
+                Scrape job ads and enrich companies with AI extraction.
               </p>
             </CardContent>
           </Card>
