@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { Link, createFileRoute } from '@tanstack/react-router'
 import { useMutation, useQuery } from 'convex/react'
 import {
   Building2,
@@ -161,6 +161,17 @@ function AdminLeads() {
     <div className="space-y-8">
       <header className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
+          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-muted-foreground mb-2">
+            <Link to="/admin" className="hover:text-foreground transition-colors">
+              Admin Hub
+            </Link>
+            <span>/</span>
+            <Link to="/admin/leads" className="hover:text-foreground transition-colors">
+              Lead Discovery
+            </Link>
+            <span>/</span>
+            <span className="text-foreground">Inbound Contacts</span>
+          </div>
           <h1 className="text-4xl font-black font-display tracking-tight text-foreground">
             Customer <span className="text-primary italic">Relationships</span>
           </h1>
@@ -278,6 +289,13 @@ function AdminLeads() {
           </DialogContent>
         </Dialog>
       </header>
+
+      <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+        <span>Need outbound opportunities?</span>
+        <Link to="/admin/leads" className="underline">
+          Run lead discovery
+        </Link>
+      </div>
 
       {!leads ? (
         <div className="p-20 border border-dashed border-border/60 rounded-2xl flex flex-col items-center justify-center bg-muted/5">

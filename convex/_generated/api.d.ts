@@ -9,6 +9,7 @@
  */
 
 import type * as comments from "../comments.js";
+import type * as hunter from "../hunter.js";
 import type * as leads from "../leads.js";
 
 import type {
@@ -19,6 +20,7 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   comments: typeof comments;
+  hunter: typeof hunter;
   leads: typeof leads;
 }>;
 
