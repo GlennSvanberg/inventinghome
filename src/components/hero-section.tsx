@@ -11,22 +11,23 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative pt-20 pb-32 overflow-hidden">
+    <section className="relative pt-20 pb-24 md:pb-32 overflow-hidden">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-3xl">
           <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 mb-6">
             {t('hero.greeting')}
           </div>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 break-words">
+          <h1 className="text-3xl md:text-6xl font-black tracking-tight mb-6 break-words hyphens-auto">
             {t('hero.headline')}
           </h1>
-          <div className="prose prose-lg dark:prose-invert mb-8">
-            <p className="text-xl text-muted-foreground leading-relaxed break-words">
-              <strong>{t('hero.intro')}</strong> {t('hero.subheadline')}
+          <div className="prose prose-lg dark:prose-invert mb-8 max-w-none">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed break-words">
+              <strong className="text-foreground block mb-2">{t('hero.intro')}</strong> 
+              {t('hero.subheadline')}
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToPlayground} className="gap-2 w-full sm:w-auto">
+            <Button size="lg" onClick={scrollToPlayground} className="gap-2 w-full sm:w-auto justify-center">
               {t('hero.cta')}
               <ArrowRight className="w-4 h-4" />
             </Button>
