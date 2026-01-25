@@ -11,44 +11,52 @@
   "hero": {
     "greeting": "Tjenare!",
     "headline": "Välkommen till min digitala sandlåda.",
-    "subheadline": "På dagarna leder jag innovation på Fiwe, men på kvällarna är det här jag leker. Här bygger jag grejer, testar nya tekniker och ser vad som händer när man trycker på knappar man kanske inte borde trycka på.",
-    "cta": "Kolla in leklådan"
+    "subheadline": "Jag leker med teknik och försöker kombinera moderna verktyg med riktiga problem. Oftast gör jag det bara för skojs skull, för att se vad som är möjligt.",
+    "cta": "Kolla in projekten"
   },
   "playground": {
     "title": "Leklådan",
-    "description": "Här är några av de projekt jag snickrat ihop. Vissa är seriösa, andra... mindre seriösa.",
+    "description": "En samling av mina experiment, sidoprojekt och digitala uppfinningar.",
     "projects": {
       "allaheterglenn": {
         "title": "allaheterglenn.se",
-        "description": "Viral marknadsföring & lokal humor. För i Göteborg heter ju alla Glenn, eller hur?"
+        "description": "Ett viralt experiment kring Göteborgs mest kända namn. Utforskar lokal kultur och viral spridning genom humor.",
+        "tech": "React, Viral Marketing"
       },
       "qrbutik": {
         "title": "qrbutik.se",
-        "description": "Friktionsfria Swish-betalningar & digitala menyer. Beställ bärsen utan att vänta i baren."
+        "description": "Ett system för friktionsfria beställningar via QR-koder. Fokus på snabba flöden och enkelhet utan app-nedladdningar.",
+        "tech": "Payments, Real-time"
       },
-      "boario": {
-        "title": "boario.io",
-        "description": "Designa och beställ dina egna brädspel. För när Monopol inte räcker till."
+      "boardio": {
+        "title": "boardio.io",
+        "description": "Plattform för att designa och beställa skräddarsydda brädspel. Ett komplext projekt som kombinerar e-handel med avancerade designverktyg i webbläsaren.",
+        "tech": "Canvas, Print-on-demand"
       },
       "trackaton": {
         "title": "trackaton.com",
-        "description": "Min egen trafikspårningsmotor. För Google Analytics är ju lite väl nyfikna ibland."
+        "description": "Min egenutvecklade motor för trafikspårning. Byggd för att förstå dataflöden och integritet på djupet, bortom standardverktygen.",
+        "tech": "Analytics, Big Data"
       },
       "glennerator": {
-        "title": "glennerator.se",
-        "description": "AI-genererade Glenn-bilder. Fråga inte varför, fråga varför inte."
+        "title": "glennsvanberg.se",
+        "description": "Glenneratorn - en AI-driven generator för... ja, mig. Ett lekfullt sätt att utforska generativ AI och personligt varumärke.",
+        "tech": "AI, Image Generation"
       },
       "malasidor": {
         "title": "målasidor.se",
-        "description": "Ett SEO-experiment med målarbilder. Barn gillar att måla, Google gillar struktur."
+        "description": "Ett renodlat SEO-experiment. Hur snabbt kan man ranka på specifika sökord genom att erbjuda strukturerat innehåll för barn?",
+        "tech": "SEO, Content"
       },
       "grzaniec": {
         "title": "grzaniec.se",
-        "description": "Importexperiment av polsk vinterdryck. Värmer gött i kylan."
+        "description": "Ett e-handels- och importexperiment med fokus på polsk vinterdryck. Testar logistik och nischad marknadsföring.",
+        "tech": "E-commerce, Logistics"
       },
       "next": {
         "title": "Next",
-        "description": "En enkel ping-app för team. 'Är du kvar?' 'Japp'."
+        "description": "En minimalistisk ping-app för team. Fokuserar på snabb statusrapportering utan onödigt brus.",
+        "tech": "Real-time, Collaboration"
       }
     }
   },
@@ -63,6 +71,6 @@
   },
   "footer": {
     "tagline": "Byggt med kaffe och kod i Göteborg.",
-    "copyright": "© 2026 Inventing. Inga rättigheter förbehållna (nästan)."
+    "copyright": "© 2026 Inventing."
   }
 }

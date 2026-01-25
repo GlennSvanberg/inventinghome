@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { ExternalLink } from 'lucide-react'
+import { ExternalLink, ArrowRight } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export function PlaygroundGrid() {
   const { t } = useTranslation()
@@ -9,47 +10,63 @@ export function PlaygroundGrid() {
   const projects = [
     { id: 'allaheterglenn', url: 'https://allaheterglenn.se' },
     { id: 'qrbutik', url: 'https://qrbutik.se' },
-    { id: 'boario', url: 'https://boario.io' },
+    { id: 'boardio', url: 'https://boardio.io' },
     { id: 'trackaton', url: 'https://trackaton.com' },
-    { id: 'glennerator', url: 'https://glennerator.se' },
+    { id: 'glennerator', url: 'https://glennsvanberg.se' },
     { id: 'malasidor', url: 'https://målasidor.se' },
     { id: 'grzaniec', url: 'https://grzaniec.se' },
     { id: 'next', url: '#' },
   ]
 
   return (
-    <section id="playground" className="py-20 bg-muted/30">
+    <section id="playground" className="py-24 bg-muted/30">
       <div className="container px-4 md:px-6">
-        <div className="max-w-2xl mb-12">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">{t('playground.title')}</h2>
-          <p className="text-muted-foreground text-lg">{t('playground.description')}</p>
+        <div className="max-w-3xl mb-16">
+          <h2 className="text-4xl font-black tracking-tight mb-6">{t('playground.title')}</h2>
+          <p className="text-xl text-muted-foreground leading-relaxed">{t('playground.description')}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <a 
-              key={project.id} 
-              href={project.url} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block group h-full"
-            >
-              <Card className="h-full transition-all duration-200 hover:shadow-md hover:border-primary/50">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+        <div className="grid grid-cols-1 gap-12">
+          {projects.map((project, index) => (
+            <Card key={project.id} className="overflow-hidden border-border/50 hover:border-primary/50 transition-colors duration-300">
+              <div className="grid md:grid-cols-12 gap-0">
+                <div className={`md:col-span-8 p-8 md:p-10 flex flex-col justify-center ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold">
                       {t(`playground.projects.${project.id}.title`)}
-                    </CardTitle>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary opacity-0 group-hover:opacity-100 transition-all" />
+                    </h3>
+                    <Badge variant="secondary" className="font-mono text-xs">
+                       {t(`playground.projects.${project.id}.tech`)}
+                    </Badge>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
+                  
+                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
                     {t(`playground.projects.${project.id}.description`)}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </a>
+                  </p>
+                  
+                  <div>
+                    <Button asChild variant="outline" className="group">
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="gap-2"
+                      >
+                        Besök projektet
+                        <ExternalLink className="w-4 h-4 group-hover:text-primary transition-colors" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+                
+                {/* Decorative placeholder for project screenshot/preview */}
+                <div className={`md:col-span-4 bg-muted/50 min-h-[200px] md:min-h-full flex items-center justify-center border-t md:border-t-0 ${index % 2 === 1 ? 'md:border-r md:order-1' : 'md:border-l'}`}>
+                   <div className="text-muted-foreground/20 font-black text-6xl select-none">
+                     {index + 1}
+                   </div>
+                </div>
+              </div>
+            </Card>
           ))}
         </div>
       </div>
