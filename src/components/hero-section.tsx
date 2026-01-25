@@ -17,14 +17,16 @@ export function HeroSection() {
           <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 mb-6">
             {t('hero.greeting')}
           </div>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 break-words">
             {t('hero.headline')}
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            {t('hero.subheadline')}
-          </p>
+          <div className="prose prose-lg dark:prose-invert mb-8">
+            <p className="text-xl text-muted-foreground leading-relaxed break-words">
+              <strong>{t('hero.intro')}</strong> {t('hero.subheadline')}
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToPlayground} className="gap-2">
+            <Button size="lg" onClick={scrollToPlayground} className="gap-2 w-full sm:w-auto">
               {t('hero.cta')}
               <ArrowRight className="w-4 h-4" />
             </Button>
