@@ -1,158 +1,77 @@
 {
   "meta": {
-    "title": "Inventing — Skala upp utan att anställa fler",
-    "description": "Vi förvandlar Excel-kaos till smarta system för växande företag i Göteborg. Förstärk din personal, ersätt dem inte. 0 kr i startkostnad."
+    "title": "Inventing — Glenns Digitala Leklåda",
+    "description": "En plats där jag bygger, pajar och lär mig nya grejer. Kod, innovation och lite göteborgshumor."
+  },
+  "nav": {
+    "playground": "Leklådan",
+    "logbook": "Loggboken",
+    "about": "Om mig"
   },
   "hero": {
-    "kicker": "Industriell mjukvara för SME",
-    "kickerZeroUpfront": "0 kr i startkostnad",
-    "headline": "Skala upp utan att anställa fler.",
-    "subheadline": "Vi förvandlar manuellt Excel-arbete till smarta system. Istället för att lägga tid på att träna nyanställda i gamla kalkylark, ger vi din befintliga personal verktygen att hantera dubbelt så mycket – med halva ansträngningen.",
-    "ctaPrimary": "Boka ett kartläggningssamtal",
-    "ctaSecondary": "Gör 60‑sekundersdiagnosen",
-    "visualTitle": "Från Excel-kaos → till automatiserat flöde",
-    "visualBefore": "FÖRE (Personberoende)",
-    "visualAfter": "EFTER (Systemstöd)",
-    "visualDashboard": "Verksamhetssystem",
-    "visualLive": "LIVE",
-    "visualMetric1": "Kapacitet",
-    "visualMetric2": "Admin",
-    "visualBeforeNote": "Excel Hell: En felaktig formel från totalstopp.",
-    "microProof": "Specialister på verksamhetskritisk mjukvara för logistik, tillverkning och service i Göteborg."
+    "greeting": "Tjenare!",
+    "headline": "Här bygger jag grejer. Ibland funkar det.",
+    "intro": "Tjenare! Jag heter Glenn Svanberg. Utvecklare, göteborgare och nyfiken i en strut.",
+    "subheadline": "Det här är min plats för att testa, paja och bygga nytt. Inga kravspecar, bara ren kodglädje och en vilja att se vad som händer om man trycker på den där knappen.",
+    "cta": "Kolla in projekten"
   },
-  "excelHell": {
-    "kicker": "DON'T HIRE – AUTOMATE",
-    "heading": "Excel-kaoset är en bromskloss för er tillväxt.",
-    "copy": "När företag växer i Göteborg (logistik, tillverkning, service) tror de ofta att de behöver anställa fler för att hantera ”messet”. Men problemet är inte personalbrist – det är Excel-brist. Vi bygger mjukvaran som tar bort det manuella gnetet.",
-    "mockTitle": "Manual_Workload_V7_FINAL.xlsx",
-    "mockMeta": "Excel Hell i realtid"
-  },
-  "partnership": {
-    "kicker": "PRISSÄTTNING & RISK",
-    "heading": "Vi tar risken. Ni får effekten.",
-    "description": "Vår modell är byggd för långsiktigt partnerskap. Vi tar hela utvecklingskostnaden – ni betalar bara när systemet faktiskt levererar värde.",
-    "steps": {
-      "extraction": {
-        "title": "1) 0 kr Startavgift",
-        "body": "Vi tar bygget på vår egen risk. Om vår lösning inte tar bort er friktion, så betalar ni ingenting."
+  "playground": {
+    "title": "Leklådan",
+    "description": "En samling av mina experiment, sidoprojekt och digitala uppfinningar.",
+    "projects": {
+      "allaheterglenn": {
+        "title": "allaheterglenn.se",
+        "description": "Ett viralt experiment kring Göteborgs mest kända namn. Utforskar lokal kultur och viral spridning genom humor.",
+        "tech": "React, Viral Marketing"
       },
-      "engineering": {
-        "title": "2) Fast månadspris",
-        "body": "Predictable like a salary, but cheaper. Ni får en fast månadskostnad för hosting, support och vidareutveckling."
+      "qrbutik": {
+        "title": "qrbutik.se",
+        "description": "Ett system för friktionsfria beställningar via QR-koder. Fokus på snabba flöden och enkelhet utan app-nedladdningar.",
+        "tech": "Payments, Real-time"
       },
-      "optimization": {
-        "title": "3) Skalbar tillväxt",
-        "body": "När systemet är live kan ni hantera ökade volymer utan att behöva öka huvudet på admin-avdelningen."
+      "boardio": {
+        "title": "boardio.io",
+        "description": "Plattform för att designa och beställa skräddarsydda brädspel. Ett komplext projekt som kombinerar e-handel med avancerade designverktyg i webbläsaren.",
+        "tech": "Canvas, Print-on-demand"
+      },
+      "trackaton": {
+        "title": "trackaton.com",
+        "description": "Min egenutvecklade motor för trafikspårning. Byggd för att förstå dataflöden och integritet på djupet, bortom standardverktygen.",
+        "tech": "Analytics, Big Data"
+      },
+      "glennerator": {
+        "title": "glennsvanberg.se",
+        "description": "Glenneratorn - en AI-driven generator för... ja, mig. Ett lekfullt sätt att utforska generativ AI och personligt varumärke.",
+        "tech": "AI, Image Generation"
+      },
+      "malasidor": {
+        "title": "målasidor.se",
+        "description": "Ett renodlat SEO-experiment. Hur snabbt kan man ranka på specifika sökord genom att erbjuda strukturerat innehåll för barn?",
+        "tech": "SEO, Content"
+      },
+      "grzaniec": {
+        "title": "grzaniec.se",
+        "description": "Ett e-handels- och importexperiment med fokus på polsk vinterdryck. Testar logistik och nischad marknadsföring.",
+        "tech": "E-commerce, Logistics"
+      },
+      "next": {
+        "title": "Next",
+        "description": "En minimalistisk ping-app för team. Fokuserar på snabb statusrapportering utan onödigt brus.",
+        "tech": "Real-time, Collaboration"
       }
     }
   },
-  "empowerTeam": {
-    "kicker": "PEOPLE FIRST",
-    "heading": "Förstärk din personal, ersätt dem inte.",
-    "description": "Vi bygger inte mjukvara för att ersätta människor, utan för att ge dem tid att göra det de är bäst på.",
-    "items": {
-      "training": {
-        "title": "Eliminera upplärningsskulden",
-        "body": "Nyanställningar tar månader att lära sig \"ert sätt\" i Excel. Vår mjukvara fungerar och guidar användaren från dag ett."
-      },
-      "value": {
-        "title": "Fokusera på värdeskapande",
-        "body": "Låt ditt team prata med kunder och lösa problem medan vår mjukvara hanterar datalogistiken felfritt i bakgrunden."
-      },
-      "reliability": {
-        "title": "Enterprise-standard",
-        "body": "Industriell pålitlighet. Vi bygger mjukvara som inte går sönder, enligt samma principer som används av globala svenska industriledare."
-      }
-    }
+  "logbook": {
+    "title": "Loggboken",
+    "description": "Mina tankar, idéer och anteckningar. Rått och oredigerat.",
+    "empty": "Här var det tomt än så länge. Men vänta bara, snart kommer det gnäll om JavaScript-ramverk."
   },
-  "boring": {
-    "kicker": "MISSION-CRITICAL",
-    "heading": "Pålåtlig infrastruktur, inte AI-hype.",
-    "description": "Vi säljer inte trendiga buzzwords. Vi bygger den \"tråkiga\" men livsviktiga mjukvaran som håller hjulen snurrande dygnet runt.",
-    "items": {
-      "orders": "Automatiserade orderflöden",
-      "logistics": "Logistikspårning i realtid",
-      "invoicing": "Felfria fakturabryggor"
-    }
-  },
-  "trust": {
-    "kicker": "VARFÖR OSS",
-    "heading": "Expertis från industriell innovation.",
-    "description": "Grundaren är en erfaren utvecklare med bakgrund i tung industri. Vi vet vad som krävs för att bygga system som tål verkligheten.",
-    "badgeScarcity": "3 platser kvar för Q1 2026",
-    "badgeLine": "Abonnemang • Ingen startkostnad • Gbg-baserat",
-    "cta": "Boka ett kartläggningssamtal",
-    "micro": "15–30 min. Ingen förberedelse. Vi pratar klarspråk."
-  },
-  "diagnostic": {
-    "kicker": "PROBLEMDIAGNOS",
-    "heading": "Hur mycket admin-tid bränner ni i onödan?",
-    "description": "Svara på tre korta frågor. Vi förvandlar det till en konkret lönsamhetskalkyl inför vårt möte.",
-    "cardTitle": "60‑sekundersdiagnos",
-    "cardDescription": "Ingen e‑post krävs. Snabbt och anonymt.",
-    "q1": {
-      "label": "Hur många timmar i veckan lägger ni på manuell datainmatning?",
-      "placeholder": "t.ex. 10"
-    },
-    "q2": {
-      "label": "Hur många anställda är direkt beroende av Excel för att sköta sitt jobb?",
-      "placeholder": "t.ex. 4"
-    },
-    "q3": {
-      "label": "Vad vore det värt att slippa rekrytera en person till bara för admin?",
-      "placeholder": "t.ex. 45 000 / mån"
-    },
-    "summaryLabel": "KOPIERA/KLISTRA IN I KONTAKTFORMULÄRET",
-    "copy": "Kopiera resultatet",
-    "copied": "Kopierat!",
-    "summaryTemplate": "Problemdiagnos\n- Manuella timmar/vecka: {{hours}}\n- Excel-beroende personer: {{people}}\n- Uppskattat besparingsvärde: {{value}}\n- Beräknad årskostnad (manuellt): {{yearlyCost}} kr\n- Förslag automation: {{suggestedPrice}} kr/mån\n\nKontext: Vi behöver få ordning på...",
-    "reset": "Börja om",
-    "back": "Tillbaka",
-    "next": "Nästa",
-    "finish": "Se sammanfattning",
-    "cta": "Skicka diagnosen till oss",
-    "sideTitle": "Vad händer sedan?",
-    "sideDescription": "Vi hör av oss med en plan för hur vi tar bort er administrativa skuld.",
-    "sideBullet1": "Kartläggning av flaskhalsar (ERP, CRM, lager).",
-    "sideBullet2": "Förslag på en första modul som ger omedelbar effekt.",
-    "sideBullet3": "Ett fast månadspris utan dolda avgifter.",
-    "result": {
-      "yearlyCost": "Denna process kostar ditt företag ca {{cost}} kr per år i enbart arbetstid.",
-      "pitch": "Vi kan automatisera hela flödet för ca {{price}} kr/mån.",
-      "subPitch": "Det är mindre än 10% av vad ni betalar i ”Excel-skatt” idag."
-    }
-  },
-  "contact": {
-    "heading": "Redo att sluta anställa admin?",
-    "description": "Berätta vad ni gör manuellt idag. Vi återkommer med ett lösningsförslag inom 24 timmar.",
-    "cardTitle": "Be om ett möte",
-    "cardDescription": "Helt förutsättningslöst möte online eller i Göteborg.",
-    "form": {
-      "name": "Namn",
-      "namePlaceholder": "Ditt namn",
-      "email": "E‑post",
-      "emailPlaceholder": "namn@foretag.se",
-      "company": "Företag",
-      "companyPlaceholder": "Företagsnamn",
-      "phone": "Telefon",
-      "phonePlaceholder": "070-000 00 00",
-      "message": "Vad vill ni automatisera?",
-      "messagePlaceholder": "Beskriv ert största Excel-problem här...",
-      "required": "*",
-      "send": "Skicka förfrågan",
-      "sending": "Skickar...",
-      "success": "Tack! Vi hörs inom kort.",
-      "errors": {
-        "nameRequired": "Namn krävs",
-        "emailRequired": "E‑post krävs",
-        "emailInvalid": "Ogiltig e-postadress",
-        "messageRequired": "Meddelande krävs",
-        "sendFailed": "Kunde inte skicka. Prova igen."
-      }
-    }
+  "about": {
+    "title": "Vem är Glenn?",
+    "description": "Jag är en utvecklare och innovationsledare som bor i Göteborg. Jag gillar att bygga saker som löser riktiga problem (och ibland problem som inte finns). Min stil är 'hacka först, fråga sen' – fast med snygg kod, såklart."
   },
   "footer": {
-    "tagline": "Specialister på att automatisera SME i Göteborg. Don't hire – automate.",
-    "copyright": "© 2026 Inventing. Alla rättigheter förbehållna."
+    "tagline": "Byggt med kaffe och kod i Göteborg.",
+    "copyright": "© 2026 Inventing."
   }
 }

@@ -1,63 +1,45 @@
-import { ArrowRightIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
 
 export function HeroSection() {
   const { t } = useTranslation()
 
+  const scrollToPlayground = () => {
+    const element = document.getElementById('playground')
+    element?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-primary/5" />
-
-      {/* Static geometric shapes - no animations */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-      </div>
-
-      {/* Floating glass panel */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[5]">
-        <div className="glass-strong rounded-3xl p-12 max-w-4xl mx-6 transform rotate-[-2deg] opacity-30 blur-sm" />
-        <div className="glass-strong rounded-3xl p-12 max-w-4xl mx-6 transform rotate-[1deg] opacity-20 blur-md" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
-        {/* Glass card for main content */}
-        <div className="glass-strong rounded-3xl p-8 md:p-12 mb-8">
-          {/* Brand name */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
-            <span className="font-futuristic font-black bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent">
-              {t('hero.title')}
-            </span>
+    <section className="relative pt-20 pb-24 md:pb-32 overflow-hidden">
+      <div className="container px-4 md:px-6 relative z-10">
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80 mb-6">
+            {t('hero.greeting')}
+          </div>
+          <h1 className="text-3xl md:text-6xl font-black tracking-tight mb-6 break-words hyphens-auto">
+            {t('hero.headline')}
           </h1>
-
-          {/* Tagline */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 mb-8 font-medium max-w-3xl mx-auto leading-relaxed">
-            {t('hero.tagline')}{' '}
-            <span className="bg-gradient-to-r from-red-600 via-primary to-orange-500 bg-clip-text text-transparent font-semibold">
-              {t('hero.taglineHighlight')}
-            </span>
-          </p>
+          <div className="prose prose-lg dark:prose-invert mb-8 max-w-none">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed break-words">
+              <strong className="text-foreground block mb-2">{t('hero.intro')}</strong> 
+              {t('hero.subheadline')}
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" onClick={scrollToPlayground} className="gap-2 w-full sm:w-auto justify-center">
+              {t('hero.cta')}
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
-
-        {/* CTA Button */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            size="lg"
-            className="text-lg px-8 py-6 h-auto group glass-button glass-button-hover !bg-transparent"
-            onClick={() => {
-              document
-                .getElementById('contact')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
-            {t('hero.cta')}
-            <ArrowRightIcon className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </div>
+      </div>
+      
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 -z-10 opacity-10 translate-x-1/3 -translate-y-1/4">
+        <svg width="800" height="800" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor" d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,70.6,32.2C59,42.9,47.1,51.4,34.8,58.3C22.5,65.2,9.8,70.5,-3.1,75.8C-16,81.1,-29.1,86.4,-40.8,80.7C-52.5,75,-62.8,58.3,-70.6,42.3C-78.4,26.3,-83.7,11,-81.9,-3.1C-80.1,-17.2,-71.2,-30.1,-60.8,-40.8C-50.4,-51.5,-38.5,-60,-26.1,-68.6C-13.7,-77.2,-0.8,-85.9,13.2,-88.2C27.2,-90.5,54.4,-86.4,44.7,-76.4Z" transform="translate(100 100)" />
+        </svg>
       </div>
     </section>
   )

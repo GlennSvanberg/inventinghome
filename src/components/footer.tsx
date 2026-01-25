@@ -1,8 +1,4 @@
 import { useTranslation } from 'react-i18next'
-import { Link } from '@tanstack/react-router'
-import { LanguageSelector } from './language-selector'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -32,9 +28,6 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-5 flex flex-col items-start md:items-end gap-4">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:justify-end">
-              <LanguageSelector />
-            </div>
             <div className="text-sm text-muted-foreground">
               © {currentYear} Inventing. {t('footer.copyright')}
             </div>
