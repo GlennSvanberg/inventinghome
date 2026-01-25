@@ -1,30 +1,22 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { SaaSHeroSection } from '@/components/saas-hero-section'
-import { ExcelHellSection } from '@/components/excel-hell-section'
-import { BoringSoftwareSection } from '@/components/boring-software-section'
-import { PartnershipModelSection } from '@/components/partnership-model-section'
-import { WhyInventingSection } from '@/components/why-inventing-section'
-import { TrustSection } from '@/components/trust-section'
-import { ProblemDiagnosticSection } from '@/components/problem-diagnostic-section'
-import { ContactFormSection } from '@/components/contact-form-section'
+import { HeroSection } from '@/components/hero-section'
+import { PlaygroundGrid } from '@/components/playground-grid'
+import { LogbookSection } from '@/components/logbook-section'
 import { Footer } from '@/components/footer'
-import { RedCloudOverlay } from '@/components/red-cloud-overlay'
 
-export const Route = createFileRoute('/')({ component: App })
+export const Route = createFileRoute('/')({
+  component: Index,
+})
 
-function App() {
+function Index() {
   return (
-    <main className="min-h-screen relative">
-      <RedCloudOverlay />
-      <SaaSHeroSection />
-      <ExcelHellSection />
-      <BoringSoftwareSection />
-      <WhyInventingSection />
-      <PartnershipModelSection />
-      <TrustSection />
-      <ProblemDiagnosticSection />
-      <ContactFormSection />
+    <div className="min-h-screen bg-background font-sans antialiased">
+      <main>
+        <HeroSection />
+        <PlaygroundGrid />
+        <LogbookSection />
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }

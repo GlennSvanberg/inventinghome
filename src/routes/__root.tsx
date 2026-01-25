@@ -83,15 +83,20 @@ export const Route = createRootRoute({
   },
 })
 
+import { Header } from '@/components/header'
+
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="sv" className="dark">
       <head>
         <HeadContent />
       </head>
       <body>
         <Suspense fallback={null}>
-          <ConvexProvider client={convex}>{children}</ConvexProvider>
+          <ConvexProvider client={convex}>
+            <Header />
+            {children}
+          </ConvexProvider>
         </Suspense>
         <TanStackDevtools
           config={{
