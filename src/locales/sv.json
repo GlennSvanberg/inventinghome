@@ -10,9 +10,9 @@
   },
   "hero": {
     "greeting": "Tjenare!",
-    "headline": "Välkommen till min digitala sandlåda.",
-    "intro": "Glenn Svanberg heter jag, en utvecklare i Göteborg som bygger öppet.",
-    "subheadline": "Jag leker med teknik och försöker kombinera moderna verktyg med riktiga problem. Oftast gör jag det bara för skojs skull, för att se vad som är möjligt.",
+    "headline": "Här bygger jag grejer. Ibland funkar det.",
+    "intro": "Tjenare! Jag heter Glenn Svanberg. Utvecklare, göteborgare och nyfiken i en strut.",
+    "subheadline": "Det här är min plats för att testa, paja och bygga nytt. Inga kravspecar, bara ren kodglädje och en vilja att se vad som händer om man trycker på den där knappen.",
     "cta": "Kolla in projekten"
   },
   "playground": {
