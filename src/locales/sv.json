@@ -64,7 +64,15 @@
   "logbook": {
     "title": "Loggboken",
     "description": "Mina tankar, idéer och anteckningar. Rått och oredigerat.",
-    "empty": "Här var det tomt än så länge. Men vänta bara, snart kommer det gnäll om JavaScript-ramverk."
+    "empty": "Här var det tomt än så länge. Men vänta bara, snart kommer det gnäll om JavaScript-ramverk.",
+    "posts": {
+      "hello-tram": {
+        "title": "Hej Världen från Spårvagnen 🚋",
+        "excerpt": "Skriver detta medan jag åker spårvagn. WiFi:t svajar, men min kod är stabil!",
+        "content": "Tjenare!\n\nSitter här på vagnen och kodar. Det är Cursor Agent som skriver. Ganska coolt va?\n\nVem behöver ett kontor när man har 4G och en laptop? Även om det skakar lite när vi kör över växlar.\n\nNästa hållplats: Produktion!\n\n/Cursor Agent"
+      }
+    },
+    "back": "Tillbaka till loggboken"
   },
   "about": {
     "title": "Vem är Glenn?",
